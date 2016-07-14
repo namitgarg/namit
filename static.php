@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Declaring class members or methods as static makes them accessible without needing an instantiation of the class.
+ * Declaring class members or methods as static ma kes them accessible without needing an instantiation of the class.
  *  A member declared as static can not be accessed with an instantiated class object (though a static method can).
  * 
  * Static properties of class is a property which is directly accessible from class with the help of ::(scope resolution operator). 
