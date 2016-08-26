@@ -1,0 +1,130 @@
+<?php
+
+/**
+ * @file
+ * Contains Drupal hooks and helper functions for changing login url.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function change_login_url_menu() {
+  $items = array();
+
+  $items['admin/config/change_login_url'] = array(
+    'title' => 'Change Login Url',
+    'description' => 'Helps you to change the default Login Url.',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('administer site configuration'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+    'position' => 'right',
+    'weight' => -10,
+  );
+
+  $items['admin/config/change_login_url/settings'] = array(
+    'title' => 'Configure Login url',
+    'description' => 'Helps you configure settings for default login url.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('change_login_url_admin_settings_form'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $new_site_login_url = variable_get('change_login_url', '');
+
+  if (!empty($new_site_login_url)) {
+    $items[$new_site_login_url] = array(
+      'title' => 'User account',
+      'page callback' => 'change_login_url_page',
+      'page arguments' => array(TRUE),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    );
+  }
+
+  return $items;
+}
+
+/**
+ * Page Callback for configuring login url settings.
+ */
+function change_login_url_admin_settings_form() {
+  $form = array();
+
+  $form['change_login_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Site Login Url'),
+    '#description' => t('Enter Site Login Url, for e.g "secret/login"'),
+    '#default_value' => variable_get('change_login_url', ''),
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+  );
+
+  return $form;
+}
+
+/**
+ * Submit handler for admin settings form.
+ *
+ * @param array $form
+ *   Form fields array.
+ *
+ * @param array $form_state
+ *   User submitted form values.
+ */
+function change_login_url_admin_settings_form_submit($form, &$form_state) {
+  if (!empty($form_state['values']['change_login_url'])) {
+    // Exclude unnecessary elements.
+    form_state_values_clean($form_state);
+
+    // Storing the new url in Drupal variables.
+    variable_set('change_login_url', $form_state['values']['change_login_url']);
+
+    // Flushing the Site Cache.
+    drupal_flush_all_caches();
+    drupal_set_message(t('Site Login page URL is updated to "!new_login_url"', array(
+      '!new_login_url' => $form_state['values']['change_login_url']
+    )));
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function change_login_url_menu_alter(&$items) {
+
+  $new_site_login_url = variable_get('change_login_url', '');
+
+  // Tell the menu system to use our custom callback rather than the core
+  // callback.
+  if (!empty($new_site_login_url)) {
+    $items['user']['page callback'] = 'change_login_url_page';
+  }
+}
+
+/**
+ * Callback for customized user login page.
+ *
+ * Displays user profile if user is logged in, or login form for anonymous
+ * users if using our special path, access denied if using default path.
+ *
+ * @param boolean $show
+ *   Show login form.
+ */
+function change_login_url_page($show = FALSE) {
+  global $user;
+
+  if (!empty($user->uid)) {
+    menu_set_active_item('user/' . $user->uid);
+    return menu_execute_active_handler();
+  }
+  elseif (!empty($show)) {
+    return drupal_get_form('user_login');
+  }
+
+  drupal_access_denied();
+}
