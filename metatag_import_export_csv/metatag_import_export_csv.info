@@ -1,0 +1,13 @@
+name = Metatag Import Export CSV
+description = Import or Export Metatags with the help of a CSV file
+core = 7.x
+dependencies[] = metatag
+dependencies[] = path
+configure = admin/config/search/metatags/import
+
+; Information added by Drupal.org packaging script on 2016-07-08
+version = "7.x-1.0"
+core = "7.x"
+project = "metatag_import_export_csv"
+datestamp = "1467974340"
+

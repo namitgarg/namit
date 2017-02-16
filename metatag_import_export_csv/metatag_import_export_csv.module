@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Main file for the Metatag Import Export module.
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function metatag_import_export_csv_permission() {
+  return array(
+    'metatag_import_csv' => array(
+      'title' => t('Metatag Import'),
+      'description' => t('Allow people to Import metatag from a CSV file'),
+    ),
+    'metatag_export_csv' => array(
+      'title' => t('Metatag Export'),
+      'description' => t('Allow people to Export metatag to a CSV file'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_help().
+ */
+function metatag_import_export_csv_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#metatag_import_export_csv":
+      $text = t("<h3>Metatag Import Export CSV.</h3> 
+      <p>This modules helps user to import or export metatags for the nodes with the help of a CSV file.</p>
+      <p> Module supports 4 fields which are provided by <a href='https://www.drupal.org/project/metatag'>Metatag module</a> . 
+      For more Information Please visit the project page
+      <a href='https://www.drupal.org/node/2738695'>https://www.drupal.org/node/2738695</a></p>
+          <h4>Metatag Import</h4>
+      <ul>
+      <li> Import metatags from a CSV on the basis of the path or URl Alias of the node. </li>
+      <li> Drush command : drush metatag-import < path to your CSV file> </li>
+      <li> Import Metatags from a CSV file. For the CSV format Some Sample files are  included inside sample folder.</li>
+      </ul>
+          <h4> Metatag Export</h4>
+      <ul>
+      <li> Export Metatags based on content type to a CSV file </li>
+      <li> The form for metatag export can be accessed by going to  /admin/config/search/metatags/export</li>
+      <li> Drush command : drush metatag-export <type> </li>
+      </ul>");
+      return $text;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function metatag_import_export_csv_menu() {
+  $items['admin/config/search/metatags/import'] = array(
+    'title' => 'MetaTag Import',
+    'description' => 'Import Metatag from a csv file',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('metatag_import_export_csv_upload_form'),
+    'access arguments' => array('metatag_import_csv'),
+    'file' => 'metatag_import_export_csv_upload_admin.inc',
+    'type' => MENU_LOCAL_TASK,
+  );
+  $items['admin/config/search/metatags/export'] = array(
+    'title' => 'MetaTag Export',
+    'description' => 'Export Metatag to a csv file',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('metatag_import_export_csv_download_form'),
+    'access arguments' => array('metatag_export_csv'),
+    'file' => 'metatag_import_export_csv_download_admin.inc',
+    'type' => MENU_LOCAL_TASK,
+  );
+  return $items;
+}
