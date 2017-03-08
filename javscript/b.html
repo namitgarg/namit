@@ -1,0 +1,17 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+<div ng-app="">
+<div ng-init="person=[
+{name:'namit',age:18},
+{name:'ayush',age:19},
+{name:'nishant',age:20},
+
+]">
+<p ng-repeat="value in person">
+{{ value.name}}<br>
+{{value.age}}
+</p>
+</div>
+</body>
+</html>
