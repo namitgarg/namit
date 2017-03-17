@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Browscap Block module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function newsletter_schema() {
+
+  $schema['newsletter_data'] = array(
+    'description' => 'Save subscriber detail',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a newsletter.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'email' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'description' => "The block's unique delta within module, from {block}.delta.",
+      ),
+	  'created' => array(
+		'type' => 'int', 
+		'not null' => TRUE, 
+		'length' => 32,
+		'default' => 0,
+	  ),
+    ),
+    'primary key' => array('email'),
+    'indexes' => array(
+      'id' => array('id'),
+    ),
+  );
+  return $schema;
+}
+?>

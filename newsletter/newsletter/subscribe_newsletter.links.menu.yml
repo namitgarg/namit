@@ -1,0 +1,6 @@
+subscribe_newsletter_menu:
+  title: 'Newsletter Lists'
+  parent: system.admin_config_system
+  description: 'Get all Email listed'
+  route_name: subscribe_newsletter.settings
+  

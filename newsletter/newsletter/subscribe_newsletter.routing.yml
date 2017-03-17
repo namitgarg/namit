@@ -1,0 +1,9 @@
+subscribe_newsletter.settings:
+  path: '/admin/config/system/newsletter'
+  defaults:
+    _controller: '\Drupal\subscribe_newsletter\Controller\NewsLetterController::listSubscribtion'
+    _title: 'Newsletters Listing'
+  requirements:
+    _permission: 'access administration pages'  
+  
+    

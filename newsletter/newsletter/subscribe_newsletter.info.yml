@@ -1,0 +1,5 @@
+name: Subscribe Newsletter
+description: Newsletter subscription Module
+type: module
+core: 8.x 
+package: custom
