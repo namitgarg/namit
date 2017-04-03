@@ -1,0 +1,242 @@
+// To change this license header, choose License Headers in Project Properties.
+// To change this template file, choose Tools | Templates
+// and open the template in the editor.
+
+// Created on : Jun 22, 2016, 3:17:34 PM
+// Author     : manishkumar.singh
+// Mobile menu scss
+
+@import "base";
+
+$container: ".mean-container"//, ".foo-container"
+;
+$reveal: ".meanmenu-reveal"//, ".foomenu-reveal"
+;
+$m-nav: ".mean-nav"//, ".foo-nav"
+;
+$bar: ".mean-bar";
+$m-text: ".mobile-text";
+$foobar: ".foo-bar";
+$foo-text: ".foo-mobile-text";
+
+#{unite($container)} {a {text-decoration: none !important;}}
+#{unite($reveal)} {
+					@include dis(null,auto,inline-block);
+					@include pos(ab,0,0);
+					height: set($bg,mobile-nav,height);
+					padding: 12px 0 8px 15px;
+					color: set($bg,mobile-nav,color) !important;
+					text-indent: -99999em;
+					line-height: 19px;
+					font-weight: 700;
+}
+#{unite($m-text)} {
+					display: block;
+					font-size: set($bg,mobile-nav,font);
+					margin-left: 40px;
+					text-align: left;
+					overflow: visible;
+					text-indent: 0;
+					@include lato;
+					margin-top: 3px;
+					text-transform: uppercase;
+}
+#{unite($foo-text)} {
+					display: block;
+					font-size: set($bg,mobile-nav,font);
+					margin-left: 45px;
+					text-align: left;
+					overflow: visible;
+					text-indent: 0;
+					@include lato;
+					margin-top: 3px;
+					text-transform: uppercase;
+					color: set($bg,mobile-nav,color-foobar);
+}
+#{unite($bar)} {
+    @include dis(null,100%,left);
+    @include pos(re,null,null,null,null,99);
+    padding: 0;
+    min-height: set($bg,mobile-nav,height);
+    line-height: 24px;
+    @include prefix(transition, all 0.5s ease, webkit moz);
+    span {
+        @include dis(null,25px,left);
+        background: set($bg,mobile-nav,color);
+        height: 5px;
+        margin-top: 4px;
+        clear: both;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    small {
+        clear: both;
+        @include dis(null,25px,left);
+        font-size: 26px;
+        margin: 2px 0px 0px 6px;
+    }
+}
+#{unite($foobar)} {
+    @include dis(null,100%,left);
+    @include pos(re,null,null,null,null,99);
+    padding: 0;
+    min-height: set($bg,mobile-nav,height);
+    line-height: 24px;
+    @include prefix(transition, all 0.5s ease, webkit moz);
+    span {
+        @include dis(null,25px,left);
+        background: set($bg,mobile-nav,color-foobar);
+        height: 5px;
+        margin-top: 4px;
+        clear: both;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    small {
+        clear: both;
+        @include dis(null,25px,left);
+        font-size: 26px;
+        margin: 1px 0 0 4px;
+        color: set($bg,mobile-nav,color-foobar);
+    }
+}
+#{unite($m-nav)} {
+    @include dis(null,100%,left);
+    background: set($bg,mobile-nav,first-tier-bg);
+    margin-top: set($bg,mobile-nav,height);
+    .contextual-links-wrapper {display: none !important;}
+    > ul {
+					   padding: 0;
+        margin: 0;
+        overflow: visible !important;
+        visibility: visible !important;
+								> li{&:last-of-type{display: none;}
+								
+								&:nth-last-of-type(2){ > a{&:first-of-type{border-bottom: 1px solid set($bg,mobile-nav,border);}}
+								ul{li{a{border:none;border-bottom: 1px solid set($bg,mobile-nav,border);margin-top: 0;}}}}}
+        ul {
+            padding: 0;
+            overflow: visible !important;
+            visibility: visible !important;
+        }        
+        li {
+            @include pos(re);
+            @include dis(null,100%,left);
+            list-style: none;
+            span {
+                @include dis(null,100%,left);
+                padding: 10px 50px 10px 5%;
+                overflow: hidden;
+                text-align: left;
+                color: set($bg,mobile-nav,color) !important;
+                border-top: 1px solid set($bg,mobile-nav,border);
+                text-transform: uppercase;
+                font-size: set($bg,mobile-nav,font-sub-tier);
+            }
+            a,span {
+                @include dis(null,100%,left);
+                padding: 10px 50px 10px 5%;
+                overflow: hidden;
+                text-align: left;
+                color: set($bg,mobile-nav,color) !important;
+                border-top: 1px solid set($bg,mobile-nav,border);
+                text-transform: uppercase;
+                font-size: set($bg,mobile-nav,font-sub-tier);                
+                &:hover {
+                    background: set($bg,mobile-nav,hover-bg);
+                    color: set($bg,mobile-nav,HoverF) !important;
+                }
+            }            
+            .mean-expand {
+                margin-top: 1px;
+                width: 50px;
+                height: 45px;
+                padding: 0 !important;
+                text-align: center;
+                @include pos(ab,0,0,null,null,2);
+                font-weight: 400;
+                font-size: 0 !important;
+                background: set($bg,mobile-nav,second-tier-bg);
+                border: none !important;
+                border-left: 1px solid set($bg,mobile-nav,border) !important;
+                border-bottom: 1px solid set($bg,mobile-nav,border) !important;
+																&:hover {background: set($bg,mobile-nav,second-tier-bg);}
+                &:before {
+                    content: "\f067";
+                    font-family: 'FontAwesome';
+                    color: set($bg,mobile-nav,color);
+                    font-size: set($bg,mobile-nav,icon-size) !important;
+                    line-height: 46px !important;
+                    @include dis(null,null,inline-block);
+                    padding-left: 3px;
+                    font-weight: 400 !important;
+                    cursor: pointer;
+                }
+                &.mean-clicked{background: set($bg,mobile-nav,expand-click);
+																&:before {
+                    content: "\f068";
+                    font-family: 'FontAwesome';
+                    color: set($bg,mobile-nav,color);
+                    font-size: set($bg,mobile-nav,icon-size) !important;
+                    line-height: 46px !important;
+                    @include dis(null,null,inline-block);
+                    padding-left: 3px;
+                    font-weight: 400 !important;
+                    cursor: pointer;
+                }
+																}
+            }
+            li {
+                > a,span {
+                    width: 100%;                    
+                    overflow: hidden;
+                    padding: 10px 50px 10px 7%;
+                    border-top: 1px solid set($bg,mobile-nav,border);
+                    text-shadow: none !important;
+                    visibility: visible;
+                    background: set($bg,mobile-nav,second-tier-bg);
+                    color: set($bg,mobile-nav,color) !important;
+                    font-size: set($bg,mobile-nav,font-sub-tier);
+                    &:hover {
+                        color: set($bg,mobile-nav,HoverF) !important;
+                    }
+                }
+                li {
+                    a {
+                        width: 100%;
+                        padding: 10px 50px 10px 10%;
+                        background: set($bg,mobile-nav,first-tier-bg);
+                        border-top: 1px solid set($bg,mobile-nav,border);
+                        color: set($bg,mobile-nav,color) !important;
+                    }
+                    li {                       
+                        a {
+                            width: 100%;
+                            padding: 10px 50px 10px 12%;
+                            border-top: 1px solid set($bg,mobile-nav,border);
+                            background: set($bg,mobile-nav,second-tier-bg);
+                            color: set($bg,mobile-nav,color) !important;
+                            font-size: set($bg,mobile-nav,font-sub-tier);
+                            &:hover {
+                                color: set($bg,mobile-nav,color) !important;
+                            }
+                        }
+                        li a {
+                            width: 100%;
+                            padding: 10px 50px 10px 15%;
+                            border-top: 1px solid set($bg,mobile-nav,border);
+                            background: set($bg,mobile-nav,first-tier-bg);
+                            color: set($bg,mobile-nav,color) !important;
+                            &:hover {
+                                color: set($bg,mobile-nav,color) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.foo-nav > ul > li:last-of-type{display:block;}

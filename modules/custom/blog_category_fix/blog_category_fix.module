@@ -1,0 +1,18 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+function blog_category_fix_menu() {
+    $items['admin/config/system/blog-fix'] = array(
+        'title' => 'Blog category fix',
+        'page callback' => 'taxonomy_fix',
+        'access arguments' => array('access contents'),
+        'type' => MENU_NORMAL_ITEM,
+        'file' => 'blog_category_fix.inc'
+    );
+
+return$items;
+}

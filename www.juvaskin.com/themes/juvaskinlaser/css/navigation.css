@@ -1,0 +1,1154 @@
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*========================= navigation css ===============================*/
+/* line 6, ../sass/navigation.scss */
+.relative-wrapper {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/* line 10, ../sass/navigation.scss */
+#navigation {
+  float: left;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background: #d37c7c;
+  height: 61px;
+  padding: 0;
+}
+
+/* line 17, ../sass/navigation.scss */
+#navigation.stickey {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+/*======================== block-tb-megamenu-main-menu related scss start ============================*/
+/* line 21, ../sass/navigation.scss */
+#block-nice-menus-1,
+#block-tb-megamenu-main-menu {
+  display: none !important;
+}
+
+/* line 25, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+/* line 29, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu {
+  background: none;
+}
+/* line 31, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav {
+  width: auto;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  background: none;
+  border: none;
+  background: none;
+  max-height: 61px;
+  height: auto;
+  float: none;
+}
+/* line 42, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li {
+  color: #000;
+  float: left;
+  background: none;
+  border: none;
+  width: auto;
+}
+/* line 49, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li.active > a {
+  color: #fff;
+}
+/* line 53, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+  border: none;
+  background: none;
+  margin: 0;
+  color: #000;
+  line-height: 17px;
+  text-decoration: none;
+  padding: 22px 15px;
+  font-size: 15px;
+  position: relative;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: block;
+}
+/* line 67, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a.active, #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a:hover,
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link.active,
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link:hover {
+  color: #fff;
+}
+/* line 72, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li[data-id="1332"] {
+  display: none;
+}
+/* line 75, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li .caret {
+  display: none;
+}
+/* line 78, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > .mega-dropdown-menu {
+  max-width: 900px !important;
+  background: #fff;
+  border: 1px solid #000;
+  padding: 15px 0;
+  box-shadow: none;
+}
+/* line 84, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > .mega-dropdown-menu .mega-group-title {
+  font-weight: 400;
+  color: #d17575;
+  text-decoration: none;
+  margin: 5px 0;
+  padding: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+/* line 93, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > .mega-dropdown-menu .mega-group-title:hover {
+  text-decoration: underline;
+}
+/* line 97, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > .mega-dropdown-menu .tb-megamenu-column-inner {
+  padding: 0;
+}
+/* line 104, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav li[data-id="3816"] .tb-megamenu-subnav li.level-2 {
+  padding-bottom: 13px;
+}
+/* line 105, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav li[data-id="3816"] .tb-megamenu-subnav li.level-2.hidden-lable-2-maga-group-title > a.mega-group-title {
+  display: none;
+}
+/* line 107, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav li[data-id="3816"] .tb-megamenu-subnav li.level-2 .mega-group-title, #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav li[data-id="3816"] .tb-megamenu-subnav li.level-2 > a {
+  font-weight: 400;
+  color: #d17575;
+  text-decoration: none;
+  margin: 5px 0;
+  padding: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+/* line 116, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav li[data-id="3816"] .tb-megamenu-subnav li.level-2 .mega-group-title:hover, #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav li[data-id="3816"] .tb-megamenu-subnav li.level-2 > a:hover {
+  text-decoration: underline;
+}
+/* line 120, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav li[data-id="3816"] .tb-megamenu-subnav li.level-2 .mega-dropdown-inner {
+  padding-bottom: 0;
+}
+/* line 127, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .dropdown-menu li > a {
+  clear: both;
+  color: #000;
+  display: block;
+  font-size: 15px;
+  line-height: 1.4;
+  text-decoration: none;
+  text-shadow: none;
+  padding: 0 15px;
+  text-transform: capitalize;
+  border: none;
+  font-weight: 400;
+}
+/* line 139, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .dropdown-menu li > a:hover {
+  text-decoration: underline;
+}
+/* line 143, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .dropdown-menu li.active > a {
+  text-decoration: underline;
+  background: none;
+}
+/* line 147, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .dropdown-menu li.active .mega-group-title {
+  color: #d17575;
+  text-decoration: underline;
+}
+/* line 151, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .row-fluid [class*="span"] {
+  margin: 0;
+  min-height: 0 !important;
+}
+/* line 155, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .tb-megamenu .row-fluid .span4 {
+  width: 33%;
+}
+/* line 158, ../sass/navigation.scss */
+#block-tb-megamenu-main-menu .mega-dropdown-inner {
+  background: #fff;
+  padding-bottom: 13px;
+}
+
+/*======================== block-tb-megamenu-main-menu related scss end ============================*/
+/*======================== block-nice-menus-1 related css ============================*/
+/* line 165, ../sass/navigation.scss */
+#block-nice-menus-1 {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  padding-right: 50px;
+  text-align: center;
+}
+/* line 170, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+  height: auto;
+  float: none;
+}
+/* line 178, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink,
+#block-nice-menus-1 #nice-menu-1 > li {
+  color: #7caaae;
+  float: left;
+  background: none;
+  border: none;
+  padding: 0 7px;
+  width: auto;
+  position: relative;
+}
+/* line 187, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink a,
+#block-nice-menus-1 #nice-menu-1 > li .nolink,
+#block-nice-menus-1 #nice-menu-1 > li a {
+  border: none;
+  background: none;
+  border-bottom: 5px solid transparent;
+  color: #7caaae;
+  display: block;
+  text-decoration: none;
+  padding: 21.5px 9px;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* line 201, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink .nolink.active, #block-nice-menus-1 #nice-menu-1 .menu-path-nolink .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink a:hover,
+#block-nice-menus-1 #nice-menu-1 > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li a.active,
+#block-nice-menus-1 #nice-menu-1 > li a:hover {
+  border-bottom: 5px solid #7caaae;
+  color: #fff;
+}
+/* line 208, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li.menuparent > a {
+  position: relative;
+}
+/* line 212, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li.menuparent:hover > a {
+  border-bottom: 5px solid #7caaae;
+}
+/* line 218, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li.active-trail > a {
+  border-bottom: 5px solid #7caaae;
+}
+/* line 221, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li.active-trail a.active {
+  border-bottom: 5px solid #7caaae;
+}
+/* line 228, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink.last ul, #block-nice-menus-1 #nice-menu-1 .menu-path-nolink.menu-path-node-79 ul,
+#block-nice-menus-1 #nice-menu-1 > li.last ul,
+#block-nice-menus-1 #nice-menu-1 > li.menu-path-node-79 ul {
+  left: -110px;
+}
+/* line 232, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink.menu-path-sitemap, #block-nice-menus-1 #nice-menu-1 .menu-path-nolink.menu-path-user-login,
+#block-nice-menus-1 #nice-menu-1 > li.menu-path-sitemap,
+#block-nice-menus-1 #nice-menu-1 > li.menu-path-user-login {
+  display: none;
+}
+/* line 236, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul,
+#block-nice-menus-1 #nice-menu-1 > li > ul {
+  width: 240px;
+  top: 66px;
+  left: 15px;
+  z-index: 99;
+  background: #7caaae;
+  padding: 15px 0;
+  border: none;
+}
+/* line 244, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li {
+  width: 100%;
+  background: none;
+  border: none;
+  position: relative;
+}
+/* line 251, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li.menuparent > a {
+  position: relative;
+}
+/* line 253, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li.menuparent > a:after {
+  content: '\f105';
+  font-size: 20px;
+  line-height: 20px;
+  font-family: 'fontawesome';
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  margin: auto;
+  width: 10px;
+  height: 20px;
+  color: #fff;
+}
+/* line 269, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li.menuparent:hover > a {
+  color: #fff;
+  background: #50686a;
+  border-bottom: none;
+}
+/* line 277, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li.active-trail > a {
+  color: #fff;
+  background: #50686a;
+  border-bottom: none;
+}
+/* line 282, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li.active-trail a.active {
+  color: #fff;
+  background: #50686a;
+  border-bottom: none;
+}
+/* line 288, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink .nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li a {
+  background: none;
+  margin: 0;
+  padding: 7px 20px;
+  border: none;
+  line-height: 18px;
+  color: #fff;
+  display: block;
+}
+/* line 297, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink .nolink.active, #block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink a:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li a:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink a:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li a:hover {
+  color: #fff;
+  background: #50686a;
+  border-bottom: none;
+}
+/* line 304, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul {
+  background: #50686a;
+  width: 240px;
+  left: 240px;
+  padding: 15px 0;
+  z-index: 100;
+  border: none;
+  top: -15px;
+}
+/* line 312, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li {
+  width: 100%;
+  position: relative;
+  background: none;
+  border: none;
+}
+/* line 318, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li.menuparent > a {
+  position: relative;
+}
+/* line 320, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li.menuparent > a:after {
+  content: '\f105';
+  font-size: 20px;
+  line-height: 20px;
+  font-family: 'fontawesome';
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  margin: auto;
+  width: 10px;
+  height: 20px;
+}
+/* line 335, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li.menuparent:hover > a {
+  color: #fff;
+  background: #7caaae;
+}
+/* line 342, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li.active-trail > a {
+  color: #fff;
+  background: #7caaae;
+}
+/* line 346, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li.active-trail a.active {
+  color: #fff;
+  background: #7caaae;
+}
+/* line 351, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li a {
+  background: none;
+  margin: 0;
+  padding: 7px 20px;
+  border: none;
+  color: #fff;
+  display: block;
+}
+/* line 359, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li .nolink.active, #block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li a:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li a:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li a:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li a:hover {
+  color: #fff;
+  background: #7caaae;
+}
+/* line 365, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul {
+  width: 240px;
+  top: -15px;
+  left: 240px;
+  z-index: 101;
+  background: #7caaae;
+  padding: 15px 0;
+  border: none;
+}
+/* line 373, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li {
+  width: 100%;
+  position: relative;
+  background: none;
+  border: none;
+}
+/* line 380, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink.menuparent > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li.menuparent > a {
+  position: relative;
+}
+/* line 382, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink.menuparent > a:after,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li.menuparent > a:after {
+  content: '\f105';
+  font-family: 'fontawesome';
+  font-size: 20px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  margin: auto;
+  width: 10px;
+  height: 20px;
+}
+/* line 397, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink.menuparent:hover > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li.menuparent:hover > a {
+  color: #fff;
+  background: #50686a;
+}
+/* line 404, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink.active-trail > a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li.active-trail > a {
+  color: #fff;
+  background: #50686a;
+}
+/* line 408, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink.active-trail a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li.active-trail a.active {
+  color: #fff;
+  background: #50686a;
+}
+/* line 413, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink a,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink .nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink a,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink .nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink a,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li .nolink,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li a {
+  background: none;
+  margin: 0;
+  padding: 7px 20px;
+  border: none;
+  color: #fff;
+  display: block;
+}
+/* line 421, ../sass/navigation.scss */
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink .nolink.active, #block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul .menu-path-nolink a:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul .menu-path-nolink > ul > li > ul > li a:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink .nolink.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul .menu-path-nolink a:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 .menu-path-nolink > ul > li > ul > li > ul > li a:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul .menu-path-nolink a:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul .menu-path-nolink > ul > li > ul > li a:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul .menu-path-nolink a:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li .nolink.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li .nolink:hover,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li a.active,
+#block-nice-menus-1 #nice-menu-1 > li > ul > li > ul > li > ul > li a:hover {
+  color: #fff;
+  background: #50686a;
+}
+/* line 436, ../sass/navigation.scss */
+#block-nice-menus-1 #tinynav1 {
+  display: none;
+}
+
+/*======================== block-menu-block-3 related css ============================*/
+/* line 443, ../sass/navigation.scss */
+#block-menu-block-3 {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 25px 20px 20px;
+  clear: both;
+  text-align: center;
+}
+/* line 448, ../sass/navigation.scss */
+#block-menu-block-3 .menu {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 auto;
+}
+/* line 454, ../sass/navigation.scss */
+#block-menu-block-3 .menu .menu-path-nolink,
+#block-menu-block-3 .menu > li {
+  color: #000;
+  float: left;
+  list-style: none;
+  background: none;
+  border: none;
+  padding: 0 9px;
+  width: auto;
+  position: relative;
+}
+/* line 464, ../sass/navigation.scss */
+#block-menu-block-3 .menu .menu-path-nolink .nolink,
+#block-menu-block-3 .menu .menu-path-nolink a,
+#block-menu-block-3 .menu > li .nolink,
+#block-menu-block-3 .menu > li a {
+  border: none;
+  background: none;
+  color: #000;
+  display: block;
+  text-decoration: none;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* line 477, ../sass/navigation.scss */
+#block-menu-block-3 .menu .menu-path-nolink .nolink.active, #block-menu-block-3 .menu .menu-path-nolink .nolink:hover,
+#block-menu-block-3 .menu .menu-path-nolink a.active,
+#block-menu-block-3 .menu .menu-path-nolink a:hover,
+#block-menu-block-3 .menu > li .nolink.active,
+#block-menu-block-3 .menu > li .nolink:hover,
+#block-menu-block-3 .menu > li a.active,
+#block-menu-block-3 .menu > li a:hover {
+  color: #fff;
+}
+
+/*========================search form related scss here start============================*/
+/* line 488, ../sass/navigation.scss */
+#block-search-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 47px;
+  margin: 0;
+}
+/* line 492, ../sass/navigation.scss */
+#block-search-form .block-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 101;
+  font-size: 0;
+  line-height: 0;
+  font-weight: normal;
+  height: 47px;
+  margin: auto;
+  cursor: pointer;
+  display: block;
+}
+/* line 501, ../sass/navigation.scss */
+#block-search-form .block-title:before {
+  content: "\f002";
+  font-family: 'FontAwesome';
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 60px;
+  cursor: pointer;
+  text-align: center;
+  color: #000;
+}
+/* line 512, ../sass/navigation.scss */
+#block-search-form #search-block-form {
+  float: right;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  z-index: 102;
+  height: 70px;
+  line-height: 0;
+  padding: 0;
+  display: none;
+}
+/* line 519, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline {
+  border: 4px solid #fff;
+  display: inline-block;
+  vertical-align: top;
+  width: 238px;
+  background: #fff;
+  margin-top: 20px;
+  position: relative;
+}
+/* line 525, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-item {
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  display: inline-block;
+  height: 40px;
+  background: #fff;
+  width: 100%;
+}
+/* line 533, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-text {
+  width: 100%;
+  border: 1px solid #d17575;
+  background: #fff;
+  outline: none;
+  font-size: 15.75px;
+  line-height: 40px;
+  height: 40px;
+  color: #000;
+  text-align: left;
+  padding: 0 42px 0 10px;
+}
+/* line 534, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-text::-webkit-input-placeholder {
+  color: #000 !important;
+  opacity: 1;
+  font-size: 15.75px;
+}
+/* line 539, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-text:-webkit-input-placeholder {
+  color: #000 !important;
+  opacity: 1;
+  font-size: 15.75px;
+}
+/* line 544, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-text::-webkit-placeholder {
+  color: #000 !important;
+  opacity: 1;
+  font-size: 15.75px;
+}
+/* line 549, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-text::-moz-placeholder {
+  color: #000 !important;
+  opacity: 1;
+  font-size: 15.75px;
+}
+/* line 554, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-text:-ms-placeholder {
+  color: #000 !important;
+  opacity: 1;
+  font-size: 15.75px;
+}
+/* line 569, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-text:focus {
+  outline: none;
+}
+/* line 573, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  -webkit-text-fill-color: #000 !important;
+}
+/* line 577, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline .form-submit {
+  outline: none !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none !important;
+  font-size: 0;
+  width: 42px;
+  height: 40px;
+  background: #d17575 url("../images/search-button.png") no-repeat center center !important;
+  cursor: pointer;
+}
+/* line 587, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline:before {
+  border-bottom: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  content: "";
+  height: 0;
+  left: 195px;
+  position: absolute;
+  top: -18px;
+  width: 0;
+}
+/* line 598, ../sass/navigation.scss */
+#block-search-form #search-block-form .container-inline:after {
+  border-bottom: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  content: "";
+  height: 0;
+  left: 195px;
+  position: absolute;
+  top: -18px;
+  width: 0;
+  z-index: 9;
+}
+
+/*========================search form related scss here end============================*/
+/*=============Search and Search_node pages scss here start==================================*/
+/* line 616, ../sass/navigation.scss */
+.search-results-label {
+  clear: both;
+  font-weight: 700;
+  margin: 10px 0;
+  text-transform: capitalize;
+  color: #303030 !important;
+  font-size: 22px !important;
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 626, ../sass/navigation.scss */
+#content div.messages.error,
+div.messages,
+div.warning {
+  background-color: #303030;
+  background-position: 14px 10px;
+  color: #fff;
+  line-height: 24px;
+  font-size: 16px;
+}
+/* line 629, ../sass/navigation.scss */
+#content div.messages.error ul.messages__list,
+div.messages ul.messages__list,
+div.warning ul.messages__list {
+  margin: 0;
+  padding: 0 0 0 25px;
+  overflow: hidden;
+}
+/* line 633, ../sass/navigation.scss */
+#content div.messages.error ul.messages__list li,
+div.messages ul.messages__list li,
+div.warning ul.messages__list li {
+  color: #fff !important;
+  background-image: none;
+}
+/* line 643, ../sass/navigation.scss */
+#content div.messages.error a,
+div.messages a,
+div.warning a {
+  color: #fff;
+}
+
+/* line 647, ../sass/navigation.scss */
+.section-search #content h2.search-404results,
+.section-search404 #content h2.search-404results {
+  color: #303030 !important;
+  font-weight: 400;
+  margin: 5px 0;
+  text-transform: capitalize !important;
+  width: 100%;
+  display: block;
+}
+
+/* line 656, ../sass/navigation.scss */
+.section-search404 #edit-basic > div > label[for="edit-keys"],
+.section-search #edit-basic > div > label[for="edit-keys"] {
+  clear: both;
+  font-weight: 700;
+  margin: 10px 0;
+  text-transform: capitalize;
+  color: #303030 !important;
+  font-size: 22px !important;
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 667, ../sass/navigation.scss */
+.section-search #edit-basic input#edit-submit,
+.section-search404 #edit-basic input#edit-submit {
+  color: #fff;
+  background: #d47d7d;
+  text-transform: capitalize;
+  width: 100px;
+  font-size: 22px;
+  margin: 0;
+  vertical-align: middle;
+  padding: 0 3px;
+}
+/* line 677, ../sass/navigation.scss */
+.section-search #edit-basic input#edit-submit:hover,
+.section-search404 #edit-basic input#edit-submit:hover {
+  background: #303030;
+}
+
+/* line 681, ../sass/navigation.scss */
+.section-search #edit-basic > div > input#edit-keys,
+.section-search404 #edit-basic > div > input#edit-keys {
+  border: 1px solid #303030 !important;
+  width: 77%;
+  width: calc(100% - 105px);
+  padding: 12px;
+  vertical-align: middle;
+}
+
+/* line 689, ../sass/navigation.scss */
+.section-search .search-results.node-results,
+.section-search404 .search-results.node-results {
+  padding: 0;
+}
+
+/*==============================node search page style css==========================================*/
+/* line 697, ../sass/navigation.scss */
+.section-search .search-form + h2 {
+  color: #303030;
+}
+/* line 700, ../sass/navigation.scss */
+.section-search #content ol.search-results,
+.section-search #content ul.search-results {
+  margin: 0 0 20px;
+  padding: 0;
+}
+/* line 704, ../sass/navigation.scss */
+.section-search #content ol.search-results li.search-result,
+.section-search #content ul.search-results li.search-result {
+  font-size: 16px;
+  line-height: 24px;
+  color: #303030;
+  font-weight: 400;
+  padding-bottom: 10px;
+  background-image: none;
+  border-bottom: 1px solid #303030;
+}
+/* line 712, ../sass/navigation.scss */
+.section-search #content ol.search-results li.search-result:last-child,
+.section-search #content ul.search-results li.search-result:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/*==============================node search page style css==========================================*/
+/*==========IPad and desktop [Also flud responsive] css start==========*/
+@media all and (min-width: 1025px) and (max-width: 1250px) {
+  /* line 724, ../sass/navigation.scss */
+  #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+  #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+    padding: 22px 0.896vw;
+    font-size: 1.376vw;
+  }
+
+  /* line 730, ../sass/navigation.scss */
+  #block-nice-menus-1 #nice-menu-1 > li > a {
+    padding: 22px 1.2vw;
+  }
+
+  /* line 734, ../sass/navigation.scss */
+  #block-menu-block-3 .menu li {
+    padding: 0 0.8vw;
+  }
+  /* line 736, ../sass/navigation.scss */
+  #block-menu-block-3 .menu li .nolink,
+  #block-menu-block-3 .menu li a {
+    font-size: 1.28vw;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+@media all and (max-width: 1024px) {
+  /* line 746, ../sass/navigation.scss */
+  #navigation {
+    height: 47px;
+  }
+
+  /* line 749, ../sass/navigation.scss */
+  #block-nice-menus-1 {
+    display: none !important;
+  }
+
+  /* line 754, ../sass/navigation.scss */
+  #block-menu-block-3 .menu > li {
+    float: none;
+    display: inline-block;
+    padding: 0 0.83333vw;
+    vertical-align: top;
+  }
+  /* line 759, ../sass/navigation.scss */
+  #block-menu-block-3 .menu > li .nolink,
+  #block-menu-block-3 .menu > li a {
+    font-size: 15px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+@media all and (min-width: 1025px) {
+  /* line 771, ../sass/navigation.scss */
+  #block-search-form {
+    height: 61px;
+  }
+  /* line 773, ../sass/navigation.scss */
+  #block-search-form .block-title {
+    right: 0;
+    top: -170px;
+    height: 61px;
+  }
+  /* line 775, ../sass/navigation.scss */
+  #block-search-form .block-title:hover:before {
+    color: #d17575;
+  }
+  /* line 782, ../sass/navigation.scss */
+  #block-search-form .block-title:before {
+    width: 50px;
+    right: 0;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  /* line 790, ../sass/navigation.scss */
+  #block-search-form #search-block-form {
+    top: -130px;
+    right: 0;
+  }
+
+  /* line 794, ../sass/navigation.scss */
+  #block-menu-block-3 {
+    padding: 20px 0 18px;
+  }
+
+  /* line 797, ../sass/navigation.scss */
+  #block-tb-megamenu-main-menu {
+    display: block !important;
+  }
+}
+@media all and (max-width: 767px) {
+  /* line 802, ../sass/navigation.scss */
+  #block-menu-block-3 {
+    padding-top: 25px;
+    background: url("../images/footer-bg-pattern-on-menu.jpg") no-repeat top center;
+    background-size: 100% 11px;
+  }
+  /* line 806, ../sass/navigation.scss */
+  #block-menu-block-3 .menu > li a {
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 3px;
+  }
+}
+@media all and (min-width: 1200px) {
+  /* line 810, ../sass/navigation.scss */
+  #block-tb-megamenu-main-menu {
+    display: block !important;
+  }
+  /* line 812, ../sass/navigation.scss */
+  #block-tb-megamenu-main-menu .tb-megamenu .row-fluid .span4 {
+    width: 33.3333% !important;
+  }
+}
+/*==========IPad and desktop [Also flud responsive] css start==========*/

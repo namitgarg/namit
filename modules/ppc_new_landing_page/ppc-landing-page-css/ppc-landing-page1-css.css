@@ -1,0 +1,792 @@
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   Normalize.css is intended to be used as an alternative to CSS resets.
+
+   It is suggested that you read through the normalize.css file and customise it
+   to meet the design requirements of a project rather including it as a "black
+   box". @see http://nicolasgallagher.com/about-normalize-css/
+
+   Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+         @see http://snook.ca/archives/html_and_css/no_css_reset/
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,300,700);
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* ============================== CSS related to landing page ===================================== */
+body{
+    width:100%;
+    font-size: 14px;
+    margin:0;
+    padding:0;
+}
+#ppc-pages-main-container {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    background: #FFF;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+}
+#ppc-pages-main-container *{
+    box-sizing: border-box;
+}
+
+/* ============================== CSS related to all parents ===================================== */
+#ppc-pages-top-header, #ppc-pages-top-banner-area, #ppc-pages-how-can-we-help, #ppc-pages-white-stradley, #ppc-pages-bottom-banner-area, #ppc-pages-reviews-area, #ppc-pages-footer-area {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+#ppc-pages-how-can-we-help, #ppc-pages-reviews-area {
+    background: #f7f7f7;
+}
+#ppc-pages-bottom-banner-area {
+    background-size: 100% auto;
+}
+.center {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+/* ============================== CSS related to ppc-pages-top-header ===================================== */
+#ppc-pages-top-header {
+    padding: 25px 0 25px 0px; /*temp edit mac*/
+    text-align:center;
+}
+#ppc-pages-top-bar-left-logo-image-container {
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+#ppc-pages-top-bar-right-address-container {
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-top: 4px; /*mac temp*/
+    text-align:right;
+}
+#ppc-pages-top-bar-right-address-container #ppc-pages-call-us {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px; /*mac temp*/
+    line-height: normal;
+    margin-right: 3px; /*mac temp*/
+    font-weight: 600;
+	margin-top:3px; /*mac temp*/
+}
+#ppc-pages-top-bar-right-address-container #ppc-pages-contact {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 30px; /*mac temp*/
+    line-height: normal;
+}
+#ppc-pages-top-bar-right-address-container #ppc-pages-contact-text {
+    font-size: 14px;
+    line-height: 24px;
+}
+#ppc-pages-top-bar-right-address-container #ppc-pages-contact-text:first-letter {
+    text-transform: uppercase;
+}
+/* ============================== CSS related to ppc-pages-top-banner-area ===================================== */
+#ppc-pages-top-banner-area .view-display-id-page {
+    width: 100%;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .slides img {
+    width: 100%;
+    height: auto;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    max-width: 1170px;
+    text-align: center;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan {
+    display: inline-block;
+    height: 102px;
+    margin-left: 40px;
+    max-width: 100%;
+    padding: 0 32px 0 28px;
+    position: relative;
+    vertical-align: top;
+    width: auto;    
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .text-slogan-before {
+    width: 0;
+    height: 0;
+    border-bottom: 102px solid #fd5032;
+    border-bottom: 102px solid rgba(253, 80, 50, 0.8);
+    border-left: 40px solid transparent;
+    position: absolute;
+    left: -40px;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-text {
+  font-size: 46px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-text.Large {
+  font-size: 46px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-text.Medium {
+  font-size: 44px;
+  line-height: 58px;
+  text-transform: uppercase;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-text.Small {
+  font-size: 42px;
+  line-height: 56px;
+  text-transform: uppercase;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-slogan{
+    font-size:26px;
+    line-height: normal;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-slogan.Large{
+    font-size:26px;
+    line-height: normal;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-slogan.Medium{
+    font-size:24px;
+    line-height: normal;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-slogan.Small{
+    font-size:22px;
+    line-height: normal;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .get-help a,#ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .get-help span{
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px 40px;
+    text-transform: capitalize;
+    vertical-align: top;
+    text-decoration: none;
+}
+#ppc-pages-top-banner-area .view-display-id-page .flexslider .flex-control-nav,#ppc-pages-top-banner-area .view-display-id-page .flexslider .flex-direction-nav{
+    display: none;
+}
+/* ============================== CSS related to ppc-pages-how-can-we-help ===================================== */
+#ppc-pages-how-can-we-help{
+    text-align: center;
+    margin-top:5px;
+    padding:48px 0;
+}
+#ppc-pages-how-can-we-help-form{
+    margin-top:30px;
+}
+#ppc-pages-how-can-we-help-form-title{
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 8px;
+}
+#ppc-pages-how-can-we-help-form-subtitle{
+    font-size: 22px;
+    line-height: 36px;
+}
+#ppc-pages-how-can-we-help-form-subtitle.Large{
+    font-size: 22px;
+    line-height: 36px;
+}
+#ppc-pages-how-can-we-help-form-subtitle.Medium{
+    font-size: 20px;
+    line-height: 34px;
+}
+#ppc-pages-how-can-we-help-form-subtitle.Small{
+    font-size: 18px;
+    line-height: 32px;
+}
+hr{
+    display: inline-block;
+    vertical-align: top;
+    width:186px;
+    height: 1px;
+    background: #e9e9e9;
+    margin-top:5px;
+    border:none;
+}
+#ppc-pages-how-can-we-help-form iframe{
+    height:255px;
+}
+/* ============================== CSS related to ppc-pages-white-stradley ===================================== */
+#ppc-pages-white-stradley{
+    padding:53px 0 15px;
+    text-align: center;
+}
+#ppc-pages-white-stradley-heading{
+    font-size: 32px;
+    line-height: 36px;
+}
+#ppc-pages-white-stradley .view-display-id-page{
+    width:100%;
+    margin-top:0px; /*edited temp by mac 8/14*/
+}
+#ppc-pages-white-stradley .view-display-id-page .views-row{
+    width:20%;
+    display: inline-block;
+    vertical-align: top;
+    margin:25px 2%;
+}
+#ppc-pages-white-stradley .icon-wrap{
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom:70px;
+}
+#ppc-pages-white-stradley .hexagon {
+    width: 100px;
+    height: 53px;
+    background: red;
+    position: relative;
+    margin-top:30px;
+}
+#ppc-pages-white-stradley .hexagon .fa{
+    line-height: 53px;
+}
+#ppc-pages-white-stradley .hexagon .icon-wrap-before{
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 30px solid red;
+}
+#ppc-pages-white-stradley .hexagon .icon-wrap-after {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 30px solid red;
+}
+#ppc-pages-white-stradley .square{
+    width:100px;
+    height:100px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+#ppc-pages-white-stradley .square .fa{
+    line-height: 100px;
+}
+#ppc-pages-white-stradley .circle{
+    width:107px;
+    height:107px;
+    margin-bottom: 40px;
+    border-radius: 107px;
+}
+#ppc-pages-white-stradley .circle .fa{
+    line-height: 107px;
+}
+.fa{
+    font-size: 42px !important;
+    color:#fff;
+}	
+#ppc-pages-white-stradley .choose-icon .choose-icon-title{
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+#ppc-pages-white-stradley .choose-icon .choose-icon-title.Large{
+    font-size: 24px;
+    line-height: 28px;
+}
+#ppc-pages-white-stradley .choose-icon .choose-icon-title.Medium{
+    font-size: 22px;
+    line-height: 26px;
+}
+#ppc-pages-white-stradley .choose-icon .choose-icon-title.Small{
+    font-size: 20px;
+    line-height: 24px;
+}
+#ppc-pages-white-stradley .choose-icon .choose-icon-desc{
+    font-size: 14px;
+    line-height: 20px;
+}
+#ppc-pages-white-stradley .choose-icon .choose-icon-desc.Large{
+    font-size: 14px;
+}
+#ppc-pages-white-stradley .choose-icon .choose-icon-desc.Medium{
+    font-size: 13px;
+}
+#ppc-pages-white-stradley .choose-icon .choose-icon-desc.Small{
+    font-size: 12px;
+}
+/* ============================== CSS related to ppc-pages-block-three-area ===================================== */
+#ppc-pages-block-three-area{
+    padding:20px 0 5px;
+}
+#ppc-pages-block-three-area p{
+    font-size: 14px;  
+    margin-bottom: 25px;
+}
+#ppc-pages-block-three-area h3{
+    margin-bottom: 5px;    
+}
+#ppc-pages-block-three-area ul{
+    padding-left: 42px;
+    margin-bottom: 25px;
+}
+/* ============================== CSS related to ppc-pages-bottom-banner-area ===================================== */
+#ppc-pages-bottom-banner-area{
+    margin-top:10px;
+    padding:45px 0 8px;   
+    text-align:center;
+    background-position: center bottom !important;
+}
+#ppc-pages-bottom-banner-title{
+    font-size: 32px;
+    line-height: 36px;
+}
+#ppc-pages-bottom-banner-sub-title{
+    font-size: 14px;
+    line-height: 24px;
+    margin: 8px 0 5px;
+}
+#ppc-pages-bottom-banner-text{
+    font-size: 14px;
+    line-height: 24px;
+    margin: 35px 0 25px;
+    text-align:left;
+    font-weight: 300;
+}
+#ppc-pages-bottom-banner-text.Large{
+    font-size: 14px;
+}
+#ppc-pages-bottom-banner-text.Medium{
+    font-size: 13px;
+}
+#ppc-pages-bottom-banner-text.Small{
+    font-size: 12px;
+}
+#ppc-pages-bottom-banner-bottom-text{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+}
+#ppc-pages-bottom-banner-bottom-text.Large{
+    font-size: 24px;
+    line-height: 24px;
+}
+#ppc-pages-bottom-banner-bottom-text.Medium{
+    font-size: 22px;
+    line-height: 22px;
+}
+#ppc-pages-bottom-banner-bottom-text.Small{
+    font-size: 20px;
+    line-height: 20px;
+}
+#ppc-pages-bottom-banner-signature{
+    font-size: 48px;
+    line-height: 54px;  
+    margin-top:85px;
+    text-align:left;
+    float:left;
+}
+#ppc-pages-bottom-banner-signature em{
+    font-size: 41px;
+    line-height: 45px;
+}
+#ppc-pages-bottom-banner-signature.Large{
+    font-size: 48px;
+    line-height: 54px;  
+}
+#ppc-pages-bottom-banner-signature.Large em{
+    font-size: 41px;
+    line-height: 45px;
+}
+#ppc-pages-bottom-banner-signature.Medium{
+    font-size: 46px;
+    line-height: 52px;  
+}
+#ppc-pages-bottom-banner-signature.Medium em{
+    font-size: 39px;
+    line-height: 43px;
+}
+#ppc-pages-bottom-banner-signature.Small{
+    font-size: 44px;
+    line-height: 50px;  
+}
+#ppc-pages-bottom-banner-signature.Small em{
+    font-size: 37px;
+    line-height: 40px;
+}
+#ppc-pages-bottom-social-share{
+    display: inline-block;
+    vertical-align: top;
+    /*margin-top:13%;   temp edit by mac*/
+    float:right;
+}
+#ppc-pages-bottom-social-share .addthis_sharing_toolbox a{
+    border-radius: 2px;
+}
+#ppc-pages-bottom-readmore{
+    margin-top: 10px;
+    text-align: right;
+}
+#ppc-pages-bottom-readmore a{
+    color:#fff;    
+    font-size:14px;
+    font-style:italic;
+}
+#ppc-pages-bottom-readmore a.Large{ 
+    font-size:14px;
+}
+#ppc-pages-bottom-readmore a.Medium{ 
+    font-size:13px;
+}
+#ppc-pages-bottom-readmore a.Small{ 
+    font-size:12px;
+}
+#ppc-pages-bottom-readmore a:hover{
+    text-decoration: none;
+}
+#ppc-pages-bottom-social-share .addthis_sharing_toolbox{
+    display: inline-block;
+    vertical-align: middle;    
+}
+#ppc-pages-bottom-social-share .share{
+    display: inline-block;
+    vertical-align: middle;
+    color:#fff;
+}
+/* ============================== CSS related to ppc-pages-reviews-area ===================================== */
+#ppc-pages-reviews-area{
+    padding:45px 0 55px; 
+    text-align: center;
+}
+#ppc-pages-reviews-area .ppc-reviews-text{
+    font-size: 32px;
+    line-height: normal;
+    padding-bottom: 8px;    
+}
+#ppc-pages-reviews-area .view-display-id-page{
+    width:100%;
+    margin-top:10px;
+}
+#ppc-pages-reviews-area .view-display-id-page .flexslider {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+#ppc-pages-reviews-area .view-display-id-page .flexslider .slides img{
+    width:auto;
+    display:inline-block;
+    margin-top:35px;
+}
+#ppc-pages-reviews-area .view-display-id-page .flexslider a{
+    display: block !important;
+    width:34px;
+    height:80px;
+    opacity: 1;
+    top:48%;
+    background: url(../images/arrow-ppc.png) no-repeat;
+}
+#ppc-pages-reviews-area .view-display-id-page .flexslider a.flex-prev{
+    background-position: 0 0;
+    left:0 !important;
+}
+#ppc-pages-reviews-area .view-display-id-page .flexslider a.flex-next{
+    background-position: -34px 0;
+    right:0 !important;
+}
+#ppc-pages-reviews-area .view-display-id-page .flexslider .reviewer-name{
+    font-size:18px;
+    line-height: 28px;
+    font-style: italic;
+    margin-top:20px;
+}
+#ppc-pages-reviews-area .view-display-id-page .flexslider .flex-control-nav{
+    display: none;
+}
+
+/*mac temp
+#ppc-pages-reviews-area .view-display-id-page .reviews-desc{
+    font-size: 14px;
+    line-height: 24px;
+    margin:40px 0;
+    position: relative;
+    width:80%;
+    margin:0 10%;
+    padding-top:90px;
+}
+
+*/
+
+#ppc-pages-reviews-area .view-display-id-page .reviews-desc.Large{
+    font-size: 14px;
+}
+#ppc-pages-reviews-area .view-display-id-page .reviews-desc.Medium{
+    font-size: 13px;
+}
+#ppc-pages-reviews-area .view-display-id-page .reviews-desc.Small{
+    font-size: 12px;
+}
+
+/*mac temp
+#ppc-pages-reviews-area .view-display-id-page .reviews-desc:before{
+    position: absolute;
+    top:0;
+    left:0; 
+    right:0;
+    content: "";
+    width:44px;
+    height:36px;
+    background: url(../images/dublle.png) no-repeat;
+    margin:auto;
+}
+*/
+
+/* ============================== CSS related to ppc-pages-footer-area ===================================== */
+#ppc-pages-footer-area{
+    margin: 10px 0;
+    font-size:11px;
+    line-height: 16px;
+    text-align:center;
+}
+#ppc-pages-how-can-we-help-form-title.Large,#ppc-pages-white-stradley-heading.Large,#ppc-pages-bottom-banner-title.Large,#ppc-pages-reviews-area .ppc-reviews-text.Large{
+    font-size: 32px;
+    line-height:36px;        
+}
+#ppc-pages-how-can-we-help-form-title.Medium,#ppc-pages-white-stradley-heading.Medium,#ppc-pages-bottom-banner-title.Medium,#ppc-pages-reviews-area .ppc-reviews-text.Medium{
+    font-size: 30px;
+    line-height:34px;        
+}  
+#ppc-pages-how-can-we-help-form-title.Small,#ppc-pages-white-stradley-heading.Small,#ppc-pages-bottom-banner-title.Small,#ppc-pages-reviews-area .ppc-reviews-text.Small{
+    font-size: 28px;
+    line-height:32px;        
+}  
+.view-ppc-reviews .flexslider .slides > li{display: block;}
+@media all and (max-width:1360px){
+    #ppc-pages-bottom-banner-area{
+        background-size: auto !important;
+    }
+}
+@media all and (max-width:1170px){
+    .center{
+        padding:0 15px;
+    }
+}
+@media all and (max-width:1024px){
+    #ppc-pages-white-stradley .view-display-id-page .views-row {
+        display: inline-block;
+        vertical-align: top;
+        width: 29%;
+    }  
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-text{
+        font-size: 42px;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-text.Large {
+      font-size: 42px;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-text.Medium {
+      font-size: 40px;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-text.Small {
+      font-size: 36px;;
+    }    
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-slogan{
+        font-size: 23px;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-slogan.Large{
+        font-size:23px;
+        line-height: normal;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-slogan.Medium{
+        font-size:20px;
+        line-height: normal;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .banner-slogan.Small{
+        font-size:18px;
+        line-height: normal;
+    }    
+}
+@media all and (max-width:900px){
+    #ppc-pages-white-stradley .view-display-id-page .views-row {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+    }    
+}
+@media all and (max-width:767px){
+    #ppc-pages-white-stradley .view-display-id-page .views-row {
+        display: inline-block;
+        margin: 25px 0;
+        vertical-align: top;
+        width: 100%;
+    }    
+    #ppc-pages-how-can-we-help-form iframe{
+        height:382px;
+    }
+    #ppc-pages-main-container{
+        text-align: center;
+    }
+    #ppc-pages-top-bar-left-logo-image-container{
+        float:none;
+    }
+    #ppc-pages-top-bar-right-address-container{
+        float:left;
+        margin:15px 0 0;
+        text-align: center;
+        width: 100%;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area{
+        position: relative;
+        bottom:0;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan .text-slogan-before{
+        display: none;
+    }
+    #ppc-pages-top-banner-area .view-display-id-page .flexslider .banner-text-area .text-slogan{
+        max-width: 100%;
+        padding: 8px 15px;
+        margin:0;
+        height:auto;
+        width:100%;
+    }
+    #ppc-pages-how-can-we-help-form-title.Large,#ppc-pages-white-stradley-heading.Large,#ppc-pages-bottom-banner-title.Large,#ppc-pages-reviews-area .ppc-reviews-text.Large{
+        font-size: 30px;
+        line-height:34px;
+    }   
+    #ppc-pages-how-can-we-help-form-subtitle{
+        font-size: 20px;
+    }
+    #ppc-pages-how-can-we-help-form-subtitle.Large{
+        font-size: 20px;
+    }
+    #ppc-pages-how-can-we-help-form-subtitle.Medium{
+        font-size: 18px;
+    }
+    #ppc-pages-how-can-we-help-form-subtitle.Small{
+        font-size: 16px;
+    }    
+    #ppc-pages-bottom-banner-area{
+        padding: 25px 0 10px;
+    }
+    #ppc-pages-bottom-banner-signature{
+        margin-top:25px;
+    }
+    #ppc-pages-bottom-banner-signature{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    #ppc-pages-bottom-banner-signature em{
+        font-size: 17px;
+        line-height: 20px;
+    } 
+    #ppc-pages-bottom-banner-signature.Large{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    #ppc-pages-bottom-banner-signature.Large em{
+        font-size: 17px;
+        line-height: 20px;
+    }    
+    #ppc-pages-bottom-banner-signature.Medium{
+        font-size: 18px;
+        line-height: 22px;  
+    }
+    #ppc-pages-bottom-banner-signature.Medium em{
+        font-size: 15px;
+        line-height: 16px;
+    }
+    #ppc-pages-bottom-banner-signature.Small{
+        font-size: 16px;
+        line-height: 18px;  
+    }
+    #ppc-pages-bottom-banner-signature.Small em{
+        font-size: 13px;
+        line-height: 15px;
+    }    
+    #ppc-pages-reviews-area .view-display-id-page .reviews-desc{
+        width:70%;
+        margin:0 15%;
+    }
+    #ppc-pages-bottom-social-share{
+        margin-top:40px;
+    }
+}
+@media all and (max-width:600px){
+    #ppc-pages-bottom-banner-text{
+        margin:15px 0;
+    }
+    #ppc-pages-bottom-banner-bottom-text{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #ppc-pages-bottom-banner-bottom-text.Large{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #ppc-pages-bottom-banner-bottom-text.Medium{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    #ppc-pages-bottom-banner-bottom-text.Small{
+        font-size: 14px;
+        line-height: 20px;
+    }    
+    #ppc-pages-bottom-readmore{
+        margin-top:5px;
+    }
+    #ppc-pages-bottom-banner-signature{
+        margin-top:10px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    #ppc-pages-bottom-social-share {
+        margin-top: 22px;
+        float:left;
+        width:100%;
+    }    
+}

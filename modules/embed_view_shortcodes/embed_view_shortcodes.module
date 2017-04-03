@@ -1,0 +1,142 @@
+<?php
+
+/**
+ * @file
+ * Provides Embedd View and Block Shortcodes.
+ */
+
+/**
+ * Implements hook_shortcode_info().
+ *
+ */
+function embed_view_shortcodes_shortcode_info() {
+
+  $shortcodes['view'] = array(
+    'title' => t('Embed View Data'),
+    'description' => t('A shortcode to print view data.'),
+    'process callback' => 'embed_view_shortcodes_view',
+    'tips callback' => 'embed_view_shortcodes_view_tip'
+  );
+  $shortcodes['block'] = array(
+    'title' => t('Embed Block Data'),
+    'description' => t('A shortcode to print block data.'),
+    'process callback' => 'embed_view_shortcodes_block',
+    'tips callback' => 'embed_view_shortcodes_block_tip'
+  );
+
+  return $shortcodes;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function embed_view_shortcodes_theme() {
+  return array(
+    'shortcode_view' => array(
+      'variables' => array('name' => '', 'display' => '', 'arg' => ''),
+    ),
+    'shortcode_block' => array(
+      'variables' => array('id' => ''),
+    ),
+  );
+}
+
+/**
+ * Provides process callback for Shortcode view.
+ */
+function embed_view_shortcodes_view($attrs) {
+  $attrs = shortcode_attrs(array(
+    'name' => '',
+    'display' => '',
+    'arg' => ''
+      ), $attrs
+  );
+
+  return theme('shortcode_view', array('name' => $attrs['name'], 'display' => $attrs['display'], 'arg' => $attrs['arg']));
+}
+
+/**
+ * Provides process callback for Shortcode block.
+ */
+function embed_view_shortcodes_block($attrs) {
+  $attrs = shortcode_attrs(array(
+    'id' => '',
+      ), $attrs
+  );
+
+  return theme('shortcode_block', array('id' => $attrs['id']));
+}
+
+/**
+ * Provides theme for view Shortcode.
+ */
+function theme_shortcode_view($vars) {
+  if (!empty($vars['name']) && empty($vars['display']) && empty($vars['arg'])) {
+    $data = views_embed_view($vars['name'], 'default');
+    if (!empty($data)) {
+      return $data;
+    }
+  }
+  elseif (!empty($vars['name']) && !empty($vars['display']) && empty($vars['arg'])) {
+    $data = views_embed_view($vars['name'], $vars['display']);
+    if (!empty($data)) {
+      return $data;
+    }
+  }
+  elseif (!empty($vars['name']) && !empty($vars['display']) && !empty($vars['arg'])) {
+    $data = views_embed_view($vars['name'], $vars['display'], $vars['arg']);
+    if (!empty($data)) {
+      return $data;
+    }
+  }
+  elseif (!empty($vars['name']) && !empty($vars['arg'])) {
+    $data = views_embed_view($vars['name'], 'default', $vars['arg']);
+    if (!empty($data)) {
+      return $data;
+    }
+  }
+}
+
+/**
+ * Provides theme for block Shortcode.
+ */
+function theme_shortcode_block($vars) {
+  if (!empty($vars['id'])) {
+    $block = module_invoke('block', 'block_view', $vars['id']);
+    if (!empty($block)) {
+      return $block['content'];
+    }
+  }
+}
+
+/**
+ * Provides tip callback for View Shortcode.
+ */
+function embed_view_shortcodes_view_tip($format, $long) {
+  $output = array();
+  $output[] = '<p><strong>' . t('[view name="view name" display="display name" arg="argument" ][/view]') . '</strong> ';
+  if ($long) {
+    $output[] = t('Text that is displayed as a View Data.') . '</p>';
+  }
+  else {
+    $output[] = t('Text that display view data.') . '</p>';
+  }
+
+  return implode(' ', $output);
+}
+
+/**
+ * Provides tip callback for Block Shortcode.
+ */
+function embed_view_shortcodes_block_tip($format, $long) {
+  $output = array();
+  $output[] = '<p><strong>' . t('[block id="block id"][/block]') . '</strong> ';
+  if ($long) {
+    $output[] = t('Text that is displayed as a Block Data.') . '</p>';
+  }
+  else {
+    $output[] = t('Text that display Block data.') . '</p>';
+  }
+
+  return implode(' ', $output);
+}

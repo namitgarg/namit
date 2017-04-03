@@ -1,0 +1,4 @@
+name = Get Meta Tags
+description = A module to get all meta details of any website   
+core = 7.x
+package = Metatags

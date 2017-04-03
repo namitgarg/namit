@@ -1,0 +1,3 @@
+name = page1report
+description = This module has all the custom drush commands made for page1 Solutions
+core = 7.x

@@ -1,0 +1,23 @@
+<?php
+
+
+
+/**
+ * Implements hook_init().
+ */
+function add_js_init() {
+    drupal_add_js("
+jQuery(function(){
+//    jQuery('section').each(function(){});
+//    containerHeight = jQuery('.ui-accordion-content').height();
+//    jQuery('.ui-accordion-content').each(function(){
+//       $(this).height();
+//    });
+//    jQuery('.ui-accordion-content').css({'height':'auto', 'padding-top':'0px !important'});
+jQuery(function(){
+jQuery('.ui-accordion-content').css({'height':'auto', 'padding':'0.625em 0.4em !important'});
+});
+});
+", array('type' => 'inline', 'scope' => JS_DEFAULT));
+}
+

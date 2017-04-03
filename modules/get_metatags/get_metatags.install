@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * This file is used to create Get Metatags table on database .
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function get_metatags_schema() {
+  $schema['get_metatags'] = array(
+    'description' => 'Table For get metatags module',
+    'fields' => array(
+      'serial_no' => array(
+        'description' => 'Serial no',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'site_url' => array(
+        'description' => 'site url',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ),
+      'h1' => array(
+        'description' => 'h1 tag of page',
+        'type' => 'blob',
+        'not null' => FALSE,
+      ),
+      'page_title' => array(
+        'description' => 'Page title',
+        'type' => 'blob',
+        'not null' => FALSE,
+      ),
+      'description' => array(
+        'description' => 'page description',
+        'type' => 'blob',
+        'not null' => FALSE,
+      ),
+      'keywords' => array(
+        'description' => 'Page keywords',
+        'type' => 'blob',
+        'not null' => FALSE,
+      ),
+      'fid' => array(
+        'description' => 'File id',
+        'type' => 'int',
+        'size' => 'normal',
+      ),
+    ),
+    'primary key' => array('serial_no'),
+  );
+  return $schema;
+}

@@ -1,0 +1,35 @@
+<?php
+function juvastore_h2_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'system_site_information_settings') {
+   
+    $form['juva_h2'] = array(
+      '#type' => 'textarea',
+      '#title' => t('H2 tag for Juva Store'),
+      '#default_value' => variable_get('juva_h2', ''),
+      '#maxlength' => 255, 
+      '#collapsible' => TRUE, 
+      '#collapsed' => TRUE, 
+      '#description' => t('Sets site-wide &#60h2&#62;  &#60;?php print $site_h2 ?&#62;'),
+    );
+  }
+}
+
+function juvastore_h2_preprocess(&$variables) {
+  $variables['juva_h2'] = '<h2>' .variable_get('juva_h2', ''). '</h2>';
+}
+
+function juvastore_list($type)
+{
+
+$juva_type="product";
+$juva_arg_list = array("products","concern-type","product-type","cart","concern");
+$arg=arg(0);
+if(in_array($arg,$juva_arg_list)||($type==$juva_type))
+{
+  return TRUE;
+}
+else
+{   
+return FALSE;
+}
+}

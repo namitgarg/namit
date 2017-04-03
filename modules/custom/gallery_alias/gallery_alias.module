@@ -1,0 +1,101 @@
+<?php
+
+/**
+ * @file 
+ * Main module file for Module.
+ */
+
+/**
+ * Defines Menu for the Form.
+ * 
+ * @return array $items
+ * Menu item for form.
+ */
+function gallery_alias_menu() {
+
+  $items['admin/before-after-setting/alias'] = array(
+    'title callback' => 'Add URl Alias',
+    'title' => 'Gallery Alias',
+    'description' => 'Add alias to before-after gallery terms with special characters',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gallery_alias_form'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer users'),
+    'file' => 'gallery_alias_admin.inc',
+    'type' => MENU_LOCAL_TASK,
+  );
+  return $items;
+}
+/**
+ * Query to get  2 Variables Store in Variable Table.
+ * 
+ * @return array $dbvalue
+ *  Stores the variables.
+ */
+function gallery_alias_db() {
+  $query = db_select('variable', 'vb')
+      ->fields('vb', array('name', 'value'))
+      ->condition('name', array('alias_gallery_name', 'alias_gallery_prefix'), 'IN');
+  $results = $query->execute()->fetchAll();
+  foreach ($results as $values) {
+    $dbvalue[] = unserialize($values->value);
+  }
+  return ($dbvalue);
+}
+/**
+ * Creates URl Alias for Term names that have special characters.
+ */
+function gallery_alias_taxonomy_term_presave($term) {
+  $intial_term_name = $term->name;
+  $intial_term_name = str_replace(' ', '-', $intial_term_name);
+  $intial_term_name = strtolower(($intial_term_name));
+  $term_name = $term->name;
+  $vocab_name = $term->vocabulary_machine_name;
+  $variable_alias = gallery_alias_db();
+  $db_mname = $variable_alias[0];
+  $db_prefix = $variable_alias[1];
+  if ($vocab_name == $db_mname) {
+    if (!empty($term->original->name)) {
+      $previous_term_name = $term->original->name;
+      $previous_term_name = str_replace(" ", "-", $previous_term_name);
+      $previous_term_name = strtolower($previous_term_name);
+      $conditions = array('source' => $db_prefix . '/' . $previous_term_name);
+      $criteria = path_load($conditions)['pid'];
+      $criteria = array('pid' => $criteria);
+      path_delete($criteria);
+    }
+    if (preg_match('![^a-z0-9]!i', $term_name)) {
+      $term_name = preg_replace('/[^a-zA-Z0-9\']/', '-', $term_name);
+      while (preg_match('/--/', $term_name)) {
+        $term_name = preg_replace('/--/', '-', $term_name);
+      }
+      $term_name = rtrim($term_name, "-");
+      $term_name = strtolower($term_name);
+      $path = array('source' => $db_prefix . '/' . $intial_term_name, 'alias' => 'before-after/' . $term_name);
+      path_save($path);
+    }
+  }
+}
+
+/**
+ * Deletes The Path when a term is deleted.
+ */
+function gallery_alias_taxonomy_term_delete($term) {
+  $vocab_name = $term->vocabulary_machine_name;
+  $variable_alias = gallery_alias_db();
+  $db_mname = $variable_alias[0];
+  $db_prefix = $variable_alias[1];
+  if ($vocab_name == $db_mname) {
+    $term_name = $term->name;
+    if (preg_match('![^a-z0-9]!i', $term_name)) {
+      $term_name = str_replace(' ', '-', $term_name);
+      $term_name = rtrim($term_name, "-");
+      $term_name = strtolower($term_name);
+      $actions = $db_prefix . '/' . $term_name;
+      $conditions = array('source' => $db_prefix . '/' . $term_name);
+      $criteria = path_load($conditions)['pid'];
+      $criteria = array('pid' => $criteria);
+      path_delete($criteria);
+    }
+  }
+}

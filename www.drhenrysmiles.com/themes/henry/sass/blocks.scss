@@ -1,0 +1,1905 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+@import "base";
+/*=====================  TOP HEADER CSS GOES HERE   =======================*/
+#header{
+    width: 100%;
+    background: #090d12;
+    display: inline-block;
+    vertical-align: top;
+}
+.top-header-outer{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: #ffffff;    
+    padding: 10px;
+    .region-header-top{
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+}
+#block-block-4{ margin-bottom: 35px;text-align:center;
+    .social-text{display: inline-block; margin-right: 5px; line-height: 18px;   vertical-align: top;}
+    #atstbx{display: inline-block !important;}
+}
+#block-block-5{
+    font-size: 18px;
+    color: #303030;
+    font-weight: 700;
+    float: left;    
+    .address{
+        display: none;
+    }
+    .phone-top{
+        a{
+            text-decoration: none;
+            color: #303030;
+        }
+        &:before{
+            content: '\f041';font-family: 'FontAwesome';color: #303030;display: inline-block;padding: 0 14px 0 0;
+        }
+    }
+}
+
+  /*================== Search Icon Css Starts Here ======================*/
+#block-block-31 {float:right; margin:0px; position:absolute; right:15px; top:15px;z-index:9;cursor: pointer;display:none;
+.link:before {    
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height:15px;
+    width:15px;
+    padding: 0;
+    transition:all 0.5s linear 0s;
+   content: "\f002";font-family: 'FontAwesome'; font-size: 17px; color: #303030;
+}
+&:hover{.link:before{color: #4891c6;}}
+}
+.search-form input{
+    margin-top: 5px;
+}
+#search-form{
+    #edit-basic{
+        label{display: block !important;}
+        input[type="text"]{max-width: 500px;}
+    }
+}
+
+
+/* block-search-form  css **/
+#block-search-form{
+  float:right; 
+  position: absolute;
+  top: 60px;
+  right:9px;
+  z-index: 9999999;
+  width:230px;
+  height: 44px;
+  background: #4891c6;
+  border: none;
+  box-sizing:border-box;   
+  line-height:0;
+  padding:7px;
+  display:none;
+  #search-block-form{
+    background: #4891c6;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    width:196px;
+    height:25px;
+    box-sizing: border-box; 
+    position:relative;
+    .form-item{
+      margin:0;
+    }
+    .form-text{
+      width:110%;
+      border:none;
+      background: #fafafa;
+      border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+      font-size: 12px;
+      color:#303030;      
+      font-weight: 400;
+      padding: 2px 32px 4px 10px;
+      box-sizing: border-box;
+      line-height: 25px;
+    }
+    .form-submit{
+      position: absolute;
+      border:none;
+      background: none;
+      top:0;
+      right:-10px;
+      font-size: 0;
+      width:22px;
+      height:25px;
+      background: url(../images/submit.png) no-repeat 8px 9px;
+      cursor:pointer;
+    }
+    &:before{
+      border-bottom: 18px solid #4891c6;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      content: "";
+      height: 0;
+      right: -17px;
+      position: absolute;
+      top: -18px;
+      width: 0;  
+    }
+/*    &:after{
+      border-bottom: 8px solid #555555;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      content: "";
+      height: 0;
+      left: 182px;
+      position: absolute;
+      top: -15px;
+      width: 0;    
+      z-index: 9;
+    }     */
+  }
+} 
+/*=====================  BANNER CSS GOES HERE   ==================*/
+.banner-outer{
+   width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: #090d12; 
+}
+.banner-inner{
+/*    max-width: 1298px;
+    margin: 0 auto;
+    position: relative;*/
+    padding: 0 10px;
+}
+.logo-outer{
+    max-width: 1298px;
+    margin: 0 auto;
+    position: relative;
+}
+ .not-front{
+        .logo-inner{
+            .call-us{display: none;}
+        }
+    }
+    .logo-inner{.call-us{display: none;}}
+#logo{
+    display: block;
+    vertical-align: top;
+    margin: 45px 0 30px;
+    text-align: center;
+}
+#block-views-mast-cycle-block{
+    display: none;
+}
+#block-views-mast-cycle-block, #block-views-mast-cycle-block-1, #block-views-mast-cycle-block-3, #block-views-mast-cycle-block-2{
+/*    max-width: 1298px;
+    margin: 0 auto;*/
+    .view-mast-cycle{
+        &.view-display-id-block, &.view-display-id-block_1, &.view-display-id-block_2, &.view-display-id-block_3{width: 100%;}
+        .flexslider{
+            border: none;
+            box-shadow: none;
+            margin: 0;
+            .slides{
+                li{
+                    background:#090d12;
+                    .views-field-field-cycle-image{
+                        background:#090d12;
+                        position:relative;
+                        max-width:1298px;
+                        margin:0 auto;
+                        width:100%;
+                        img{
+                            float: right;
+                            width: auto;
+                        }
+                    }
+/*                    .views-field-field-internal-banner-number{
+                        max-width: 1100px;
+                        margin: 0 auto;
+                        display:none;
+                        position:relative;
+                        .field-content{
+                            position: absolute;
+                            bottom: 20px;
+                            left: 11%;
+                            color: #fff;
+                            font-size: 20px;
+                            z-index: 9;
+                        }
+                    }*/
+                    .views-field-nothing, .views-field-body{
+                        width: 100%;
+                        position: absolute;
+                        bottom:20px;
+                        .banner-text{
+                            max-width: 1280px;
+                            margin: 0 auto;
+                            position:relative;
+                            .banner-tagline{
+                                width: 100%;
+                                display: inline-block;
+                                vertical-align: top;
+                                padding: 3vw 10px 4vw;
+                                text-align: center;
+                                color: #ffffff;
+                                font-size: 40px;
+                                line-height: 50px;
+                                font-family: 'Times New Roman';
+                                border: 2px solid #ffffff;
+                                text-transform: uppercase;
+                            }
+                            .banner-btn{
+                                width: 100%;
+                                display: block;
+                                margin: -25px auto 0;
+                                text-align: center;
+                                a{
+                                    max-width: 264px;
+                                    width: 100%;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                    line-height: 51px;
+                                    background: #4891c6;
+                                    font-size: 24px;
+                                    color: #ffffff;
+                                    text-decoration: none;
+                                    display:inline-block;
+                                    &:hover{
+                                        color: #4891c6;
+                                        background: #ffffff;
+                                    }
+                                }
+                            }
+                            .actual-patient{
+                                bottom: -15px;
+                                color: #fff;
+                                font-size: 13px;
+                                position: absolute;
+                                right: 0;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#block-views-mast-cycle-block-1{
+    .view-mast-cycle{
+        .flexslider{
+            .slides{
+                li{
+                    .views-field-field-cycle-image{
+                        img{
+                        }
+                    }
+                    .views-field-body{
+                        width: 100%;
+                        position: absolute;
+                        bottom:10px;
+                        .banner-text{
+                            .banner-tagline{
+                                padding: 10px 5px 30px;
+                                font-size: 26px;
+                                line-height: 30px;
+                                border: 1px solid #ffffff;
+                            }
+                            .banner-btn{
+                                margin: -20px auto 0;
+                                a{
+                                    max-width: 202px;
+                                    line-height: 39px;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*=====================  INTERNAL CSS GOES HERE   ==================*/
+#block-views-mast-cycle-block-3, #block-views-mast-cycle-block-2{
+    display: none;
+    .view-mast-cycle{
+        .flexslider{
+            .slides{
+                li{
+                    .views-field-body{
+                        width: 100%;
+                        position: absolute;
+                        bottom:10px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*=====================  CTAs CSS GOES HERE   ==================*/
+.not-front{
+    .homepage-cta{
+        display: none;
+    }  
+}
+.homepage-cta{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: #303030;
+    padding: 45px 10px;
+    .region-homepage-cta{
+        max-width: 1298px;
+        margin: 0 auto;
+    }
+}
+#block-views-cta-homepage-block{
+    .view-cta-homepage{text-align:center;max-width:780px;margin:0 auto;
+        &.view-display-id-block{width: 100%;}
+        .views-row{
+            width: 100%;
+            max-width: 100%;
+            margin: 10px auto 0;
+            text-align: center;
+            background: #4891c6;            
+            float:none;
+            display:inline-block;
+            vertical-align:top;
+            &:first-child{margin: 0 auto 0;}
+            .views-field-nothing{
+                width:100%;
+                a{                    
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    width:100%;
+                    display:inline-block;
+                    vertical-align:middle;
+                    padding:20px 0;
+                    &:hover{background: #ffffff;color: #4891c6;}
+                }
+            }
+        }
+    }
+}
+/*==================== 4 THINGS CSS GOES HERE  ======================*/
+.not-front{
+    .things{
+        display: none;
+    } 
+}
+.things{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: #303030;
+    padding: 35px 10px 65px;
+    .region-things{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+#block-views-4-things-block-1{
+   .block-title{
+        padding: 0 0 15px;
+        margin: 0;
+        font-size: 26px;
+        color: #ffffff;
+        line-height: normal;
+        margin: 0 auto;
+        max-width: 231px;
+        text-align: center;
+   }
+   .view-display-id-block_1{
+       width: 100%;
+   }
+   .slick-wrapper{
+        .slick__slider{margin-bottom: 0px;}
+        #slick-views-4-things-2{
+            .slick-list{
+                .slick-track{
+                    padding-top:7px;
+                    .slick__slide{
+                        .slide__content{
+                            background: url(../images/square-textture.jpg) no-repeat;
+                            background-size: 100% 100%;
+                            position: relative;
+                            padding: 0 10px 20px;
+                            color: #303030;
+                            text-align:center;
+                            max-width:250px;
+                            margin:0 auto;
+                            .views-field-field-thing-number{ 
+                                position:absolute;
+                                top:-7px;
+                                left:20px;
+                                .field-content{
+                                    background: #4891c6;
+                                    width: 65px;
+                                    font-size: 49px;
+                                    line-height: 49px;
+                                    color: #ffffff;
+                                    text-align: center;
+                                    padding: 35px 0 12px;
+                                    box-shadow: 0 4px 6px 0px #b9b9b7;
+                                }
+                            }
+                            .views-field-title{
+                                padding: 150px 0 20px;
+                                text-align: center;
+                                font-size: 19px; 
+                                max-width: 140px;
+                                width: 100%;
+                                margin: 0 auto;
+                                font-weight: 700;
+                            }
+                            .views-field-body{
+                                font-size: 18px;
+                            }
+                        }
+                    }         
+                }                               
+            }
+            .slick__arrow{
+                .slick-prev{
+                    left:-9px;
+                    &:before{
+                        content: '\f104' !important;font-family: 'FontAwesome';color: #fff;font-size: 55px;
+                    }                    
+                }
+                .slick-next{
+                    right:-9px;
+                    &:before{
+                       content: '\f105' !important;font-family: 'FontAwesome';color: #fff;font-size: 55px; 
+                    }
+                }
+            }
+        }
+    }
+}
+#block-views-4-things-block{
+    display:none;
+    .block-title{
+        padding: 0 0 15px;
+        margin: 0;
+        font-size: 26px;
+        color: #ffffff;
+        line-height: normal;
+        margin: 0 auto;
+        max-width: 231px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .view-display-id-block{
+        width: 100%;
+    }
+    .slick-wrapper{
+        .slick__slider{margin-bottom: 0px;}
+        #slick-views-4-things-1{
+            .slick-list{
+                overflow:inherit !important;
+                .slick-track{
+                    width: 100% !important;
+                    .slick__slide{
+                        .slide__content{
+                            background: url(../images/square-textture.jpg) no-repeat;
+                            background-size: 100% 100%;
+                            position: relative;
+                            padding: 0 10px 20px;
+                            color: #303030;
+                            text-align:center;
+                            .views-field-field-thing-number{ 
+                                position:absolute;
+                                top:-7px;
+                                left:20px;
+                                .field-content{
+                                    background: #4891c6;
+                                    width: 65px;
+                                    font-size: 49px;
+                                    line-height: 49px;
+                                    color: #ffffff;
+                                    text-align: center;
+                                    padding: 35px 0 12px;
+                                    box-shadow: 0 4px 6px 0px #b9b9b7;
+                                }
+                            }
+                            .views-field-title{
+                                padding: 150px 0 20px;
+                                text-align: center;
+                                font-size: 19px; 
+                                max-width: 140px;
+                                width: 100%;
+                                margin: 0 auto;
+                                font-weight: 700;
+                            }
+                            .views-field-body{
+                                font-size: 18px;
+                            }
+                        }
+                    }         
+                }                               
+            }
+        }
+    }
+}
+
+/*==================== REVIEW CSS GOES HERE  ======================*/
+.reviews-home{
+ width: 100%;
+ display: inline-block;
+ vertical-align: top;
+ background: url(../images/review-bg-mobile.jpg) no-repeat;
+ background-size: 100% 100%;
+ padding: 45px 12px 35px;
+ .region-reviews-home{
+     max-width: 1298px;
+     margin: 0 auto;
+ }
+}
+#block-views-testimonials-block-1{
+    h2.block-title{
+        padding: 0 0 15px;
+        margin: 0;
+        font-size: 26px;
+        color: #ffffff;
+        line-height: normal;
+        margin: 0 auto;
+        max-width: 231px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .view-testimonials{
+        &.view-display-id-block_1{width: 100%;}
+        .views-row{
+            .views-field-nothing{
+                .review-main{
+                    width: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 52px 18px 65px;
+                    border: 1px solid #ffffff;
+                    color: #ffffff;
+                    font-size: 18px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-style: italic;
+                }
+            }            
+        }
+        .view-footer{
+            width:100%;
+            display: inline-block;
+            vertical-align: top;
+            text-align:center;
+            margin-top:-20px;
+            a{
+                max-width: 202px;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 39px;
+                background: #4891c6;
+                font-size: 18px;
+                color: #ffffff;
+                text-decoration: none;
+                display:inline-block;
+                &:hover{
+                    color: #4891c6;
+                    background: #ffffff;
+                }
+            }
+        }
+    }
+}
+/*==================== ASSOCIATION LOGOs CSS GOES HERE  ======================*/
+.region-footer-logo{
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    padding:35px 10px;
+}
+#block-views-association-logos-block{
+    max-width: 1298px;
+    margin: 0 auto;    
+    .view-display-id-block{
+        width: 100%;
+        max-width:400px;
+        margin:0 auto;
+        .views-row{
+          display: inline-block;
+          float: none;
+          padding: 0 0 10px;
+          text-align: center;
+          vertical-align: top;
+          width: 48%;
+          &.views-row-5, &.views-row-6, &.views-row-7{width: 100%;.views-field-field-association-logo-image{img{padding: 0}}}
+            .views-field-field-association-logo-image{
+                width:100%;
+                text-align:center;
+                .field-content{
+                    img{
+                        text-align: center;
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*==================== SIDEBAR CSS GOES HERE  ======================*/
+#block-block-21{
+    width: 100%;   
+    display: block;
+    vertical-align: top;
+    text-align: center;
+    max-width: 308px;
+    margin: 0 auto 30px;
+    padding: 15px 20px;
+    background: #303030;
+    clear:left;
+    .before-after{
+        position: relative;
+        border: 1px solid #ffffff;
+        .img-box{            
+            text-align: center;            
+        }
+        .btn-box{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0px;
+            text-align: center;            
+            font-size: 21px;
+            display:inline-block;
+            background:#4891c6;
+            text-transform: capitalize;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+                line-height: 40px;
+                display: block;
+            }
+            &:hover{
+                a{
+                    background: #ffffff;
+                    color: #4891c6;  
+                }
+            }
+        }
+    }
+    &:hover{
+        .btn-box{
+            a{
+                background: #ffffff;
+                color: #4891c6;
+            }
+        }
+    }
+}
+/*======================  MINI FORM CSS GOES HERE  ============================*/
+#block-block-7{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: #303030;
+    padding: 20px 20px 45px;
+    margin-bottom:30px;
+    margin-top:7px;
+    .form-box{
+        width: 100%;
+        height: 532px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px 7px;
+        border: 1px solid #ffffff;
+        .text-box{
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            padding: 12px 0 22px;
+            text-align: center;
+            color: #ffffff;
+            h3{
+                font-size: 32px;
+                color: #ffffff;
+                padding: 0 0 17px;
+                margin: 0;
+                font-weight: 400;
+                text-transform: capitalize;
+                display:inline-block;
+                vertical-align:top;
+                span{
+                    display: block;
+                    font-size: 23px;
+                }
+            }
+            .phone-no{
+                width: 100%;
+                font-size: 24px;
+                a{
+                    text-decoration: none;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+/*======================  MEET HENRY CSS GOES HERE  ============================*/
+.meet-henry{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: #161618;
+    padding:0 10px 10px;
+    .region-meet-henry{
+        max-width: 1210px;
+        margin: 0 auto;
+    }
+    
+}
+#block-block-11{
+    width: 100%;
+    .meet-dr{
+        .mobile-img{
+            text-align: center;
+            img{
+                
+            }
+        }
+        .desktop-img{
+            display: none;
+        }
+        .meet-dr-text{
+            width: 100%;
+            .meet-hentry-heading{
+                font-size: 30px;
+                color: #ffffff;
+                text-transform: capitalize;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                padding:0 0 30px;
+                display:inline-block;
+                vertical-align:top;
+                &:after{border-bottom: 2px solid #ffffff;display: inline-block;vertical-align: middle;content: '';position: absolute;top: 20px;left: 210px;width:100%;}
+            }
+            .text-box{
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #ffffff;
+                    text-align: center;
+                    padding-bottom:35px;                
+                }
+                .btn-container{
+                    text-align:center;
+                    a{
+                        min-width: 125px;
+                        margin: 0 3px 35px;
+                        text-align: center;
+                        line-height: 42px;
+                        background: #303030;
+                        font-size: 14px;
+                        color: #ffffff;
+                        text-decoration: none;
+                        display:inline-block;
+                        vertical-align:top;
+                        padding:0 11px;
+                        text-decoration:none;
+                        text-transform:capitalize;
+                        &:hover{
+                            color: #ffffff;
+                            background: #4891c6;
+                        }
+                    }
+                }  
+            }
+            .video-box{
+                text-align: center;
+            }
+        }
+    }
+}
+/*======================  FOOTER DISCLAIMER PART CSS GOES HERE  ============================*/
+.region-bottom{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: #090d12;
+    padding: 35px 9px 60px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #ffffff;
+    text-align: center;
+    p{
+        font-size: 12px;
+        line-height: 18px; 
+    }
+}
+#block-block-8, #block-block-2, #block-block-3{
+    max-width: 1246px;
+    margin: 0 auto;
+    a{
+        text-decoration: underline;
+        color: #ffffff;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .dr-google{
+        margin-top: 20px;
+    }
+}
+/*======================  GALLERY PAGE CSS GOES HERE  =======================*/
+/*=====  MOBILE GALLERY PAGE CSS GOES HERE  =====*/
+#block-views-before-after-gallery-block-1{
+    .view-before-after-gallery{
+        &.view-display-id-block_1{display: block !important;}
+        .views-row{
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+            text-align:center;
+            margin-bottom:20px;
+            .views-field-title{
+                span{
+                        width: 100%;
+                        display: inline-block;
+                        vertical-align: top;
+                        min-height: 70px;
+                        text-align: center;
+                } 
+            }
+
+            &:hover{opacity: 0.8;}
+        }
+    }
+}
+.views-field-colorbox-1, .views-field-colorbox-2, .views-field-colorbox-3, .views-field-colorbox-4, .views-field-colorbox-5, .views-field-colorbox-6, .views-field-colorbox-7 {
+    display: none;
+}
+
+.gallery_pair{border:none !important; padding:0 0 0 0px !important; margin-top:0px !important;}
+img{ padding:0 5px;}
+.view-before-after-gallery{
+    width: 100%;
+    display: none;
+    vertical-align: top;
+    .views-row{
+        float: left;
+        width: 50%;
+        padding: 0 10px;
+        text-align:center;
+        margin-bottom:20px;
+        .views-field-nothing{
+            span{
+                &.before-after-title{
+                    width: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    min-height: 70px;
+                    text-align: center;
+                }
+            } 
+        }
+        
+        &:hover{opacity: 0.8;}
+    }
+}
+.Gallery_body_area{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:30px 30px;
+    .headshot{
+        width:100%;
+        float: left;
+        img{border: 10px solid #eceff1;}
+    }
+    .before-after-wrapper{
+        width: auto;
+        .before-img{margin-bottom: 20px;}
+        .before-img, .after-img{
+            width: 100%;
+            float: left;
+            max-width:250px;
+            margin:0 15px 10px 0;
+            .field-name-field-before-image-1, .field-name-field-after-image-1, .field-name-field-before-image-2, .field-name-field-after-image-2, .field-name-field-before-image-3, .field-name-field-after-image-3{
+                width:100%;
+                img{border: 10px solid #eceff1;vertical-align: top;}
+            }
+            .bef-aft{display: block;padding:0 0 12px;text-align:center;background: #eceff1;max-width: 365px;}
+        }
+
+    }
+
+    .before-after-bodytext{
+        width: 100%;
+        display:inline-block;
+        vertical-align:top;
+        #gallery-page-title{display: block;font-size: 60px !important;line-height: normal !important;color: #0b56a4 !important;text-decoration: none;}
+        .body-text{
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            border-top: 1px dotted #0b56a4;
+        }
+    }
+}
+    
+.gal-pager{
+    width:100%;
+    text-align:center;
+    padding:0;
+    margin:0;
+    li{list-style:none;
+       &.gal-prev, &.gal-last{
+           margin-bottom:20px;display:inline-block;
+           a{
+               background: #303030;
+               color: #fff !important;
+               font-size: 22px;
+               font-family: 'Open Sans', sans-serif;
+               font-weight: 300;
+               line-height: 53px;
+               text-align: center;
+               margin: 0px auto 0;
+               width: 200px;
+               display: inline-block;
+               text-decoration: none;
+               text-transform:capitalize;
+               float:none;
+               text-decoration:none !important;
+               &:hover{background: #4891c6;}
+               &:before{content: '\f100';font-family: 'FontAwesome';color: #fff;font-size: 22px;padding-right: 5px;}
+           }
+           &.empty{display: none;}
+       }
+       &.gal-next, &.gal-first{
+           a{
+               background: #303030;
+               color: #fff !important;
+               font-size: 22px;
+               font-family: 'Open Sans', sans-serif;
+               font-weight: 300;
+               line-height: 53px;
+               text-align: center;
+               margin: 0px auto 0;
+               width: 200px;
+               display: inline-block;
+               text-decoration: none;
+               text-transform:capitalize;
+               float:none;
+               text-decoration:none !important;
+               &:hover{background: #4891c6;}
+               &:after{content: '\f101';font-family: 'FontAwesome';color: #fff;font-size: 22px;padding-left: 5px;}
+
+           }
+           &.empty{display: none;}
+       }
+    }
+}
+.back-to{text-align:center;padding:0 0 50px 0;
+         a{
+             background: #303030;
+             color: #fff !important;
+             font-size: 20px;
+             font-family: 'Open Sans', sans-serif;
+             font-weight: 300;
+             line-height: 53px;
+             text-align: center;
+             margin: 20px auto 0;
+             width: 300px;
+             padding: 5px 0;
+             display: inline-block;
+             text-decoration:none !important;
+             text-transform:capitalize;
+             float:none;
+             &:hover{background: #4891c6;}
+         } 
+}
+/*=====================  FOOTER ADDRESS PART CSS GOES HERE   ==================*/
+#footer{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    background: url(../images/footer-bg-mobile.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding:45px 10px 13px;
+}
+#block-block-16{
+    max-width: 1100px;
+    margin: 0 auto;    
+    .text-box{
+        width: 100%;
+        display:inline-block;
+        vertical-align:top;
+        padding:0 0 35px;
+        font-size:18px;
+        color:#fff;
+        text-align:center;
+        .logo{
+            padding-bottom: 10px;
+        }
+        .telephone{
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            padding:23px 0 0;
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+        .social-icons{
+            .icon-title{
+                width: 100%;
+                display: inline-block;
+                vertical-align: top;
+                padding: 25px 0 10px;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+            a{text-decoration: none;width: 31px;height: 32px;line-height:32px;display:inline-block;vertical-align: top;border-radius: 50%;margin-right:4px;font-size: 0;transition: all 0.2s linear 0s; position:relative;        
+                &.pinit{background: #c92026;&:before{content: '\f099';}}  
+                &.fb{background: #3b5a9a;&:before{content: '\f09a';}}
+                &.gplus{background: #dc4e41;&:before{content: '\f0d5';}} 
+                &.linkedin{background: #127bb7;&:before{content: '\f0e1';}}
+                &.ytube{background: #ce322e;&:before{content: '\f167';}}                
+                &:before{font-size: 15px;color: #fff; font-family: 'FontAwesome';text-align: center;position: absolute;left: 0;right: 0;} 
+                &:hover{opacity: 0.5;}
+            }
+        }
+    }
+    .map-box{
+        position:relative;
+        text-align:center;
+        .direction-btn{
+            width: 100%;
+            text-align: center;
+            position:absolute;
+            bottom:15px;
+            left:0;
+            a{
+                max-width: 202px;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 39px;
+                background: #4891c6;
+                font-size: 18px;
+                color: #ffffff;
+                text-decoration: none;
+                display:inline-block;
+                &:hover{
+                    background: #303030;
+                }
+            }
+        }
+    }
+}
+/*=====================  NEWS PAGE CSS GOES HERE   ==================*/
+.view-in-the-news{
+    .views-row{
+        width: 50%;
+        float: left;
+        padding: 0 5px;
+        .views-field-nothing{ 
+            text-align:center;
+            span.news-link{
+                display: inline-block;
+                min-height: 70px;
+                text-align: center;
+                vertical-align: top;
+                width: 100%;
+            }
+        }
+    }
+}
+/*=====================  CONTACT PAGE CSS GOES HERE   ==================*/
+.main-form{
+    width: 100%;
+    max-width: 600px;
+    background: #303030;
+    padding: 20px;
+    margin:15px 0;
+    clear:both;
+    iframe{
+        border: 1px solid #fff !important;
+        padding: 0 10px !important;
+    }
+}
+/*=====================  SITEMAP PAGE CSS GOES HERE   ==================*/
+.section-sitemap{
+    .view-sitemap{
+        h3{text-transform: capitalize;}
+    }
+    #main{
+        #content{
+            ul{
+                padding: 0 0 0 35px;
+                li{
+                    list-style: inherit;
+                }
+            }
+        }
+    }
+}
+/*=====================  WINDOW SAFARI CSS GOES HERE   ==================*/
+.safari5{
+    &.win{
+        #block-views-mast-cycle-block .view-mast-cycle.view-display-id-block .flexslider .slides li .views-field-nothing .banner-text .banner-tagline{
+            padding: 60px 10px 80px;
+        } 
+        .logo-inner{
+            left: 9%;
+            top:86px;
+        }
+        &.not-front{
+          .logo-inner{
+            left: 12%;
+            top:15px;
+        }  
+        }
+        #block-search-form #search-block-form .form-text{
+        padding: 8px 32px 8px 10px;
+        line-height: normal;
+    }
+    }    
+}
+.ie{
+    #block-search-form #search-block-form .form-text{
+        padding: 7px 32px 7px 10px;
+        line-height: normal;
+    }
+}
+@media screen and (min-width:0px) and (max-width:767px){
+    #block-block-5 .phone-top::before{
+        display: none;
+    }
+    #block-block-5 .phone-top{padding-left: 25px;}
+/*================== Search Icon Css Starts Here ======================*/
+#block-block-31 {left:10px; top:-32px;z-index:9;display:block;width: 20px;}
+/* block-search-form  css **/
+#block-search-form{
+  top: 3px;
+  left:9px;
+  #search-block-form{
+    &:before{
+      left: -7px;
+    }
+/*    &:after{
+      border-bottom: 8px solid #555555;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      content: "";
+      height: 0;
+      left: 182px;
+      position: absolute;
+      top: -15px;
+      width: 0;    
+      z-index: 9;
+    }     */
+  }
+} 
+}
+@media screen and (min-width:480px){
+ #block-views-cta-homepage-block .view-cta-homepage .views-row{max-width: 80%;}   
+}
+
+@media screen and (min-width:768px){
+    .logo-inner{
+        display: block;
+        position: absolute;
+        top:4.5vw;
+        left: 2.7vw;
+        z-index: 5;
+        margin: 0;
+        max-width:280px;
+        .call-us{
+            color:#fff;font-size:20px;
+            text-align:center;
+            margin:20px 0 0;
+            display:block;
+            a{
+               text-decoration: none;color: #fff;
+            }
+        }
+    }
+    #logo{ 
+        display: inline-block;
+        margin: 0;
+    }
+    .not-front{
+        .logo-inner{            
+            position: absolute;
+            top:1.5vw;
+            left: 2.5vw;
+            z-index: 5;
+            max-width:250px;
+            .call-us{
+                margin: 7px 0 0;
+                display: block;
+            }
+        }
+    }
+    .top-header-outer{
+        background: #090d12;
+        color: #ffffff;
+        float: right;
+        padding: 13px 20px;
+    }
+    #block-block-5{
+        color: #ffffff;
+        float:right;
+        font-size:16px;
+        .address{
+            display: block;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        .phone-top{
+            display: none;
+        }
+    } 
+/*================== Search Icon Css Start Here ======================*/
+     #block-block-31{
+         display: block;
+     }
+/*=====================  BANNER CSS GOES HERE   ==================*/
+#block-views-mast-cycle-block{
+    display: block;
+    .view-mast-cycle{
+        &.view-display-id-block{
+            .flexslider{
+                .slides{
+                    li{
+                        .views-field-field-cycle-image{
+                            img{
+                                padding-right: 10%;
+                            }
+                        }
+                        .views-field-field-banner-number{
+                            max-width: 1298px;
+                            margin: 0 auto;
+                            display:none;
+                            .field-content{
+                                position: absolute;
+                                left: 12vw;
+                                top: 19vw;
+                                z-index: 7;
+                                font-size: 20px;
+                                color: #fff;
+                                a{
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#block-views-mast-cycle-block-1{
+    display: none;
+}
+/*=====================  INTERNAL CSS GOES HERE   ==================*/
+#block-views-mast-cycle-block-3, #block-views-mast-cycle-block-2{
+    display: block;
+}
+
+/*=====================  CTAs CSS GOES HERE   ==================*/
+#block-views-cta-homepage-block{
+    .view-cta-homepage{
+        .views-row{
+            max-width: 300px;
+            margin: 10px 3px 0;
+            &:first-child, &.views-row-2{margin: 0 3px 0;}
+        }
+    }
+}
+/*==================== 4 THINGS CSS GOES HERE  ======================*/
+.things{
+    padding: 65px 10px 65px;
+}
+#block-views-4-things-block-1{display: none;}
+#block-views-4-things-block{
+    display:block;
+    .block-title{
+        font-size: 40px;
+        max-width: 100%;
+        padding: 0 0 45px;
+    }
+    .slick-wrapper{
+        #slick-views-4-things-1{
+            .slick-list{
+                .slick-track{
+                    .slick__slide{
+                        width:50%;
+                        padding:0 20px;
+                        &.slide--0, &.slide--1{margin-bottom: 40px;}
+                        .slide__content{
+                            .views-field-title{
+                                max-width: 100%;
+                            }
+                        }
+                    }         
+                }                               
+            }
+        }
+    }
+}
+/*==================== REVIEW CSS GOES HERE  ======================*/
+.reviews-home{
+ background: url(../images/review-bg-desktop.jpg) no-repeat;
+ background-size: 100% 100%;
+ padding: 70px 12px 54px;
+}
+#block-views-testimonials-block-1{    
+    .view-testimonials{
+        .views-row{
+            padding:0;
+            border:none;
+            .views-field-nothing{
+                .review-main{
+                    border: 2px solid #ffffff;
+                    font-size: 21px;
+                    line-height: 30px;
+                }
+            }            
+        }
+    }
+}
+.view-testimonials{
+    .views-row{
+        padding: 20px 0;
+        border-bottom: 1px dotted #0b56a4
+    }
+}
+/*==================== ASSOCIATION LOGOs CSS GOES HERE  ======================*/
+#block-views-association-logos-block{
+    .view-display-id-block{
+        max-width:800px;
+        text-align:center;
+        .views-row{
+          display: inline-block;
+          float: none;
+          vertical-align: top;
+          width: 33%;
+            .views-field-field-association-logo-image{img{padding: 0 !important;}}
+            &.views-row-5, &.views-row-6, &.views-row-7{width: 33%;}
+        }
+    }
+}
+ /*======================  FOOTER DISCLAIMER PART CSS GOES HERE  ============================*/
+.region-bottom{
+    padding: 30px 10px 50px;
+    font-size: 14px;
+    line-height: 24px;
+    p{
+        font-size: 14px;
+        line-height: 24px; 
+    }
+}
+/*=====================  FOOTER ADDRESS PART CSS GOES HERE   ==================*/
+#footer{
+    background: url(../images/footer-bg-desktop.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding: 90px 10px 75px;
+}
+#block-block-16{
+    .text-box{
+        width: 57%;
+        float: left;
+        max-width: 495px;
+        padding: 0 30px 0 0;
+        .telephone{
+            padding: 0;
+        }
+    }
+    .map-box{
+        float: right;
+        width: 43%;
+    }
+}
+/*======================  GALLERY PAGE CSS GOES HERE  =======================*/
+#block-views-before-after-gallery-block-1{
+    display: none;
+}
+.view-before-after-gallery{
+    display:block;
+    .views-row{
+        width: 25%;
+        padding: 0 5px;
+    }
+}
+.Gallery_body_area{
+    padding:30px 20px;
+    .headshot{
+        width:270px;
+        float: left;
+        margin-right:30px;
+        .field-name-field-after-image-1{width: 100%;}
+    }
+    .before-after-wrapper{width:100%;float:left;
+                          .cont1{width:100%;}
+                          .before-img{margin-bottom: 0px;margin-right: 20px;}
+                          .before-img, .after-img{
+                              width: 100%;
+                              margin-bottom: 4px;
+                          }
+    }
+}
+.gal-pager{
+        li{display:inline-block;
+           &.gal-prev, &.gal-last{margin-right:10px;margin-bottom:0;                  
+                                  a{                        
+                                      margin: 0px auto 0;
+                                      width: 200px;
+                                  }
+           }
+           &.gal-next, &.gal-first{
+               a{
+                   margin: 0px auto 0;
+                   width: 200px;
+               }
+           }
+        }
+    }
+    .back-to{text-align:center;
+             a{
+
+                 margin: 20px auto 0;
+                 width: 430px;
+             } 
+    }
+/*=====================  NEWS PAGE CSS GOES HERE   ==================*/
+.view-in-the-news{
+    .views-row{
+        width: 33%;
+    }
+}
+
+}
+@media screen and (min-width:950px){
+    .logo-inner{
+        max-width: 100%;
+        .call-us{
+            font-size: 26px;
+        }
+    }
+    .not-front{
+        .logo-inner{
+            max-width:350px;
+        }
+    }
+/*    #logo{
+        width: auto;
+    }*/
+    /*=====================  BANNER CSS GOES HERE   ==================*/
+#block-views-mast-cycle-block{
+    .view-mast-cycle{
+        &.view-display-id-block{
+            .flexslider{
+                .slides{
+                    li{
+                        .views-field-field-banner-number{
+                            .field-content{
+                                left: 22vw;
+                                top: 26vw;
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  #block-views-cta-homepage-block{
+    .view-cta-homepage{max-width:950px;
+        .views-row{
+            &:first-child, &.views-row-2, &.views-row-3{margin: 0 3px 0;}
+        }
+    }
+}  
+}
+@media screen and (min-width:1025px){
+/*=====================  BANNER CSS GOES HERE   ==================*/
+#block-views-mast-cycle-block, #block-views-mast-cycle-block-1, #block-views-mast-cycle-block-3, #block-views-mast-cycle-block-2{
+    .view-mast-cycle{
+        &.view-display-id-block, &.view-display-id-block_1, &.view-display-id-block_2, &.view-display-id-block_3{
+            .flexslider{
+                .slides{
+                    li{
+                        .views-field-field-banner-number{
+                            .field-content{
+                                left: 22vw;
+                                top: 26vw;
+                            }                            
+                        }
+/*                        .views-field-field-internal-banner-number{
+                            display:block;
+                            .field-content{
+                                left: 13%;
+                            }
+                        }*/
+                    }
+                }
+            }
+        }
+    }
+}
+    
+    .meet-henry{
+        padding: 25px 10px 0;
+    }
+    #block-block-11{
+        .meet-dr{
+            .mobile-img{
+                float: left;
+                display: none;
+            }
+            .desktop-img{
+                display: block;
+                float: left;
+                width: 38%;
+                line-height: 0;
+                img{
+                    line-height: 0;
+                }
+            }
+            .meet-dr-text{
+                float: left;
+                width:62%;
+                padding:100px 0 0;
+                .text-box{
+                    width: 100%;
+                    max-width: 385px;
+                    float: left;
+                    padding:0 20px 0 0;
+                    p{
+                        text-align: left;
+                    }
+                    .btn-container{
+                        a{
+                            font-size: 16px;
+                            line-height: 51px;
+                            padding: 0 20px;
+                            min-width: 148px;
+                        }
+                    }
+                }
+                .video-box{
+                    width: 35%;
+                    float: right;
+                }
+            }
+        }        
+    }
+   /*======================  GALLERY PAGE CSS GOES HERE  =======================*/
+.view-before-after-gallery{
+    .views-row{
+        width: 20%;
+    }
+}
+    .Gallery_body_area{
+        padding:30px 20px;
+        .headshot{
+            width:300px;
+            float: left;
+            margin-right:30px;
+            .field-name-field-after-image-1{width: 100%;}
+        }
+        .before-after-wrapper{width:40%;
+                              .before-img{margin-bottom: 4px;margin-right: 20px;}
+                              .before-img, .after-img{
+                                  width: 100%;
+                              }
+        }
+    }
+    /*==================== ASSOCIATION LOGOs CSS GOES HERE  ======================*/
+#block-views-association-logos-block{
+    .view-display-id-block{
+        max-width:100%;
+        .views-row{
+            width: 12%;
+            &.views-row-5, &.views-row-6, &.views-row-7{width: 12%;}
+        }
+    }
+}
+/*=====================  FOOTER ADDRESS PART CSS GOES HERE   ==================*/
+#block-block-16{
+    .text-box{
+        padding: 0;
+    }
+    .map-box{
+        .direction-btn{
+            bottom:35px;
+            a{
+                max-width: 264px;
+                line-height: 51px;
+                font-size: 24px;
+            }
+        }
+    }
+}
+#block-block-8, #block-block-2, #block-block-3{
+    .dr-google{
+        margin-top: 30px;
+    }
+}
+/*=====================  WINDOW SAFARI CSS GOES HERE   ==================*/
+.safari5{
+    &.win{        
+        &.not-front{
+          .logo-inner{
+            left: 12%;
+            top:30px;
+        }  
+        }
+    }    
+}
+    
+}
+@media screen and (min-width:1100px){
+   /*=====================  BANNER CSS GOES HERE   ==================*/
+#block-views-mast-cycle-block, #block-views-mast-cycle-block-1, #block-views-mast-cycle-block-3, #block-views-mast-cycle-block-2{
+    .view-mast-cycle{
+        &.view-display-id-block, &.view-display-id-block_1, &.view-display-id-block_2, &.view-display-id-block_3{
+            .flexslider{
+                .slides{
+                    li{
+                        .views-field-field-banner-number{
+                            .field-content{
+                                left: 20vw;
+                                top: 23vw;
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+/*=====================  NEWS PAGE CSS GOES HERE   ==================*/
+.view-in-the-news{
+    .views-row{
+        width: 25%;
+    }
+}
+}
+@media screen and (min-width:1298px){
+    .logo-inner{
+       top:5.5vw;
+        left: 7.7vw; 
+    }
+    .not-front{
+        .logo-inner{
+            left: 8.7vw;
+            top: 2vw;
+            max-width:100%;
+        }
+    }
+    .banner-inner{
+        padding: 0 7px;
+    }
+    /*================== Search Icon Css Start Here ======================*/
+     #block-block-31{
+         display: block;
+         right:0;
+     }
+/*=====================  BANNER CSS GOES HERE   ==================*/
+#block-views-mast-cycle-block, #block-views-mast-cycle-block-1, #block-views-mast-cycle-block-3, #block-views-mast-cycle-block-2{
+    .view-mast-cycle{
+        &.view-display-id-block, &.view-display-id-block_1, &.view-display-id-block_2, &.view-display-id-block_3{
+            .flexslider{
+                .slides{
+                    li{
+                        .views-field-field-cycle-image{
+                            img{
+                                padding-right: 15%;
+                            }
+                        }
+                        .views-field-nothing{
+                            .banner-text{
+                                .banner-tagline{
+                                    font-size: 60px;
+                                    line-height: 60px;
+                                }
+                            }
+                        }
+                        .views-field-field-banner-number{
+                            top: 275px;
+                            left: 275px;
+                        }
+/*                         .views-field-field-internal-banner-number{
+                            .field-content{
+                                left: 200px;
+                                top: -31px;
+                                bottom: inherit;
+                            }
+                        }*/
+                    }
+                }
+            }
+        }        
+    }
+}
+/*=====================  CTAs CSS GOES HERE   ==================*/
+  .homepage-cta{
+      padding: 60px 10px 65px;
+  }
+#block-views-cta-homepage-block{
+    .view-cta-homepage{max-width:100%;
+        .views-row{
+            max-width:310px;
+            margin: 17px 5px 0;
+            &:first-child, &.views-row-2, &.views-row-3, &.views-row-4{margin: 0 5px 0;}
+            .views-field-nothing{
+                a{
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
+/*==================== MEET DRs CSS GOES HERE  ======================*/
+    #block-block-11{
+        .meet-dr{
+            .meet-dr-text{
+                margin-left: -30px;
+                .meet-hentry-heading{
+                    font-size: 36px;
+                    padding: 0 0 42px;
+                    &:after{border-bottom: 1px solid #ffffff;top: 25px;left: 255px;}
+                }
+                .text-box{
+                    p{
+                        padding-left: 3px;
+                    }
+                    .btn-container{
+                        a{
+                            margin: 20px 3px 0px;
+                        }
+                    }
+                }
+                .video-box{
+                    width: 42%;
+                    float: right;
+                }
+            }
+        }        
+    }
+    /*==================== 4 THINGS CSS GOES HERE  ======================*/
+.things{
+    padding: 88px 10px 90px;
+}
+#block-views-4-things-block{
+    h2.block-title{
+        font-size: 52px;
+        padding: 0 0 60px;
+    }
+    .slick-wrapper{
+        #slick-views-4-things-1{
+            .slick-list{
+                .slick-track{
+                    .slick__slide{
+                        width:24%;
+                        padding:0; 
+                        margin-left: 13px;
+                        &:first-child{margin-left: 0px;}
+                        &.slide--0, &.slide--1{margin-bottom: 0px;}
+                         .slide__content{
+                            .views-field-title{
+                                max-width: 140px;
+                            }
+                        }
+                    }         
+                }                               
+            }
+        }
+    }
+}
+/*==================== REVIEW CSS GOES HERE  ======================*/
+.reviews-home{
+ background: url(../images/review-bg-desktop.jpg) no-repeat;
+ background-size: 100% 100%;
+}
+#block-views-testimonials-block-1{    
+    .view-testimonials{
+        .views-row{
+            .views-field-nothing{
+                .review-main{
+                    font-size: 34px;
+                    line-height: 48px;
+                    padding: 55px 70px 55px;
+                }
+            }            
+        }
+        .view-footer{
+            margin-top: -25px;
+            a{
+                font-size: 24px;
+                line-height: 51px;
+                max-width: 264px;
+            }
+        }
+    }
+}
+/*================== GALLERY PAGE CSS  ========================*/
+.Gallery_body_area{
+    .before-after-wrapper{width:60%;
+        .before-img, .after-img{
+            width: 45%;
+        }
+    }
+}
+/*==================== ASSOCIATION LOGOs CSS GOES HERE  ======================*/
+#block-views-association-logos-block{
+    .view-display-id-block{
+        max-width:100%;
+        .views-row{
+            width: auto;
+            margin-left:25px;
+            padding:0;
+            &.views-row-1{margin-left: 0;}
+            &.views-row-5, &.views-row-6, &.views-row-7{width: auto;}
+        }
+    }
+}
+
+
+}
+@media screen and (min-width:1330px){
+  /*=====================  CTAs CSS GOES HERE   ==================*/
+  .homepage-cta{
+      padding: 60px 0px 65px;
+  }
+  /*==================== MEET DRs CSS GOES HERE  ======================*/
+    #block-block-11{
+        .meet-dr{
+            .desktop-img{
+                margin-left: -30px;
+            }
+            .meet-dr-text{
+                width: 67%;
+                float: right;
+                margin-left: -35px;
+                .video-box{
+                    width: 50%;
+                    max-width: 375px;
+                    float: right;
+                }
+            }
+        }        
+    }
+}
+@media screen and (min-width:1500px){
+    .not-front{
+        .logo-inner{
+            top: 4vw;
+        }
+    } 
+}
+
+@media screen and (max-width:1315px) and (min-width:1025px){
+  #block-views-association-logos-block .view-display-id-block .views-row{
+    margin-left: 20px;
+  }
+}

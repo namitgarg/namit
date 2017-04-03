@@ -1,0 +1,12 @@
+name = Metatag Replace
+description = Search and Replace Meta Tags for Node Pages.
+core = 7.x
+dependencies[] = metatag
+configure = admin/config/search/metatags/replace
+
+; Information added by Drupal.org packaging script on 2016-06-03
+version = "7.x-1.0"
+core = "7.x"
+project = "metatag_replace"
+datestamp = "1464971640"
+

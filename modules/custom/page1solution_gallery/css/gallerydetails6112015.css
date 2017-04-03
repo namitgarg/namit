@@ -1,0 +1,264 @@
+/*====== For Gallery1 css ======*/
+.view-display-id-block{
+  width:410px;
+  height:auto;
+ }
+.view-display-id-block .view-header{
+  margin-bottom: 15px;
+}
+.view-display-id-block .views-row{
+ float:left;
+  }  
+ .view-display-id-block #singlegallery{
+  background-color: #2A1A08;
+  margin-bottom: 30px;
+  margin-top: 0;
+  outline: 10px solid #2A1A08;
+  padding: 10px;
+  width:100%;
+  float:left;
+  border: 2px solid #FFFFFF;
+ }
+ .view-display-id-block #singlegallery a:first-child img{
+   padding-right: 10px;
+ }
+.view-display-id-block .views-row .views-field{
+  float:left;
+  }
+  
+  
+  /*====== For Gallery2 css ======*/
+  .view-display-id-block_2{
+    width:650px; 
+    float: left;
+  }
+ .view-display-id-block_2 .views-row{
+   width:100%;
+   float:left;
+ }
+ .view-display-id-block_2 .views-row #gallery_pairs{
+  float: left;
+  width: 333px;
+  margin-right: 10px;
+  height:auto;
+  margin: 14px 0;
+  }
+  .view-display-id-block_2 .views-row #gallery_pairs .gallery_pair{
+    border:7px solid #DACAA1;
+    margin-top: 10px;
+    padding: 7px 0 0 7px;
+  }
+  .view-display-id-block_2 .views-row #gallery_pairs .gallery_pair a:first-child img{
+    margin-right: 5px;
+    height: auto;
+  }
+  .view-display-id-block_2 .views-row .views-field.views-field-body{
+    width:300px;
+    float:right;
+    padding-left:5px;
+  }
+  .view-display-id-block_2 .views-row .views-field.views-field-body{
+    color: #666666;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 13px;
+    line-height: normal;
+    
+  }
+
+  /*====== For Gallery3 css ======*/
+  .view-display-id-block_3{
+    width:750px; 
+    float: left;
+  }
+ .view-display-id-block_3 .views-row{
+   width:100%;
+   float:left;
+ }
+ .view-display-id-block_3 .views-row #gallery_group_rows{
+  float: left;
+  width: 433px;
+  height:auto;
+  margin: 14px 0;
+  }
+  .view-display-id-block_3 .views-row #gallery_group_rows .gallery_group_row{
+    border:7px solid #DACAA1;
+    margin-top: 10px;
+    padding: 7px 0 0 7px;
+  }
+  .view-display-id-block_3 .views-row #gallery_group_rows .gallery_group_row a:first-child img{
+    margin-right: 5px;
+    height: auto;
+  }
+  .view-display-id-block_3 .views-row .views-field.views-field-body{
+    width:300px;
+    float:left;
+    margin-right: 10px;
+  }
+  .view-display-id-block_3 .views-row .views-field.views-field-body{
+    color: #666666;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 13px;
+    line-height: normal;
+  }
+ #group_gallery_boxs .group_gallery_box img{
+   margin:5px 10px;
+ }
+
+ 
+ /*====== For Gallery4 css ======*/
+ .view-display-id-block_1{
+    width:620px; 
+    float: left;
+  }
+  .view-display-id-block_1 .views-field.views-field-title span{
+   font-weight: bold;  
+  }
+ .view-display-id-block_1 .views-row{
+   width:100%;
+   float:left;
+ }
+ .view-display-id-block_1 .views-row #gallery_large_thumb{
+  float: left;
+  width: 315px;
+  margin-right: 5px;
+  height:auto;
+  margin: 24px 0;
+  }
+  .view-display-id-block_1 .views-row #gallery_large_thumb .gallery_large a img{
+    margin-right: 5px;
+    height: auto;
+  }
+  .view-display-id-block_1 .views-row .views-field.views-field-body{
+    width:300px;
+    float:left;
+    padding-left:5px;
+    color: #666666;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 13px;
+    line-height: normal;
+  }
+  
+   
+
+  /*====== For Gallery5 css ======*/
+  .view-display-id-block_4{
+    margin: 20px auto 70px;
+    min-height: 570px;
+    width: 610px;
+  }
+  
+  .view-display-id-block_4 .views-row{
+    background-color: hsl(10, 56%, 6%);
+    border: 7px solid hsl(26, 54%, 40%);
+    border-radius: 14px 14px 14px 14px;
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 0;
+    padding: 20px;
+  }
+  .view-display-id-block_4 .views-field.views-field-title{
+   margin-bottom: 15px; 
+  }
+  .view-display-id-block_4 .views-field.views-field-title span{
+    color: hsl(0, 0%, 100%);
+    font-family: 'goudytrajanregular';
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  .view-display-id-block_4 #gallery_underneath{
+    width:100%;
+  }
+  .view-display-id-block_4 #gallery_underneath a img{
+    border: 2px solid hsl(26, 54%, 40%);
+    padding: 0;
+  }
+  .view-display-id-block_4 #gallery_underneath a:first-child img{
+    margin-right: 10px;
+  }
+  .view-display-id-block_4 .views-field.views-field-body{
+    color: hsl(0, 0%, 100%);
+    float: left;
+    width: 554px;
+    font-size: 13px;
+  }
+  
+  /*====== For Gallery6 css ======*/
+  .view-display-id-block_5{
+    margin: 20px auto 70px;
+    min-height: 570px;
+    width: 610px;
+  }
+  
+  .view-display-id-block_5 .views-row{
+    background-color: hsl(10, 56%, 6%);
+    border: 7px solid hsl(26, 54%, 40%);
+    border-radius: 14px 14px 14px 14px;
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 0;
+    padding: 20px;
+  }
+  .view-display-id-block_5 .views-field.views-field-title{
+   margin-bottom: 15px; 
+  }
+  .view-display-id-block_5 .views-field.views-field-title span{
+    color: hsl(0, 0%, 100%);
+    font-family: 'goudytrajanregular';
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  .view-display-id-block_5 #gallery_bodybox{
+    width:100%;
+  }
+  .view-display-id-block_5 #gallery_bodybox a img{
+    border: 2px solid hsl(26, 54%, 40%);
+    padding: 0;
+  }
+  .view-display-id-block_5 #gallery_bodybox a:first-child img{
+    margin-right: 10px;
+  }
+  
+  /*====== For Gallery7 css ======*/
+  .view-display-id-block_6{
+    width:750px; 
+    float: left;
+  }
+ .view-display-id-block_6 .views-row{
+   width:100%;
+   float:left;
+ }
+ .view-display-id-block_6 .views-field.views-field-title span{
+   font-weight: bold;
+ }
+ .view-display-id-block_6 .views-row .views-field.views-field-field-after-image-1{
+  float: left;
+  width: auto;
+  height:auto;
+  margin: 14px 0;
+  }
+  .view-display-id-block_6 .views-row .galleryslider{
+  border: 2px solid hsl(0, 0%, 40%);  
+  }
+  .view-display-id-block_6 .views-row .galleryslider img{
+    max-width:none;
+  }
+  .view-display-id-block_6 .views-row .views-field.views-field-body{
+    width:300px;
+    float:left;
+    margin-right: 10px;
+  }
+  .view-display-id-block_6 .views-row .views-field.views-field-body{
+    color: #666666;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 13px;
+    line-height: normal;
+  }
+  .balinks a{
+    color:#000000;
+    text-decoration: none;
+  }
+  .balinks a:hover{
+    color:#000000;
+    text-decoration: underline;
+  }
+ 

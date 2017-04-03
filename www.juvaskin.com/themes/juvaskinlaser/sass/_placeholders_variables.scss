@@ -1,0 +1,132 @@
+
+// Created on : Jun 22, 2016, 3:17:34 PM
+// Author     : manishkumar.singh
+
+
+//   To use a mixin in this file, add this line to the top of your .scss file:
+//   @import "base";
+
+// maps represent an association between keys and values within an object.
+// Maps must always be surrounded by parentheses and the key/value pairings inside must always be comma-separated.
+// curly brackets:
+//    .selector{color:  map-get($colors,1);}   --------------use for demo--------
+
+
+// Fonts Colors
+$colors: (
+base:  #303030, // base font color
+link:  #d17575, // All link color
+hover: #d17575, // All link hover color 
+white:  #fff,  
+footer-nav:  (
+link:#000,    // footer nav link color.
+hover: #fff,  // footer nav link hover color.
+active: #fff, // footer nav link active color.
+),
+);
+
+// Background Colors
+$bg: (
+body-bg : #eceaeb,
+header-bg : #000,
+banner: (
+tag-bg : rgba(51,51,51,.5),
+btn-bg : #d47d7d,
+btn-hover-bg : #303030,
+color:  #fff, // banner btn color
+hover-color: #fff, // banner btn-hover color
+btn-size: 18px,  // banner btn text size.
+tag-size: 30px,  // banner tag line text-size
+),
+nav: (
+bg : #d37c7c,
+hover-bg : #303030,
+text-size: 14px,
+first-tier-bg : #7caaae,
+first-tier-hover-bg : #50686a,
+second-tier-bg : #50686a,
+second-tier-hover-bg : #7caaae,
+third-tier-bg : #7caaae,
+third-tier-hover-bg : #50686a,
+right-angle-color:  #fff,  //  right-angle-color for top nav in tier section.
+link:  #7caaae, // top nav link color.
+hover: #fff, // top nav link hover color.
+active: #7caaae, // top nav link active color.
+first-tier-link:  #fff, // top first tier nav link color.
+first-tier-hover: #fff, // top first tier nav link hover color.
+first-tier-active: #fff, // top first tier nav link active color.
+second-tier-link:  #fff, // top second tier nav link color.
+second-tier-hover: #fff, // top second tier nav link hover color.
+second-tier-active: #fff, // top second tier nav link active color.
+third-tier-link:  #fff, // top third tier nav link color.
+third-tier-hover: #fff, // top third tier nav link hover color.
+third-tier-active: #fff, // top third tier nav link active color.
+),
+
+mobile-nav: (
+bg : #d37c7c,
+hover-bg :       #d37c7c,
+first-tier-bg :  #fff,
+second-tier-bg : #c9c99a, 
+third-tier-bg :  #fff, 
+Fcolor :         #d37c7c,
+Scolor :         #000, 
+Tcolor :         #d37c7c,
+HoverF:          #fff,
+HoverS:          #000,
+HoverT:          #fff,
+border:          #150e0a,
+color:           #000,
+color-foobar:    #7e695c,
+font:            14px,
+font-sub-tier:   14px,
+icon-size:       20px,
+height:          47px,
+expand-click:    rgba(211, 124, 124, 1),
+),
+
+archive: (
+bg : #303030,
+hover-bg : #303030,
+month-bg : #caca9b,
+month-hover-bg : #caca9b,
+active-bg : #303030,
+active-hover-bg : #d47d7d,
+),
+search:(
+bg: #fff,
+font-size: 22px,  
+hover-color: #d17575,
+placeholder-color: #000,
+input-color:  #000, // search input text color.
+color: #000,
+blog-bg: #303030,
+blog-size: 22px,
+blog-color: #000,
+blog-hover-color: #7caaae,
+blog-error-color: #fff,
+blog-error-bg: #303030,
+blog-results: #303030,
+),
+gallery-bg: #edecef, 
+footer-bg : #f7f7f7,
+form-bg : #303030,
+social-icons-bg: #2a2a2a,
+);
+// Fonts size
+$size: ( 
+h-group: (
+h1: 52px, // page title text size.
+h2: 18px, // page address title text size.
+h3: 32px // page sub-title text size.
+),
+p: 18px, // font size for base size.
+form-title: 22px,  // mini form title text size.
+disclaimer: 13px, //disclaimer text size.
+footer-text: 13px,  // footer text size.
+);
+$leftGutterwidth : 35px;
+$sideBarFirstWidth : $leftGutterwidth + 245px;
+$rightGutterwidth : 30px;
+$sideBarSecondWidth : 275px;
+ 

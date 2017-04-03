@@ -1,0 +1,18 @@
+<?php
+
+function tagmanager_remove_page_alter(&$page) {
+//print_r($page);
+    global $theme;
+    if ($theme == 'ampsubtheme_example') {
+        if (function_exists('newrelic_disable_autorum')) {
+    newrelic_disable_autorum();
+  }
+        $page['#post_render'][] = 'tagmanager_remove_tag_process';
+    }
+}
+
+function tagmanager_remove_tag_process($children, $elements) {
+    $remove_script = "";
+    $children = preg_replace('/<!-- Google Tag Manager -->(.*?)<!-- End Google Tag Manager -->/s', $remove_script, $children, 1);
+    return $children;
+}

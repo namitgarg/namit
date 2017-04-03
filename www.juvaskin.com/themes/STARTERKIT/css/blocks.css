@@ -1,0 +1,55 @@
+/**
+ * @file
+ * Block Styling
+ */
+/* line 9, ../sass/blocks.scss */
+.block {
+  /* Block wrapper */
+  margin-bottom: 1.5em;
+}
+/* line 12, ../sass/blocks.scss */
+.block.first {
+  /* The first block in the region */
+}
+/* line 15, ../sass/blocks.scss */
+.block.last {
+  /* The last block in the region */
+}
+/* line 18, ../sass/blocks.scss */
+.block.odd {
+  /* Zebra striping for each block in the region */
+}
+/* line 21, ../sass/blocks.scss */
+.block.even {
+  /* Zebra striping for each block in the region */
+}
+/* line 24, ../sass/blocks.scss */
+.block h2.block-title {
+  /* Block title */
+}
+
+@media all and (min-width: 768px) {
+  /* line 28, ../sass/blocks.scss */
+  .defaultimage {
+    float: left;
+    margin: 15px 20px 15px 0;
+  }
+
+  /* line 29, ../sass/blocks.scss */
+  .leftimage {
+    float: left;
+    margin: 15px 20px 15px 0;
+  }
+
+  /* line 30, ../sass/blocks.scss */
+  .rightimage {
+    float: right;
+    margin: 15px 0px 15px 20px;
+  }
+
+  /* line 31, ../sass/blocks.scss */
+  .centerimage {
+    float: none;
+    margin: 15px auto;
+  }
+}

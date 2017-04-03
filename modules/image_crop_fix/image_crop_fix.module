@@ -1,0 +1,37 @@
+<?php
+
+
+function image_crop_fix_image_effect_info_alter(&$effects) {
+    $effects['image_crop']['effect callback'] = 'image_crop_effect_custom'; 
+}
+
+function image_crop_effect_custom(&$image, $data) {
+  $data += array(
+    'anchor' => 'center-center',
+  );
+  list($x, $y) = explode('-', $data['anchor']);
+  $x = image_filter_keyword($x, $image->info['width'], $data['width']);
+  $y = image_filter_keyword($y, $image->info['height'], $data['height']);
+  if (!image_crop_custom($image, $x, $y, $data['width'], $data['height'])) {
+    watchdog('image', 'Image crop failed using the %toolkit toolkit on %path (%mimetype, %dimensions)', array('%toolkit' => $image->toolkit, '%path' => $image->source, '%mimetype' => $image->info['mime_type'], '%dimensions' => $image->info['width'] . 'x' . $image->info['height']), WATCHDOG_ERROR);
+    return FALSE;
+  }
+  return TRUE;
+}
+
+function image_crop_custom(stdClass $image, $x, $y, $width, $height) {
+  $aspect = $image->info['height'] / $image->info['width'];
+  if (empty($height)) $height = $width / $aspect;
+  if (empty($width)) $width = $height * $aspect;
+  $width = (int) round($width);
+  $height = (int) round($height);
+  if($width > $image->info['width'] && $height > $image->info['height']){
+  return image_toolkit_invoke('crop', $image, array(0, 0, $image->info['width'], $image->info['height']));    
+  }
+  if($width > $image->info['width']){
+  return image_toolkit_invoke('crop', $image, array(0, $y, $image->info['width'], $height));
+  }
+  if($height > $image->info['height']){
+  return image_toolkit_invoke('crop', $image, array($x, 0, $width, $image->info['height']));
+  }
+}

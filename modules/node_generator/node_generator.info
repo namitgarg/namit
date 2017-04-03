@@ -1,0 +1,8 @@
+name = Node Generator
+description = Module to generate node from sitemap.xml provided.
+core = 7.x
+files[] = /include/generator.admin.inc
+files[] = /include/simple_html_dom.php
+files[] = /sample xml/node_generator.js
+dependencies[] = metatag
+configure = admin/config/system/metatags-upload/node-generator-form

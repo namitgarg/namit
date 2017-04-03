@@ -1,0 +1,271 @@
+    // Created on : Jun 22, 2016, 3:17:34 PM
+    // Author     : manishkumar.singh
+
+// To use a mixin in this file, add this line to the top of your .scss file:
+//   @import "base";
+// Then to use a mixin for a particular rule, add this inside the ruleset's
+// curly brackets:
+//   @include mix-in-name;
+
+
+// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 0px;
+  width: 0px;
+  overflow: hidden;   
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;  
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+@mixin element-focusable {
+  @include element-invisible;
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// The word "Unpublished" displayed underneath unpublished nodes and comments.
+@mixin unpublished-div {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word; // A very nice CSS3 property  
+}
+
+@mixin css3($property, $value) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}#{$property}: $value;
+     }
+}
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+      @if $vendors {
+        @each $vendor in $vendors {
+          #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+      }
+      #{$property}: #{$value};
+}
+
+//--------------------------------
+// Photoshop Drop Shadow
+//--------------------------------
+@mixin photoshop-drop-shadow ($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: #000, $inner: false) {
+  $angle: (180 - $angle) * pi() / 180; // convert to radians
+  $h-shadow: round(cos($angle) * $distance);
+  $v-shadow: round(sin($angle) * $distance);
+  $css-spread: $size * $spread/100;
+  $blur: ($size - $css-spread);
+  $inset: if($inner != false, 'inset', ''); 
+  $box-shadow: ($h-shadow $v-shadow $blur $css-spread $color unquote($inset));
+  @include css3 (box-shadow, $box-shadow);
+} 
+ 
+//--------------------------------
+// Photoshop Text Shadow
+//--------------------------------
+@mixin photoshop-text-shadow ($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: #000) {
+  // NOTE: $spread has no effect for text shadows
+  $angle: (180 - $angle) * pi() / 180;
+  $h-shadow: round(cos($angle) * $distance);
+  $v-shadow: round(sin($angle) * $distance);
+  $css-spread: $size * $spread/100;
+  $blur: ($size - $css-spread); 
+  $value:($h-shadow $v-shadow $blur $color);  
+  @include css3 (text-shadow, $value);
+}
+
+// Decimal calculate function 
+@function decimal($number, $digits: 18, $mode: floor) {
+    $n: 1;   
+    @for $i from 1 through $digits {$n: $n * 10;}    
+    @return floor($number * $n) / $n;
+}
+
+// Viewport-width unit function 
+@function vw($count-width,$viewport-width){
+ $return-unit: decimal($count-width / decimal(($viewport-width / 100))); 
+ @return $return-unit+vw; 
+}
+
+// hear size variable help us mapping via map-get(); in Scss.
+// $size: ( 
+//  h-group: (
+//  h1: 36px, // page title text size.
+//  h2: 14px, // page address title text size.
+//  h3: 22px // page sub-title text size
+//  ),
+//  p: 16px, // font size for base size.
+// );
+// ex: [for tow group] .selector{font-size: set($group-name, sub-group-name, key);} or
+// ex: [for one group] .selector{font-size: set($group-name, key);}
+
+@function set($group: null, $sub-group: null, $sub-group-val:null, $nesting-step:true) {   
+  @if $nesting-step == true {
+    @if ($sub-group-val != null) {     
+      @return map-get(map-get($group,$sub-group),$sub-group-val);
+    }  
+  }  
+   @if ($sub-group != null) {    
+      @return map-get($group,$sub-group);
+    }    
+}
+
+@function unite($list, $glue: ", ") {
+     @if length($list) == 1 {@return $list;}
+     @else {
+        $string: "";
+        @each $item in $list {
+          @if $string != "" { $string: $string + $glue; }
+              $string: $string + $item;              
+          }      
+     @return $string;
+  }
+}
+
+// Positional mixins 
+@mixin pos($pos:static,$top:null,$right:null,$bottom:null,$left:null,$z-index:null) {  
+  @if (($pos == relative) or ($pos == re)) {
+   position: relative;
+  }
+  @else if (($pos == absolute) or ($pos == ab)) {
+   position: absolute;
+  }
+  @else if (($pos == fixed) or ($pos == fi)) {
+   position: fixed;
+  }
+  @else if ($pos == static) {
+   position:static;
+  }   
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+  z-index:$z-index;
+}
+
+// Dispaly mixins
+@mixin dis($maxw: null, $w: null, $dis: null){
+  @if ((($dis == block) or ($dis == table)) or ($dis == none)) {
+    display: $dis; margin: 0 auto;
+  }
+  @else if ($dis == inline-block) {
+    display: $dis; vertical-align: top;
+  }
+  @else if (($dis == left) or ($dis == right)) {
+    float: $dis;
+  }
+   max-width: $maxw; width: $w;
+}
+
+// Responsive iframe mixins
+@mixin maintain-ratio($ratio: 1 1,$dis: null,$maxw: null) {
+  @if length($ratio) < 2 or length($ratio) > 2 {@warn "$ratio must be a list with two values.";} 
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1)); 
+  @if (($dis == block) or ($dis == table)) {
+    display: $dis; margin: 0 auto 20px;
+  }
+  @else if ($dis == inline-block) {
+    display: $dis; vertical-align: top;
+  }
+  @else if (($dis == left) or ($dis == right)) {
+    float: $dis;
+  } 
+  width: 100%;max-width: $maxw;overflow: hidden;position: relative;
+  &:before{content: '';clear: both;display: block;width: 100%;padding-bottom: $height;height: 0px;}  
+  > iframe, > object, > embed, > img {position:absolute;top:0;left:0;width: 100% !important;height: 100% !important;}
+}
+
+
+// ui-icon mixin for gallery
+@mixin ui-angle-icon{
+	.ui-icon{@include pos(ab,0,0,0,null,99);background: none;height: 100%;width: 50px;text-indent: 0;
+			&:before {
+								position: absolute;
+								top: 0;
+								right: 12px;
+								bottom: 0;
+								content: "";
+								background: #5c1415;
+								height: 27px;
+								width: 27px;
+								margin: auto;
+								text-align: center;
+								line-height: 27px;
+								@include prefix(border-radius, 50%,null);
+				}
+				&:after {
+								position: absolute;
+								top: 9px;
+								right: 11px;
+								content: "\f105";
+								font-size: 24px;
+								color: #fff;
+								font-family: 'fontawesome';
+								height: 27px;
+								width: 27px;
+								margin: auto;
+								text-align: center;
+								line-height: 25px;
+								@include prefix(transition,all 1s ease,webkit);
+				}
+}
+&.ui-accordion-header-active{.ui-icon{&:after{@include prefix(transform,rotate(90deg),webkit);top: 10px;right: 12px;}}}
+&.cust-header-active{.ui-icon{&:after{@include prefix(transform,rotate(90deg),webkit);top: 10px;right: 12px;}}
+	+.ui-accordion-content{display: block !important;}}
+}
+@mixin ui-plus-icon{
+.ui-icon{@include pos(ab,0,10px,0,null,99);background: #5c1415;text-indent: 0;height: 24px;width: 24px;margin:auto;
+	&:before{
+				content: "";
+				@include pos(ab,0,0,0,0,99);
+				height: 3px;
+				width: 11px;
+				background: #fff;
+				margin:auto;
+				line-height: 0;
+				@include prefix(transition,all .5s ease,webkit ms);
+				@include prefix(transform,rotate(90deg),webkit ms);
+				@include prefix(border-radius, 0,null);
+	}
+	&:after{
+				content: "";
+				@include pos(ab,0,0,0,0,99);
+				height: 3px;
+				width: 11px;
+				background: #fff;
+				margin:auto;
+	}
+	}
+&.ui-accordion-header-active{.ui-icon{&:before{@include prefix(transform,rotate(0deg),webkit ms);}
+&:after{@include prefix(transform,none,webkit ms);top: 0;right: 0;}}}
+&.cust-header-active{.ui-icon{&:before{@include prefix(transform,rotate(0deg),webkit ms);}
+       &:after{@include prefix(transform,none,webkit ms);top: 0;right: 0;}}
+							+.ui-accordion-content{display: block !important;}}
+}
+
+// title-bar mixin for underline on titles
+@mixin title-bar($bg: null,$pos: null,$w: null,$h:2px) {
+	@include pos(re);
+ &:after{content: '';background: $bg;width: $w;height: $h;@include pos(ab,null,0,$pos,0,8);margin: auto;}
+}
+// bg mixin for attached background image.
+$path--rel      : "../images";
+@mixin bg($img,$repeat:null,$background-position: null,$bg-size: null,$background-color:null) {
+    background: #{$background-color} url('#{$path--rel}/#{$img}') #{$repeat} #{$background-position};  
+				background-size: $bg-size;    
+} 

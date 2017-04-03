@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 19, 2016, 4:50:51 PM
+    Author     : Manishkumar.Singh
+*/
+/**
+ * @file
+ * Block Styling
+ */
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media all and (max-width: 360px) {
+  /* line 20, ../sass/multi-lang.scss */
+  body.french.page-cart-checkout, body.russian.page-cart-checkout {
+    font-size: 15px;
+  }
+  /* line 22, ../sass/multi-lang.scss */
+  body.french.page-cart-checkout #main, body.russian.page-cart-checkout #main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /* line 26, ../sass/multi-lang.scss */
+  body.french.page-cart-checkout .form-submit:last-of-type, body.russian.page-cart-checkout .form-submit:last-of-type {
+    margin-right: 15px;
+  }
+  /* line 29, ../sass/multi-lang.scss */
+  body.french.page-cart-checkout .form-submit:first-of-type, body.russian.page-cart-checkout .form-submit:first-of-type {
+    margin-left: 15px !important;
+  }
+  /* line 34, ../sass/multi-lang.scss */
+  body.french .uc-cart-checkout-form .fieldset, body.russian .uc-cart-checkout-form .fieldset {
+    padding: 10px 5px;
+  }
+  /* line 38, ../sass/multi-lang.scss */
+  body.french .form-submit:last-of-type, body.russian .form-submit:last-of-type {
+    margin-right: 15px;
+  }
+  /* line 41, ../sass/multi-lang.scss */
+  body.french .form-submit:first-of-type, body.russian .form-submit:first-of-type {
+    margin-left: 15px !important;
+  }
+}
+@media all and (min-width: 768px) {
+  /* line 51, ../sass/multi-lang.scss */
+  body #edit-actions > font {
+    margin: 0 15px;
+  }
+  /* line 53, ../sass/multi-lang.scss */
+  body #edit-actions > font:first-of-type {
+    margin-left: 0 !important;
+  }
+  /* line 56, ../sass/multi-lang.scss */
+  body #edit-actions > font:last-of-type {
+    margin-right: 0;
+  }
+  /* line 62, ../sass/multi-lang.scss */
+  body.russian #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+  body.russian #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+    padding: 22px 12px;
+  }
+  /* line 66, ../sass/multi-lang.scss */
+  body.russian #block-menu-block-3 .menu .menu-path-nolink,
+  body.russian #block-menu-block-3 .menu > li {
+    padding: 0 4px;
+  }
+  /* line 72, ../sass/multi-lang.scss */
+  body.french #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+  body.french #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+    padding: 22px 7px;
+  }
+  /* line 76, ../sass/multi-lang.scss */
+  body.french #block-menu-block-3 .menu .menu-path-nolink,
+  body.french #block-menu-block-3 .menu > li {
+    padding: 0 8px;
+  }
+  /* line 82, ../sass/multi-lang.scss */
+  body.spanish #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+  body.spanish #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+    padding: 22px 7px;
+  }
+  /* line 86, ../sass/multi-lang.scss */
+  body.spanish.page-cart-checkout {
+    font-size: 15px;
+  }
+  /* line 88, ../sass/multi-lang.scss */
+  body.spanish.page-cart-checkout #main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /* line 93, ../sass/multi-lang.scss */
+  body.spanish #block-views-location-block .view-location .view-content .views-row .views-field.views-field-title {
+    font-size: 35px;
+  }
+}

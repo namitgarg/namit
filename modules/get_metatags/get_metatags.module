@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * This file content menu's to create to csv upload path and csv download path.
+ */
+
+/**
+ * Implements hook_init().
+ */
+function get_metatags_init() {
+  $file_path = drupal_get_path('module', 'get_metatags') . '/include/simple_html_dom.php';
+  if (!file_exists($file_path)) {
+    drupal_set_message(t('Please download the latest version of PHP Simple HTML DOM Parser library from http://sourceforge.net/projects/simplehtmldom/ to your include folder '.drupal_get_path('module', 'get_metatags').'/include/simple_html_dom.php'), 'warning', FALSE);
+  }
+}
+
+
+/**
+ * Implements hook_menu().
+ */
+function get_metatags_menu() {
+  $items['admin/config/system/get-metatags'] = array(
+    'title' => 'Get Meta Tags',
+    'description' => 'Get meta tags of any external website',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('_get_metatags_form'),
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'include/get_metatags.inc',
+  );
+  $items['admin/config/system/get-metatags/download'] = array(
+    'title' => 'download file',
+    'page callback' => array('generate_metatags_csv'),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file' => 'include/get_csv.inc',
+  );
+  return $items;
+}

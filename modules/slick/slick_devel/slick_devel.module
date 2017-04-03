@@ -1,0 +1,84 @@
+<?php
+/**
+ * @file
+ * Provides development options for the Slick module.
+ */
+
+define('SLICK_DEVEL', variable_get('slick_devel', FALSE));
+define('SLICK_DEVEL_DEBUG', variable_get('slick_devel_debug', FALSE));
+define('SLICK_DEVEL_REPLACE', variable_get('slick_devel_replace', FALSE));
+define('SLICK_DEVEL_DISABLE', variable_get('slick_devel_disable', FALSE));
+
+/**
+ * Implements hook_menu().
+ */
+function slick_devel_menu() {
+  $items = array();
+
+  $items['admin/config/media/slick/devel'] = array(
+    'title' => 'Development',
+    'description' => 'Configure the Slick development module settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slick_devel_form_settings'),
+    'access arguments' => array('administer slick'),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 2,
+    'file' => 'includes/slick_devel.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_library_alter().
+ */
+function slick_devel_library_alter(&$libraries, $module) {
+  $path = drupal_get_path('module', 'slick_devel');
+  $slick_path = drupal_get_path('module', 'slick');
+  if (SLICK_DEVEL) {
+    // Switch to the un-minified version of the library.
+    if ($module == 'slick' && isset($libraries['slick'])) {
+      $libraries['slick']['js'] = array(
+        libraries_get_path('slick') . '/slick/slick.js' => array('group' => JS_LIBRARY, 'weight' => -4),
+      );
+    }
+  }
+
+  if (SLICK_DEVEL_DEBUG) {
+    // Switch to the development version of the slick.load.js.
+    if ($module == 'slick' && isset($libraries['drupal.slick'])) {
+      $libraries['drupal.slick']['js'] = array(
+        $slick_path . '/js/slick.load.js' => array('group' => JS_DEFAULT, 'weight' => 0),
+      );
+    }
+  }
+  else {
+    // Switch to the development version of the slick.load.js.
+    if (SLICK_DEVEL_REPLACE && $module == 'slick' && isset($libraries['drupal.slick'])) {
+      $libraries['drupal.slick']['js'] = array(
+        $path . '/js/slick.load.devel.js' => array('group' => JS_DEFAULT, 'weight' => 0),
+      );
+    }
+  }
+
+  if (SLICK_DEVEL_DISABLE) {
+    // Disable the slick.load.min.js.
+    if ($module == 'slick' && isset($libraries['drupal.slick'])) {
+      unset($libraries['drupal.slick']['js']);
+    }
+  }
+}
+
+/**
+ * Implements hook_libraries_info_alter().
+ */
+function slick_devel_libraries_info_alter(&$libraries) {
+  if (SLICK_DEVEL) {
+    // Switch to the un-minified version of the library.
+    if (isset($libraries['slick'])) {
+      $libraries['slick']['files']['js'] = array(
+        'slick/slick.js',
+      );
+    }
+  }
+}

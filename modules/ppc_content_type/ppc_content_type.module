@@ -1,0 +1,10 @@
+<?php
+/**
+ * @file
+ * Code for the PPC Content Type feature.
+ */
+
+include_once 'ppc_content_type.features.inc';
+drupal_add_css(drupal_get_path('module', 'ppc_content_type') . '/ppc-landing-page-css/font-awesome.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+drupal_add_css(drupal_get_path('module', 'ppc_content_type') . '/ppc-landing-page-css/ppc-landing-page1-css.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+drupal_add_css(drupal_get_path('module', 'ppc_content_type') . '/ppc-landing-page-css/ppc-landing-page2-css.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));

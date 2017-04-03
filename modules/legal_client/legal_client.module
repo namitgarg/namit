@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Legal Client feature.
+ */
+
+include_once 'legal_client.features.inc';

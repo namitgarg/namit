@@ -1,0 +1,56 @@
+/**
+ * @file
+ * Provides colorbox integration.
+ */
+
+.colorbox-on--video #colorbox,
+.colorbox-on--video #cboxContent,
+.colorbox-on--video #cboxLoadedContent,
+.colorbox-on--audio #colorbox,
+.colorbox-on--audio #cboxContent,
+.colorbox-on--audio #cboxLoadedContent {
+  box-sizing: border-box;
+}
+
+.colorbox-on--video #cboxBottomCenter,
+.colorbox-on--video #cboxBottomRight,
+.colorbox-on--video #cboxBottomLeft,
+.colorbox-on--video #cboxTopCenter,
+.colorbox-on--video #cboxTopRight,
+.colorbox-on--video #cboxTopLeft,
+.colorbox-on--video #cboxMiddleLeft,
+.colorbox-on--video #cboxMiddleRight,
+.colorbox-on--audio #cboxBottomCenter,
+.colorbox-on--audio #cboxBottomRight,
+.colorbox-on--audio #cboxBottomLeft,
+.colorbox-on--audio #cboxTopCenter,
+.colorbox-on--audio #cboxTopRight,
+.colorbox-on--audio #cboxTopLeft,
+.colorbox-on--audio #cboxMiddleLeft,
+.colorbox-on--audio #cboxMiddleRight {
+  display: none;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.colorbox-on--video #cboxWrapper,
+.colorbox-on--video #cboxContent,
+.colorbox-on--audio #cboxWrapper,
+.colorbox-on--audio #cboxContent {
+  background: none;
+  border-radius: 0;
+}
+
+.colorbox-on--video #cboxContent,
+.colorbox-on--video #cboxLoadedContent,
+.colorbox-on--audio #cboxContent,
+.colorbox-on--audio #cboxLoadedContent {
+  overflow: visible !important;
+}
+
+.colorbox-on--video #cboxLoadedContent .cboxIframe,
+.colorbox-on--audio #cboxLoadedContent .cboxIframe {
+  background-clip: padding-box;
+  border-radius: 0;
+  border: 8px solid #37465b;
+}

@@ -1,0 +1,3 @@
+name = Tag manager Remove
+description = Removes Tag Manager Script from AMP theme
+core = 7.x

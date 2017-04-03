@@ -1,0 +1,14 @@
+name = "Migrate Panels"
+description = "Migrates paths stored in panels custom text"
+package = "Migrate"
+core = "6.x"
+project = "sitedir_migrate"
+dependencies[] = sitedir_migrate
+dependencies[] = panels
+
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "sitedir_migrate"
+datestamp = "1380628400"
+

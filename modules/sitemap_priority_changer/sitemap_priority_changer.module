@@ -1,0 +1,68 @@
+<?php
+
+function sitemap_priority_changer_xmlsitemap_link_alter(&$link) {
+//$a = serialize($link);   
+//watchdog('security', '@fallback', array('@fallback' => $a), WATCHDOG_WARNING);       
+    if ($link['type'] == 'node' && $link['loc'] != 'node/4') {
+        $result = db_select('menu_links', 'm')
+                ->fields('m')
+                ->condition('menu_name', 'main-menu', '=')
+                ->condition('depth', 3, '<')
+                ->condition('link_path', $link['loc'], '=')
+                ->condition('hidden', 0, '=')
+                ->execute()
+                ->fetchAll();
+    }
+    if (!empty($result)) {
+        $link['priority'] = variable_get('main_menu_sitemap_priority', 0.7);
+    }
+     $link['lastmod'] = 0;
+     $link['changefreq'] = XMLSITEMAP_FREQUENCY_MONTHLY; 
+}
+
+/**
+ * Implements hook_menu().
+ */
+function sitemap_priority_changer_menu() {
+    $items['admin/config/system/sitemap-priority'] = array(
+        'title' => 'Set Main Menu Pages Priority',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('_sitemap_priority_changer_form'),
+        'access arguments' => array('access_sitemap_frequency_changer'),
+        'type' => MENU_LOCAL_TASK,
+    );
+    return $items;
+}
+
+/**
+ * Form constructor for node_generator_input_form form.
+ */
+function _sitemap_priority_changer_form($form, &$form_state) {
+    drupal_set_title(t('Change Sitemap XML Priority Upto Second Level Main Menu Pages.'));
+    $form['main_menu_sitemap_priority'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Set Priority For Main Menu'),
+    '#default_value' =>  variable_set('main_menu_sitemap_priority', '')
+    );
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Submit')
+    );
+    $form['information'] = array(
+        '#markup' => '<div><strong>' . t('Note:- Please Enter Between 0.1 to 1.0 ...') . '</strong></div>',
+    );
+    return system_settings_form($form);
+}
+
+
+/**
+ * Implements hook_permission(). 
+ */
+function sitemap_priority_changer_permission() {
+    return array(
+        'access_sitemap_frequency_changer' => array(
+            'title' => t('Access Sitemap Priority Form'),
+            'description' => t('Set Main Menu Pages Priority.'),
+        ),
+    );
+}

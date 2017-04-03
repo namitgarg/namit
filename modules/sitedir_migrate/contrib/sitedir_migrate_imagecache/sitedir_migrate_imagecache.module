@@ -1,0 +1,15 @@
+<?php
+
+function sitedir_migrate_imagecache_sitedir_query() {
+  return 'Imagecache';
+}
+
+function sitedir_migrate_imagecache_sitedir_update() {
+  watchdog('Sitedir Migrate', 'Running the Imagecache migration');
+
+  $presets = imagecache_presets();
+
+  foreach ($presets as $preset) {
+    imagecache_preset_flush($preset);
+  }
+}

@@ -1,0 +1,7 @@
+name = Shortcode to Display View and Block Data
+description = Shortcode tag to display View Data.
+package = Shortcode
+core = 7.x
+dependencies[] = shortcode
+dependencies[] = filter
+

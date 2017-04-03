@@ -1,0 +1,1063 @@
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   Normalize.css is intended to be used as an alternative to CSS resets.
+
+   It is suggested that you read through the normalize.css file and customise it
+   to meet the design requirements of a project rather including it as a "black
+   box". @see http://nicolasgallagher.com/about-normalize-css/
+
+   Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+         @see http://snook.ca/archives/html_and_css/no_css_reset/
+   ========================================================================== */
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 24, ../sass/normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 43, ../sass/normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+/* line 54, ../sass/normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+/* line 64, ../sass/normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/**
+ * @file
+ * Wireframes Styling
+ *
+ * Add wireframes to the basic layout elements.
+ */
+/* line 76, ../sass/normalize.scss */
+.with-wireframes #header,
+.with-wireframes #main,
+.with-wireframes #content,
+.with-wireframes #navigation,
+.with-wireframes .region-sidebar-first,
+.with-wireframes .region-sidebar-second,
+.with-wireframes #footer,
+.with-wireframes .region-bottom {
+  outline: 1px solid #ccc;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/* Instead of relying on the fonts that are available on a user's computer, you
+   can use web fonts which, like images, are resources downloaded to the user's
+   browser. Because of the bandwidth and rendering resources required, web fonts
+   should be used with care.
+
+   Numerous resources for web fonts can be found on Google. Here are a few
+   websites where you can find Open Source fonts to download:
+   - http://www.fontsquirrel.com/fontface
+   - http://www.theleagueofmoveabletype.com
+
+   In order to use these fonts, you will need to convert them into formats
+   suitable for web fonts. We recommend the free-to-use Font Squirrel's
+   Font-Face Generator:
+     http://www.fontsquirrel.com/fontface/generator
+
+   The following is an example @font-face declaration. This font can then be
+   used in any ruleset using a property like this:  font-family: Example, serif;
+
+   Since we're using Sass, you'll need to declare your font faces here, then you
+   can add them to the font variables in the _base.scss partial.
+*/
+/*
+@font-face {
+  font-family: 'Example';
+  src: url('../fonts/example.eot');
+  src: url('../fonts/example.eot?iefix') format('eot'),
+    url('../fonts/example.woff') format('woff'),
+    url('../fonts/example.ttf') format('truetype'),
+    url('../fonts/example.svg#webfontOkOndcij') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+/* line 134, ../sass/normalize.scss */
+html {
+  font-size: 18px;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  line-height: 28px;
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+/* line 145, ../sass/normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Lato", sans-serif;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * The order of link states are based on Eric Meyer's article:
+ * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+ */
+/* line 163, ../sass/normalize.scss */
+a:link {
+  text-decoration: none;
+}
+
+/* line 166, ../sass/normalize.scss */
+a:visited {
+  text-decoration: none;
+}
+
+/* line 169, ../sass/normalize.scss */
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* line 173, ../sass/normalize.scss */
+a:active {
+  text-decoration: none;
+}
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+/* line 180, ../sass/normalize.scss */
+a:focus {
+  outline: none;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+/* line 187, ../sass/normalize.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
+   so that the line height of our base font becomes the basic unit of vertical
+   measurement. We use multiples of that unit to set the top and bottom margins
+   for our block level elements and to set the line heights of any fonts.
+   For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+/* line 205, ../sass/normalize.scss */
+h4 {
+  font-size: 1em;
+  line-height: 1.55556em;
+  margin-top: 1.55556em;
+  margin-bottom: 1.55556em;
+}
+
+/* line 211, ../sass/normalize.scss */
+h5 {
+  font-size: 0.83em;
+  line-height: 1.87416em;
+  margin-top: 1.87416em;
+  margin-bottom: 1.87416em;
+}
+
+/* line 217, ../sass/normalize.scss */
+h6 {
+  font-size: 0.75em;
+  line-height: 2.07407em;
+  margin-top: 2.07407em;
+  margin-bottom: 2.07407em;
+}
+
+/* Thematic break */
+/* line 224, ../sass/normalize.scss */
+hr {
+  height: 1px;
+  border: 1px solid #303030;
+  margin: 1.55556em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+/* line 234, ../sass/normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  white-space: nowrap;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+/* line 244, ../sass/normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 249, ../sass/normalize.scss */
+blockquote {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.55556em 30px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+/* line 258, ../sass/normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+/* line 266, ../sass/normalize.scss */
+mark {
+  background: #fff;
+  color: #303030;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 275, ../sass/normalize.scss */
+p {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 0 0 35px;
+}
+/* line 278, ../sass/normalize.scss */
+p:last-child {
+  margin: 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+/* line 286, ../sass/normalize.scss */
+pre,
+code,
+kbd,
+samp,
+tt,
+var {
+  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+  /* The $font-monospace value ends with ", serif". */
+  font-size: 1em;
+  line-height: 1.55556em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+/* line 300, ../sass/normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 10px 0 35px;
+}
+
+/* @todo Determine how big element affects vertical rhythm. */
+/* line 309, ../sass/normalize.scss */
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+/* line 318, ../sass/normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 326, ../sass/normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 330, ../sass/normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 343, ../sass/normalize.scss */
+dl,
+menu,
+ol,
+ul,
+.item-list ul {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.55556em 0;
+}
+
+/* line 352, ../sass/normalize.scss */
+.item-list ul li {
+  /* Drupal override */
+  margin: 0;
+}
+
+/* line 356, ../sass/normalize.scss */
+dd {
+  margin: 0 0 0 30px;
+  /* LTR */
+}
+
+/* line 361, ../sass/normalize.scss */
+ul ul, ul ol, ol ul, ol ol, .item-list ul ul, .item-list ul ol, .item-list ol ul, .item-list ol ol {
+  margin: 0;
+  /* Turn off margins on nested lists. */
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+/* line 370, ../sass/normalize.scss */
+menu,
+ol,
+ul,
+.item-list ul {
+  padding: 0 0 0 30px;
+  /* LTR */
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+/* line 381, ../sass/normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+/* line 398, ../sass/normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+  /* vertical-align: bottom; */
+  /* Suppress the space beneath the baseline */
+  /* Responsive images */
+  /* @todo Add responsive embedded video. */
+  max-width: 100%;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+/* line 414, ../sass/normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+/* line 427, ../sass/normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+/* line 440, ../sass/normalize.scss */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+/* line 448, ../sass/normalize.scss */
+fieldset {
+  border-color: #c0c0c0;
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-top-width: 0.05556em;
+  border-top-style: solid;
+  padding-top: 0.48889em;
+  border-bottom-width: 0.05556em;
+  border-bottom-style: solid;
+  padding-bottom: 0.95556em;
+  border-left-width: 0.05556em;
+  border-left-style: solid;
+  padding-left: 0.95556em;
+  border-right-width: 0.05556em;
+  border-right-style: solid;
+  padding-right: 0.95556em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+/* line 464, ../sass/normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+/* line 476, ../sass/normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+/* line 489, ../sass/normalize.scss */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+/* line 501, ../sass/normalize.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/*Re-set default cursor for disabled elements*/
+/* line 509, ../sass/normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* 1. Addresses box sizing set to content-box in IE8/9
+   2. Removes excess padding in IE8/9 */
+/* line 515, ../sass/normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/* 1. Addresses appearance set to searchfield in S5, Chrome
+   2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+/* line 523, ../sass/normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/*Removes inner padding and search cancel button in S5, Chrome on OS X*/
+/* line 528, ../sass/normalize.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+/* line 536, ../sass/normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+/* line 545, ../sass/normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* =======================Tables============================================= */
+/*Remove most spacing between table cells*/
+/* line 551, ../sass/normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* width: 100%; */
+  /* Prevent cramped-looking tables */
+  /* Add vertical rhythm margins. */
+  margin-top: 1.55556em;
+  margin-bottom: 1.55556em;
+}
+
+/*Drupal provides table styling which is only useful for its admin section forms, so we override this default CSS. (We set it back in forms.css.)*/
+/* line 560, ../sass/normalize.scss */
+th {
+  text-align: left;
+  /* LTR */
+  padding: 0;
+  border-bottom: none;
+}
+
+/* line 565, ../sass/normalize.scss */
+tbody {
+  border-top: none;
+}
+
+/*Basic positioning styles shared by primary and secondary tabs.*/
+/* line 572, ../sass/normalize.scss */
+ul.primary,
+ul.secondary {
+  overflow: hidden;
+  *zoom: 1;
+  border-bottom: 1px solid #bbb;
+  list-style: none;
+  margin: 1em 0 1.5em;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+/* line 581, ../sass/normalize.scss */
+ul.primary li,
+ul.secondary li {
+  float: left;
+  /* LTR */
+  margin: 0.5em 3px 0;
+}
+/* line 586, ../sass/normalize.scss */
+ul.primary a,
+ul.secondary a {
+  border: 1px solid #e9e9e9;
+  border-right: 0;
+  border-bottom: 0;
+  display: block;
+  line-height: 1.5em;
+  text-decoration: none;
+}
+
+/*Primary tabs*/
+/* line 597, ../sass/normalize.scss */
+ul.primary li {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  text-shadow: 1px 1px 0 #fff;
+  border: 1px solid #bbb;
+  border-bottom: 0;
+  margin: 0.5em 0 0 3px;
+  /* LTR */
+}
+/* line 604, ../sass/normalize.scss */
+ul.primary li.active {
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+  /* Overlap the ul's border. */
+}
+/* line 609, ../sass/normalize.scss */
+ul.primary a:link,
+ul.primary a:visited {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  color: #333;
+  background-color: #dedede;
+  letter-spacing: 1px;
+  padding: 0 1em;
+  text-align: center;
+}
+/* line 619, ../sass/normalize.scss */
+ul.primary a:hover,
+ul.primary a:focus {
+  background-color: #e9e9e9;
+  border-color: #f2f2f2;
+}
+/* line 624, ../sass/normalize.scss */
+ul.primary a.active {
+  background-color: transparent;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, rgba(233, 233, 233, 0)));
+  background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  border-color: #fff;
+}
+
+/*Secondary tabs*/
+/* line 632, ../sass/normalize.scss */
+ul.secondary {
+  font-size: .9em;
+  margin-top: -1.5em;
+  /* Collapse bottom margin of ul.primary. */
+  padding-bottom: .5em;
+}
+/* line 637, ../sass/normalize.scss */
+ul.secondary a:link,
+ul.secondary a:visited {
+  -moz-border-radius: 0.75em;
+  -webkit-border-radius: 0.75em;
+  border-radius: 0.75em;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  text-shadow: 1px 1px 0 #fff;
+  background-color: #f2f2f2;
+  color: #666;
+  padding: 0 .5em;
+}
+/* line 646, ../sass/normalize.scss */
+ul.secondary a:hover,
+ul.secondary a:focus {
+  background-color: #dedede;
+  border-color: #999;
+  color: #333;
+}
+/* line 652, ../sass/normalize.scss */
+ul.secondary a.active,
+ul.secondary a:active {
+  text-shadow: 1px 1px 0 #333;
+  background-color: #666;
+  border-color: #000;
+  color: #fff;
+}
+
+/* line 660, ../sass/normalize.scss */
+.comments {
+  /* Wrapper for the list of comments and its title */
+  margin: 1.5em 0;
+}
+
+/* line 664, ../sass/normalize.scss */
+.comment.comment-preview {
+  /* Preview of the comment before submitting new or updated comment */
+  background-color: #ffffea;
+  /* Drupal core will use a #ffffea background. See #1110842 */
+}
+/* line 667, ../sass/normalize.scss */
+.comment .new {
+  /* "New" marker for comments that are new for the current user */
+  color: #c00;
+}
+/* line 670, ../sass/normalize.scss */
+.comment .permalink {
+  /* Comment's permalink wrapper */
+  text-transform: uppercase;
+  font-size: 75%;
+}
+
+/* line 675, ../sass/normalize.scss */
+.indented {
+  /* Nested comments are indented */
+  margin-left: 30px;
+  /* Drupal core uses a 25px left margin */
+}
+
+/* line 678, ../sass/normalize.scss */
+.comment-unpublished {
+  /* Unpublished comments */
+}
+/* line 679, ../sass/normalize.scss */
+.comment-unpublished p.unpublished {
+  /* The word "Unpublished" displayed underneath the content. */
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@media print {
+  /* line 686, ../sass/normalize.scss */
+  a:link,
+  a:visited {
+    /* underline all links */
+    text-decoration: underline !important;
+  }
+  /* line 690, ../sass/normalize.scss */
+  #site-name a:link, #site-name
+  a:visited {
+    /* Don't underline header */
+    text-decoration: none !important;
+  }
+
+  /* line 696, ../sass/normalize.scss */
+  #content a[href]:after {
+    /* Add visible URL after links. */
+    content: " (" attr(href) ")";
+    font-weight: normal;
+    font-size: 18px;
+  }
+  /* line 702, ../sass/normalize.scss */
+  #content a[href^="javascript:"]:after,
+  #content a[href^="#"]:after {
+    /* Only display useful links. */
+    content: "";
+  }
+  /* line 707, ../sass/normalize.scss */
+  #content abbr[title]:after {
+    /* Add visible title after abbreviations. */
+    content: " (" attr(title) ")";
+  }
+
+  /* line 712, ../sass/normalize.scss */
+  #content {
+    /* Un-float the content */
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* line 719, ../sass/normalize.scss */
+  body,
+  #page,
+  #main,
+  #content {
+    /* Turn off any background colors or images */
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
+  /* line 728, ../sass/normalize.scss */
+  #skip-link,
+  #toolbar,
+  #navigation,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  #footer,
+  .breadcrumb,
+  .tabs,
+  .action-links,
+  .links,
+  .book-navigation,
+  .forum-topic-navigation,
+  .pager,
+  .feed-icons {
+    /* Hide sidebars and nav elements */
+    visibility: hidden;
+    display: none;
+  }
+}
+/* End @media print */
+/* Client login image */
+/* line 749, ../sass/normalize.scss */
+#client-login a {
+  display: block;
+  background-image: url(../images/login.png);
+  background-repeat: no-repeat;
+  left: 0;
+  cursor: pointer;
+  height: 35px;
+  overflow: hidden;
+  text-indent: -999px;
+  top: 0;
+  width: 34px;
+  z-index: 9;
+}
+
+/* line 750, ../sass/normalize.scss */
+div#client-login {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 753, ../sass/normalize.scss */
+.form-item {
+  /* Wrapper for a form element (or group of form elements) and its label */
+  margin: 1.5em 0;
+}
+/* line 756, ../sass/normalize.scss */
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  /* Highlight the form elements that caused a form submission error */
+  border: 1px solid #c00;
+}
+/* line 762, ../sass/normalize.scss */
+.form-item label {
+  /* The label for a form element */
+  display: block;
+  font-weight: bold;
+}
+/* line 767, ../sass/normalize.scss */
+.form-item label.option {
+  /* The label for a radio button or checkbox */
+  display: inline;
+  font-weight: normal;
+}
+/* line 772, ../sass/normalize.scss */
+.form-item .form-required {
+  /* The part of the label that indicates a required field */
+  color: #c00;
+}
+/* line 776, ../sass/normalize.scss */
+.form-item .description {
+  /* The descriptive help text (separate from the label) */
+  font-size: 0.85em;
+}
+/* line 780, ../sass/normalize.scss */
+.form-checkboxes .form-item, .form-radios .form-item {
+  /* Pack groups of checkboxes and radio buttons closer together */
+  margin: 0;
+  /* Drupal core uses "0.4em 0" */
+}
+
+/* line 786, ../sass/normalize.scss */
+.form-submit {
+  /* The submit button */
+}
+
+/* line 790, ../sass/normalize.scss */
+.container-inline div,
+.container-inline label {
+  /* Inline labels and form divs */
+  display: inline;
+}
+
+/* line 796, ../sass/normalize.scss */
+.tips {
+  /* Tips for Drupal's input formats */
+}
+
+/* line 799, ../sass/normalize.scss */
+a.button {
+  /* Buttons used by contrib modules like Media */
+  -moz-appearance: button;
+  -webkit-appearance: button;
+}
+
+/*
+ * Password confirmation
+ */
+/* line 807, ../sass/normalize.scss */
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+/*
+ * Search (search-block-form.tpl.php)
+ */
+/* line 816, ../sass/normalize.scss */
+#block-search-form {
+  /* Wrapper for the search form */
+}
+
+/*
+ * Drupal's default login form block
+ */
+/* line 823, ../sass/normalize.scss */
+#user-login-form {
+  text-align: left;
+  /* LTR */
+  /*
+   * OpenID
+   *
+   * The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+}
+/* line 833, ../sass/normalize.scss */
+#user-login-form ul {
+  /* OpenID creates a new ul above the login form's links. */
+  margin-bottom: 0;
+  /* Position OpenID's ul next to the rest of the links. */
+}
+/* line 837, ../sass/normalize.scss */
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* The "Log in using OpenID" link. */
+  margin-top: 1.5em;
+  margin-left: -20px;
+  /* LTR */
+  /* Un-do some of the padding on the ul list. */
+}
+/* line 843, ../sass/normalize.scss */
+#user-login-form li.user-link {
+  /* The "Cancel OpenID login" link. */
+  margin-top: 1.5em;
+}
+
+/* line 848, ../sass/normalize.scss */
+#user-login ul {
+  margin: 1.5em 0;
+}
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in normalize.css, but restore them for the admin
+ * section of the site.
+ */
+/* line 860, ../sass/normalize.scss */
+form th {
+  text-align: left;
+  /* LTR */
+  padding-right: 1em;
+  /* LTR */
+  border-bottom: 3px solid #ccc;
+}
+/* line 866, ../sass/normalize.scss */
+form tbody {
+  border-top: 1px solid #ccc;
+}
+/* line 870, ../sass/normalize.scss */
+form tr.even {
+  background-color: #fff;
+}
+/* line 874, ../sass/normalize.scss */
+form table .item-list ul {
+  margin: 0;
+}
+
+/*
+ * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+ */
+/* line 883, ../sass/normalize.scss */
+td.menu-disabled {
+  background: #ccc;
+}

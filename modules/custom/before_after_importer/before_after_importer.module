@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Defined some constant as BEFORE_IMAGE_PREFIX and AFTER_IMAGE_PREFIX and also some required
+ */
+define("BEFORE_IMAGE_PREFIX", 'field_before_image_');
+define("AFTER_IMAGE_PREFIX", 'field_after_image_');
+define('DIRECTORY_PATH_WHERE_FILES_PICKED', variable_get('file_public_path', conf_path() . '/files') . '/');
+define('BEFORE_AFTER_TAXONOMY_MACHINENAME', 'gallery_taxonomy');
+define('BEFORE_AFTER_IMPORT_LINE_MAX', 2000);
+define('___BEFORE_AFTER_IMPORT_LINE_MIN', 1);
+
+
+/**
+ * Implements hook_menu().
+ */
+
+/**
+ * Function  :: before_after_importer_menu
+ * @param type NONE 
+ */
+function before_after_importer_menu() {
+  $items['before-after-importer'] = array(
+    'title callback' => 'Before After Image Importer',
+    'page callback' => 'drupal_get_form',				// Calls the Drupal Form API
+    'page arguments' => array('before_after_importer_form'), 		// Pass function to Form API
+    'file' => 'includes/before_after_importer.inc',
+    'access callback' => 'user_access',
+    'access arguments' => array('administer users'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}

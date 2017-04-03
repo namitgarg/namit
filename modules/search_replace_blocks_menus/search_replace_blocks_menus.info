@@ -1,0 +1,4 @@
+name = Search and Replace Blocks Menus
+description = Search and Replace a string in all custom blocks and menus.
+core = 7.x
+configure = admin/config/system/replace-blocks-menus

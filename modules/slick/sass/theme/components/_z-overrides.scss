@@ -1,0 +1,30 @@
+/**
+ * Misc overrides core slick.
+ */
+/* Hide non-js lazy-loaded image to show <noscript> one instead, if the theme
+supports no-js, otherwise IMG tag with dummy placeholder. */
+.no-js .slick img.lazy {
+  display: none;
+}
+
+.slick-initialized {
+  overflow: visible;
+}
+
+.slick,
+.slick__slide {
+  position: relative;
+}
+
+.slick__slide {
+  // Prevent collapsing with nested slick.
+  width: 100%;
+  // With bug total <= slidesToShow, slick-center is screwed up.
+  &.slick-center {
+    z-index: 1;
+  }
+  // So add proper z-index for the actual current.
+  &.slide--current {
+    z-index: 4;
+  }
+}

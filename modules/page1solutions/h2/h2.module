@@ -1,0 +1,38 @@
+<?php
+function h2_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'system_site_information_settings') {
+    $form['site_h2'] = array(
+      '#type' => 'textfield',
+      '#title' => t('H2'),
+      '#default_value' => variable_get('site_h2', ''),
+      '#maxlength' => 128, 
+      '#collapsible' => TRUE, 
+      '#collapsed' => TRUE, 
+      '#description' => t('Sets site-wide &#60h2&#62;  &#60;?php print $site_h2 ?&#62;'),
+    );
+  }
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function h2_perm() {
+  return array('access h2, edit h2', 'administer newmodule');
+}
+
+/**
+ * Implementation of hook_help().
+ */
+function h2_help($path, $arg) {
+  $output = '';  //declare your output variable
+  switch ($path) {
+    case "admin/help#h2":
+      $output = '<p>'.  t('Sets site-wide &#60h2&#62;. Use &#60;?php print $site_h2 ?&#62; in your template.php file') .'</p>';
+      break;
+  }
+  return $output;
+} // function h2_help
+
+function h2_preprocess(&$variables) {
+  $variables['site_h2'] = '<h2>' . variable_get('site_h2', '') . '</h2>';
+}

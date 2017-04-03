@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ *   Install and uninstall schema and functions for the feeds_atom module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function feeds_atom_install() {
+  // @todo The drupal_(un)install_schema functions are called automatically in D7.
+  // drupal_install_schema('feeds_atom')
+}
+
+/**
+ * Implements hook_schema().
+ */
+function feeds_atom_schema() {
+  $schema['feeds_atom_file_import'] = array(
+    'fields' => array(
+      'fid' => array(
+        'description' => 'The file id that we have imported.',
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'sha1' => array(
+        'description' => 'sha1 hash of this file.',
+        'type' => 'varchar',
+        'length' => '40',
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('fid'),
+  );
+
+  return $schema;
+}
+

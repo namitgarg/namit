@@ -1,0 +1,4 @@
+name = Before After Gallery 
+description = Custom module for Before After Gallery 
+core = 7.x 
+package = Page one Solution

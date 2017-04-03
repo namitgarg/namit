@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Defined some constant
+ */
+
+define('ALIAS_CHECKER_LINE_MAX', 2000);
+define('___ALIAS_CHECKER_IMPORT_LINE_MIN', 1);
+
+
+/**
+ * Implements hook_menu().
+ */
+
+/**
+ * Function  :: alias_checker_menu
+ * @param type NONE 
+ */
+function alias_checker_menu() {
+  $items['alias-checker'] = array(
+    'title callback' => 'Alieas Checker',
+    'page callback' => 'drupal_get_form',				// Calls the Drupal Form API
+    'page arguments' => array('alias_checker_form'), 		// Pass function to Form API
+    'file' => 'includes/alias_checker.inc',
+    'access callback' => 'user_access',
+    'access arguments' => array('administer users'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}

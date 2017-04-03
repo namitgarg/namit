@@ -1,0 +1,6 @@
+<?php
+
+function searchpagetitle_menu_alter(&$items){
+    $items['search']['title']='Search Results';
+}
+

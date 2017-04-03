@@ -1,0 +1,21 @@
+<?php
+
+function uc_emptycart_theme_registry_alter(&$theme_registry) {
+    
+    if (isset($theme_registry['uc_cart_block_items'])) {
+         $theme_registry['uc_cart_block_items']['function']='uc_emptycart_theme_custom_link';
+    
+    }
+    if(isset($theme_registry['uc_empty_cart']))
+    {
+        $theme_registry['uc_empty_cart']['function']='uc_emptycart_theme_custom_empty';
+    }
+}
+
+
+function uc_emptycart_theme_custom_empty() {
+        $empty_message='<p class="uc-cart-empty">' . t(' There are no products in your shopping cart.') . '</p>';
+    $store_link='<p class="uc-cart-empty empty-store-link">' . l(t('Back to store'), '/products'). '</p>';
+$output=$empty_message.$store_link;
+  return $output;
+}

@@ -1,0 +1,510 @@
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   Normalize.css is intended to be used as an alternative to CSS resets.
+
+   It is suggested that you read through the normalize.css file and customise it
+   to meet the design requirements of a project rather including it as a "black
+   box". @see http://nicolasgallagher.com/about-normalize-css/
+
+   Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+         @see http://snook.ca/archives/html_and_css/no_css_reset/
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,300,700);
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* ============================== CSS related to landing page ===================================== */
+body{
+    width:100%;
+    font-size: 14px;
+    margin:0;
+    padding:0;
+}
+#ppc-pages-new-main-container {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    background: #FFF;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+}
+#ppc-pages-new-main-container *{
+    box-sizing: border-box;
+}
+.center {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+/* ============================== CSS related to all parents ===================================== */
+#ppc-pages-new-top-header, #ppc-pages-new-top-banner-area, #ppc-pages-new-how-can-we-help, #ppc-pages-new-white-stradley, #ppc-pages-new-icons-area, #ppc-pages-new-footer-area{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+/* ============================== CSS related to ppc-pages-top-header ===================================== */
+#ppc-pages-new-top-header {
+    padding: 5px 0 8px;
+    text-align:center;
+}
+#ppc-pages-new-top-bar-left-logo-image-container {
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+#ppc-pages-new-top-bar-right-address-container {
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-top: 12px;
+    text-align:right;
+}
+#ppc-pages-new-top-bar-right-address-container #ppc-pages-new-call-us {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    line-height: normal;
+    margin-right: 2px;
+}
+#ppc-pages-new-top-bar-right-address-container #ppc-pages-new-contact {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    line-height: normal;
+}
+#ppc-pages-new-top-bar-right-address-container #ppc-pages-new-contact-text {
+    font-size: 14px;
+    line-height: 24px;
+    font-style: italic;
+}
+#ppc-pages-new-top-bar-right-address-container #ppc-pages-new-contact-text:first-letter {
+    text-transform: uppercase;
+}
+/* ============================== CSS related to ppc-pages-new-top-banner-area ===================================== */
+#ppc-pages-new-top-banner-area{
+    position:relative;  
+    overflow: hidden;
+}
+#ppc-pages-new-top-banner-area .view-display-id-page {
+    width: 100%;
+    line-height: 0;
+ }
+#ppc-pages-new-top-banner-area .view-display-id-page .views-row{
+    width:100%;
+}
+#ppc-pages-new-top-banner-area .view-display-id-page .views-row img{
+    width:100%;
+    height:auto;
+    min-width: 1500px;
+}
+#ppc-pages-new-top-banner-area .banner-text-area-new{
+    position: absolute;
+    left:0;
+    bottom:0;
+    background: #00486e;
+    line-height: normal;
+    width:100%;
+    padding:15px 0;
+}
+#ppc-pages-new-top-banner-area .banner-text-area-new .text-title1-new{
+    max-width: 1170px;
+    width:100%;
+    font-size: 38px;
+    line-height: normal;
+    margin:0 auto;
+ }
+ #ppc-pages-new-top-banner-area .banner-text-area-new .text-title1-new.Medium{
+    font-size: 36px;
+ }
+  #ppc-pages-new-top-banner-area .banner-text-area-new .text-title1-new.Small{
+    font-size: 34px;
+ }
+#ppc-pages-new-top-banner-area .banner-text-area-new .text-title2-new{
+    max-width: 1170px;
+    width:100%;
+    font-size: 24px;
+    line-height: normal;
+    margin:0 auto;
+}
+#ppc-pages-new-top-banner-area .banner-text-area-new .text-title2-new.Medium{
+    font-size: 22px;
+}
+#ppc-pages-new-top-banner-area .banner-text-area-new .text-title2-new.Small{
+    font-size: 20px;
+}
+/* ============================== CSS related to ppc-pages-new-how-can-we-help-wrap ===================================== */
+#ppc-pages-new-how-can-we-help-wrap{
+    width:100%;
+    max-width: 1170px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    height:580px;
+    top:0;
+}
+#ppc-pages-new-top-text-area{
+    width:100%;
+    max-width: 680px;
+    float:left;
+    float:left;  
+    padding:15px;
+}
+#ppc-pages-new-top-text-area p{
+    font-size:14px;
+    line-height: 24px;
+}
+#ppc-pages-new-how-can-we-help{
+    width:49%;
+    max-width: 460px;
+    float:right;
+    border:1px solid #00486e;
+    padding:40px 28px 30px;
+    text-align:center;  
+    position:relative;
+    height:100%;
+}
+
+#ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form-title{
+    font-size: 32px;
+    line-height: 36px;    
+}
+#ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form-title.Medium{
+    font-size: 30px;
+    line-height: 34px;    
+}
+#ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form-title.Small{
+    font-size: 28px;
+    line-height: 32px;    
+}
+#ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form-subtitle{
+    font-size: 14px;
+    line-height: 24px;    
+}
+#ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form-subtitle.Medium{
+    font-size: 13px;  
+}
+#ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form-subtitle.Small{
+    font-size: 12px;  
+}
+#ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form{
+    margin-top:15px;
+}
+#ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form iframe{
+    height:430px;
+}
+/* ============================== CSS related to ppc-pages-new-white-stradley ===================================== */
+#ppc-pages-new-white-stradley{
+    padding:50px 0 28px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-heading{
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 25px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-heading.Medium{
+    font-size: 30px;
+    line-height: 34px;    
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-heading.Small{
+    font-size: 28px;
+    line-height: 32px;    
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-heading strong{
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 600;    
+}
+#ppc-pages-new-white-stradley hr{
+    background: #00486e;
+    border: medium none;
+    display: inline-block;
+    height: 3px;
+    margin-top: -2px;
+    vertical-align: top;
+    width: 186px;    
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-desc{
+    margin-top:25px;
+    font-size: 16px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-desc.Medium{
+    font-size: 15px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-desc.Small{
+    font-size: 14px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-desc{
+    margin-top:25px;
+    font-size: 16px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-desc p{
+    line-height: 32px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-readmore{
+    text-align:right;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-readmore a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 32px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-readmore a.Medium{
+    font-size: 15px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-readmore a.Small{
+    font-size: 14px;
+}
+#ppc-pages-new-white-stradley #ppc-pages-new-white-stradley-readmore a:hover{
+    text-decoration: underline;
+}
+/* ============================== CSS related to ppc-pages-new-icons-area ===================================== */
+#ppc-pages-new-icons-area{
+    padding:40px 0 45px;
+}
+#ppc-pages-new-icons-area .view-display-id-page{
+    width:100%;
+}
+#ppc-pages-new-icons-area .view-display-id-page .views-row{
+    width:48%;
+    margin-bottom: 18px;
+}
+#ppc-pages-new-icons-area .view-display-id-page .views-row-odd{
+    float:left;
+}
+#ppc-pages-new-icons-area .view-display-id-page .views-row-even{
+    float:right;
+}
+#ppc-pages-new-icons-area .view-display-id-page .ppc-new-s-s-area{
+    width:100%;
+    background: #f2f2f2;
+    min-height:118px;
+    border:1px solid #e1e1e1;
+    border-radius: 5px;
+    padding:25px 22px;
+    position: relative;    
+}
+#ppc-pages-new-icons-area .view-display-id-page .ppc-new-s-s-area .fa{
+    position: absolute;
+    top:25px;
+    left:20px;
+    font-size: 50px !important;
+}
+#ppc-pages-new-icons-area .view-display-id-page .ppc-new-s-s-area .titlecontent-wrap-new{
+    padding-left: 78px;
+}
+#ppc-pages-new-icons-area .view-display-id-page .ppc-new-s-s-area .ppc-ss-new-title{
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 600;
+}
+#ppc-pages-new-icons-area .view-display-id-page .ppc-new-s-s-area .ppc-ss-new-content{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+}
+/* ============================== CSS related to ppc-pages-new-icons-area ===================================== */
+#ppc-new-footer-bottom{
+    width:100%;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;    
+}
+#ppc-new-footer-bottom .ppc-footer-text-left{
+    width:50%;
+    float:left;
+    border-top:1px solid #eaeaea;
+    height:80px;
+}
+#ppc-new-footer-bottom .ppc-footer-text-left .ppc-footer-text-left-inner{
+    width:100%;
+    max-width: 585px;
+    float:right;
+    font-size: 11px;
+    line-height: 16px;
+    padding:31px 45px 31px 0;
+}
+#ppc-new-footer-bottom .ppc-footer-text-right{
+    width:48%;
+    float:right;
+    height:80px;
+    position: relative;
+}
+#ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-before{
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid #fd5032;
+    border-bottom: 80px solid rgba(253, 80, 50, 0.8);
+    border-left: 36px solid transparent;
+    position: absolute;
+    left: -36px;    
+}
+#ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-inner{
+    width:100%;
+    max-width: 585px;
+    float:left;
+    padding:24px 0 24px 15px;
+    position:relative;
+}
+#ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-inner .fa{
+    position: absolute;
+    left:15px;
+    top:24px;
+    font-size:28px !important;
+}
+#ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-line1,#ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-line2{
+    font-size: 12px;
+    line-height: 16px;
+    padding-left:28px;
+}
+#ppc-pages-new-bottom-social-share{
+    padding:30px 0 26px;
+    text-align: right;
+    line-height: 0;
+}
+#ppc-pages-new-bottom-social-share .share{
+    display: none;
+}
+
+@media all and (max-width:1170px){
+    .center{
+        padding:0 15px;
+    }
+    #ppc-pages-new-top-banner-area .banner-text-area-new{
+        padding:15px;
+    }
+    #ppc-new-footer-bottom .ppc-footer-text-left .ppc-footer-text-left-inner{
+        padding:31px 0;
+    }
+    #ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-inner{
+        
+    }
+    #ppc-pages-new-how-can-we-help-wrap{
+        padding:0 15px;
+    }
+    #ppc-pages-new-how-can-we-help{
+        padding:30px 15px 30px;
+        height:96%;
+    }
+    #ppc-pages-new-top-text-area{
+        width:49%;
+    }
+    #ppc-pages-new-how-can-we-help #ppc-pages-new-how-can-we-help-form-title{ 
+        font-size: 24px;
+    }   
+}
+@media all and (max-width:1024px){
+    #ppc-pages-new-icons-area .view-display-id-page .views-row{
+        width:100%;
+        float:left !important;
+    }    
+}
+@media all and (max-width:834px){
+    #ppc-pages-new-how-can-we-help{
+        padding:30px 15px 30px;
+        height:100%;
+    }    
+}
+@media all and (max-width:767px){
+    #ppc-new-footer-bottom .ppc-footer-text-left{
+        width:100%;
+        height: auto;
+        padding:0 15px;
+    }
+    #ppc-new-footer-bottom .ppc-footer-text-right{
+        width:100%;
+        height: auto; 
+        float:left;
+        padding:0 15px;
+    }
+    #ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-before{
+        display: none;
+    }
+    #ppc-new-footer-bottom .ppc-footer-text-left .ppc-footer-text-left-inner{
+        max-width: 100%;
+        float:left;
+    }
+    #ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-inner{
+        max-width: 100%;        
+    }   
+    #ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-inner .fa{
+        left:0;
+    }
+    #ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-line1, #ppc-new-footer-bottom .ppc-footer-text-right .ppc-footer-text-right-line2{
+        padding-left:15px;
+    }
+    #ppc-pages-new-top-banner-area .banner-text-area-new{
+        position: static;
+    }
+    #ppc-pages-new-top-banner-area .banner-text-area-new .text-title1-new{
+        font-size: 24px !important;
+    }
+    #ppc-pages-new-top-banner-area .banner-text-area-new .text-title2-new{
+        font-size: 18px !important;
+    }
+    #ppc-pages-new-top-bar-left-logo-image-container{
+        float:none;
+    }
+    #ppc-pages-new-top-bar-right-address-container{
+        float:left;
+        margin:15px 0 0;
+        text-align: center;
+        width: 100%;
+    }    
+    #ppc-pages-new-how-can-we-help-wrap{
+        position: static;
+        padding:20px 15px;
+    }
+    #ppc-pages-new-how-can-we-help{
+        float:left;
+        max-width: 100%;
+        margin: 0;
+    }    
+    #ppc-pages-new-top-banner-area{
+        overflow: visible;
+    }
+    #ppc-pages-new-top-banner-area .view-display-id-page .views-row img{
+        min-width: 2px;
+    }
+    #ppc-pages-new-how-can-we-help-wrap{
+        height:auto;
+    }
+    #ppc-pages-new-top-text-area{
+        width:100%;
+        height:auto;
+        max-width: 100%;
+    }
+    #ppc-pages-new-how-can-we-help{
+        width:100%;
+        height: auto;
+        margin-top:25px;
+    }
+}

@@ -1,0 +1,5 @@
+name = Sitemap frequency Changer
+description = Change Sitemap XML blog frequency.
+core = 7.x
+package = SEO 
+dependencies[] = xmlsitemap

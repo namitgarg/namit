@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*================Client profile gallery landing and listing scss start here===================*/
+/* line 4, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 0 40px;
+}
+/* line 7, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 40px;
+  border-bottom: none;
+}
+/* line 12, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row:last-child {
+  padding-bottom: 0;
+}
+/* line 15, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-field_taxanomy_before_image {
+  float: left;
+  width: 50%;
+  pointer-events: none;
+}
+/* line 18, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-field_taxanomy_before_image img {
+  width: 100%;
+  border-right: 1px solid transparent;
+}
+/* line 23, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-field_taxanomy_after_image {
+  float: left;
+  width: 50%;
+  pointer-events: none;
+}
+/* line 26, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-field_taxanomy_after_image img {
+  width: 100%;
+  border-left: 1px solid transparent;
+}
+/* line 31, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-name {
+  font-size: 26px;
+  line-height: 71px;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  background: #313130 url("../images/gallery-procedures-bg.jpg") no-repeat center center;
+  text-transform: uppercase;
+  float: left;
+  width: 100%;
+}
+/* line 40, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-name a {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 46, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .list-section {
+  clear: both;
+  text-align: center;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  background: #c7c795;
+  color: #303030;
+  font-size: 22px;
+}
+/* line 55, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .list-section .parent-list {
+  padding: 0;
+  margin: 0;
+}
+/* line 58, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .list-section .parent-list .views-row {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+}
+/* line 64, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .list-section li {
+  list-style: none;
+  background-image: none;
+}
+/* line 68, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .list-section a {
+  margin: 0 auto 30px;
+  color: inherit !important;
+}
+/* line 71, ../sass/gallery.scss */
+#content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .list-section a:hover {
+  text-decoration: none !important;
+}
+
+/* line 79, ../sass/gallery.scss */
+.view-gallery-block {
+  width: 100%;
+}
+/* line 81, ../sass/gallery.scss */
+.view-gallery-block .view-header {
+  margin-bottom: 10px;
+}
+/* line 84, ../sass/gallery.scss */
+.view-gallery-block .pager {
+  padding-bottom: 20px !important;
+}
+/* line 88, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row {
+  float: left;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #303030;
+  margin-bottom: 20px;
+}
+/* line 93, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row.views-row-last {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+/* line 98, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-title {
+  font-size: 32px;
+  margin: 0 auto 20px;
+  width: 100%;
+  line-height: 1.2;
+}
+/* line 104, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-body {
+  width: 100%;
+  color: #303030;
+}
+/* line 108, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-field-courtesy-procedure {
+  float: left;
+  width: 100%;
+  padding-left: 6px;
+  font-size: 10px;
+}
+/* line 113, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-nothing {
+  width: 100%;
+  float: left;
+}
+/* line 116, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-nothing .gallery-title {
+  font-size: 32px;
+  padding: 10px 10px 7px;
+  width: 100%;
+  background: #edecef;
+  color: #303030;
+}
+/* line 123, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-nothing #gallery_pairs {
+  width: auto;
+  margin: 0 0 20px;
+}
+/* line 126, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-nothing #gallery_pairs .gallery_pair {
+  border: 0 solid transparent;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+/* line 131, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-nothing #gallery_pairs .gallery_pair a {
+  float: left;
+  width: 50%;
+  pointer-events: none;
+}
+/* line 134, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-nothing #gallery_pairs .gallery_pair a img.adaptive-image {
+  width: 100%;
+  border: 2px solid transparent;
+}
+/* line 137, ../sass/gallery.scss */
+.view-gallery-block .view-content .views-row .views-field-nothing #gallery_pairs .gallery_pair a img.adaptive-image:first-child {
+  margin: 0;
+}
+
+/* line 150, ../sass/gallery.scss */
+.node-type-gallery .node-gallery {
+  float: left;
+  width: 100%;
+  clear: both;
+  margin-top: 15px;
+}
+/* line 155, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-name-field-gallery-type .field-label {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 158, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-name-field-gallery-type .field-items {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 163, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-name-field-is-this-featured .field-items,
+.node-type-gallery .node-gallery .field-name-field-is-this-featured .field-label {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 168, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-name-field-courtesy-procedure {
+  font-size: 10px;
+  float: left;
+  width: 100%;
+  padding-left: 6px;
+}
+/* line 173, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .img-wrapper {
+  display: table;
+  margin: 0 auto;
+  max-width: 420px;
+  width: 100%;
+}
+/* line 176, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 50%;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+/* line 180, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image[class*="before"] {
+  float: left;
+}
+/* line 182, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image[class*="before"] .field-item {
+  border-right-width: 3.5px;
+}
+/* line 186, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image[class*="after"] {
+  float: left;
+}
+/* line 188, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image[class*="after"] .field-item {
+  border-left-width: 3.5px;
+}
+/* line 192, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image .field-label {
+  width: 100%;
+}
+/* line 195, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image .field-item {
+  border: 3px solid #c7c795;
+  display: block;
+}
+/* line 198, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image .field-item a {
+  pointer-events: none;
+}
+/* line 201, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-type-image .field-item img {
+  vertical-align: top;
+}
+/* line 206, ../sass/gallery.scss */
+.node-type-gallery .node-gallery .field-name-body {
+  width: 100%;
+  float: left;
+  margin: 0 !important;
+  line-height: 0 !important;
+}
+
+/*================Client profile gallery landing and listing scss start end===================*/
+/*================ColorBox scss start here===================*/
+/* line 218, ../sass/gallery.scss */
+#cboxLoadedContent {
+  padding-bottom: 28px !important;
+  margin-bottom: 0 !important;
+}
+/* line 221, ../sass/gallery.scss */
+#cboxLoadedContent img {
+  width: 50%;
+  border: 1px solid transparent;
+}
+
+/* line 226, ../sass/gallery.scss */
+#cboxCurrent {
+  bottom: 0;
+}
+
+/*================ColorBox scss end here===================*/
+/*==========IPad and desktop [Also flud responsive] css start==========*/
+@media screen and (min-width: 320px) and (max-width: 360px) {
+  /* line 233, ../sass/gallery.scss */
+  .view-gallery-block .view-content .views-row .views-field-title {
+    font-size: 8.88889vw;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 238, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-name {
+    font-size: 5.41667vw;
+    line-height: 71, 480;
+    padding: 0 4.16667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 248, ../sass/gallery.scss */
+  .view-gallery-block .view-content .views-row .views-field-title {
+    font-size: 32px;
+    margin: 0 auto 20px;
+  }
+  /* line 252, ../sass/gallery.scss */
+  .view-gallery-block .view-content .views-row .views-field-body {
+    width: 50%;
+  }
+  /* line 255, ../sass/gallery.scss */
+  .view-gallery-block .view-content .views-row .views-field-nothing {
+    width: 50%;
+    padding-right: 20px;
+  }
+  /* line 258, ../sass/gallery.scss */
+  .view-gallery-block .view-content .views-row .views-field-nothing #gallery_pairs .gallery_pair a {
+    pointer-events: auto;
+  }
+
+  /* line 267, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+  /* line 269, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row:nth-child(1n+1) {
+    padding-right: 33px;
+    padding-left: 0;
+  }
+  /* line 273, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row:nth-child(2n+2) {
+    padding-left: 33px;
+    padding-right: 0;
+    float: right;
+  }
+  /* line 278, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row:last-child {
+    padding-bottom: 0;
+  }
+  /* line 280, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row:last-child .list-section {
+    min-height: 0;
+  }
+  /* line 284, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .list-section {
+    min-height: 670px;
+  }
+  /* line 286, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .list-section a {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 294, ../sass/gallery.scss */
+  #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-name {
+    font-size: 2.53906vw;
+    line-height: 71, 1024;
+    padding: 0 1.95313vw;
+  }
+}
+/*==========IPad and desktop [Also flud responsive] css end==========*/

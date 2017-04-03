@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_preprocess_image().
+ */
+function remove_inline_attribute_preprocess_image(&$variables) {
+  foreach (array('width', 'height') as $key) {
+    unset($variables[$key]);
+  }
+}

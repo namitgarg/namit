@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+
+// Import variables and abstractions.
+@import "../globals";
+/**
+ * @file
+ */
+.slick-wrapper {
+  margin-bottom: 60px;
+}
+
+.slide .field-type-text-long {
+  padding: 20px 0 10px;
+}

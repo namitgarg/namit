@@ -1,0 +1,9 @@
+name = Redirect Update
+description = "Update all the redirected links to their redirects."
+package = SEO
+core = 7.x
+dependencies[] = redirect
+dependencies[] = block
+files[]=includes/redirect_update.admin.inc
+files[]=includes/redirect_update.class.inc
+configure=admin/config/bulk-seo/redirect-update

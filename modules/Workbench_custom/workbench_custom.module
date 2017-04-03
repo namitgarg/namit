@@ -1,0 +1,141 @@
+<?php
+
+/**
+ * @file
+ * Workbench custom.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+
+ function workbench_custom_menu() {
+	$items['admin/workbench-email'] = array(
+		'title' => t('Workbench Email Setting'),
+		'page callback' => 'drupal_get_form',
+		'page arguments' =>array('workbench_custom_form'),
+		'access callback' => 'workbench_custom_user_has_role',
+	);
+	return $items;
+	}
+
+	/**
+ * Implements hook_menu_alter.
+ * Check access for forum menu item.
+ */
+function workbench_custom_menu_alter(&$items) {
+  $items["node/%node/moderation"]["title"] = 'Revisions';
+}
+
+
+/**
+ *Implement access callback
+ */
+function workbench_custom_user_has_role() {
+  global $user;
+  if (in_array('administrator', $user->roles)) {
+      return TRUE;
+    }
+  return FALSE;
+}
+
+/**
+ *Implement hook_form
+ */
+
+function workbench_custom_form(){
+ /*
+ $form['admin_mail'] = array(
+    '#type' => 'textfield',
+    '#default_value' => variable_get('admin_mail',variable_get('site_mail', '')),
+	'#title' => t('Mail for Transitioning : Draft -> Needs Editorial Review'),
+	'#description' => t('Enter emails separated by commas.'),
+	'#size'=> 120,
+  );
+  */
+  $form['client_mail'] = array(
+    '#type' => 'textfield',
+    '#default_value' => variable_get('client_mail', variable_get('site_mail', '')),
+	'#title' => t('Mail for Transitioning : On Needs Client Review'),
+	'#description' => t('Enter emails separated by commas.'),
+	/* '#required' => TRUE, */
+	'#size'=> 120,
+  );
+  /*
+  $form['needtoapprove'] = array(
+    '#type' => 'textfield',
+    '#default_value' => variable_get('needtoapprove', variable_get('site_mail', '')),
+	'#title' => t('Mail for Transitioning : Needs Client Review -> Approved'),
+	'#description' => t('Enter emails separated by commas.'),
+    '#size'=> 120,
+  );
+  */
+  $form['needtodraft'] = array(
+    '#type' => 'textfield',
+    '#default_value' => variable_get('needtodraft', variable_get('site_mail', '')),
+	'#title' => t('Mail for Transitioning : Needs Client Review -> Draft'),
+	'#description' => t('Enter emails separated by commas.'),
+	/* '#required' => TRUE, */
+	'#size'=> 120,
+  );
+  $form['pub'] = array(
+    '#type' => 'textfield',
+    '#default_value' => variable_get('pub', variable_get('site_mail', '')),
+	'#title' => t('Mail for Transitioning : On Publish'),
+	'#description' => t('Enter emails separated by commas.'),
+	/* '#required' => TRUE, */
+	'#size'=> 120,
+  );
+  /* $form['mailfrom'] = array(
+    '#type' => 'textfield',
+    '#default_value' => variable_get('mailfrom', variable_get('site_mail', '')),
+	'#title' => t('Mail From'),
+	'#description' => t('Enter email which you want to set as FROM mail.'),
+	'#required' => TRUE,
+	'#size'=> 120,
+  ); */
+  return system_settings_form($form);
+
+
+}
+
+/**
+ *Implement hook_form_alter
+ */
+
+function workbench_custom_form_alter(&$form, &$form_state, $form_id){
+global $user;
+
+$deafult = (in_array('administrator',$user->roles)) ? 1 : 0;
+
+
+if($form_id == 'page_node_form' || $form_id == 'blog_node_form' || $form_id == 'practice_area_node_form') {
+	if(isset($form['options']['workbench_moderation_state_new']) && arg(2) != 'edit') {
+    //$form['options']['workbench_moderation_state_new']['#type'] = 'radio';
+	//$form['options']['workbench_moderation_state_new']['#default_value'] = 'published';
+        }
+    $form['options']['#weight'] = -20;
+		//$form['workbench_scheduler']['dates']['#states'] = array();
+	    //$form['workbench_scheduler']['workbench_scheduler_sid']['#header'] = array('label' => 'Name');
+		//$form['workbench_scheduler']['workbench_scheduler_sid']['#options'] = array(0 => array('label'=>'No Schedule'),1 => array('label'=>'Publish'),2 => array('label'=>'Unpublish'));
+        $form['workbench_scheduler']['dates']['workbench_scheduler_start_date']['#prefix'] = '<div style="display:none">';
+		$form['workbench_scheduler']['dates']['workbench_scheduler_start_date']['#suffix'] = '</div>';
+		$form['workbench_scheduler']['dates']['workbench_scheduler_end_date']['#title'] = 'Date';
+
+    if(array_key_exists(3, $user->roles)) {
+		$form['options']['sendmail'] = array(
+			'#type' => 'checkbox',
+			'#title' => t('Do not send emails'),
+			'#weight' => -22,
+			'#default_value' => $deafult,
+		);
+	$form['#submit'][] = 'workbench_custom_mysubmit';
+	} else {
+		$form['revision_information']['#weight'] = -20;
+	}
+	}
+}
+
+function workbench_custom_mysubmit($form, $form_state){
+$_SESSION['sendmail'] = $form_state['values']['sendmail'];
+}

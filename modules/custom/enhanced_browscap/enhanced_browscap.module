@@ -1,0 +1,254 @@
+<?php
+
+function enhanced_browscap_preprocess_html(&$variables) {
+  $variables['classes_array'][] = Page1CompleteUserAgent::EnhancedGetBrowserAction();
+}
+
+class Page1CompleteUserAgent {
+
+  static function EnhancedGetBrowserAction() {
+    $agent = self::Page1getCompleteDetailOfUserAgent();
+    $type = self::getTypeOfDevice();  // This will return the device (mobile|tablet|desktop)
+    $class = implode(' ',$agent) . ' ' . $type;
+    return $class;
+  }
+
+  // This is the static method that will return Agent, name , version, platform.
+
+  static function Page1getCompleteDetailOfUserAgent() {
+    $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+    $bname = 'Unknown';
+    $platform = 'Unknown';
+    $version = "";
+
+    //First get the platform?
+
+    $classes = array();
+
+    // Add ie extra class with the version number
+    $ie_pattern = '/(?:\b(ms)?ie\s+|\btrident\/7\.0;.*\s+rv:)(\d+)/';
+    $ie_matches = array();
+    $ie_m = preg_match($ie_pattern, $agent, $ie_matches);
+
+    if ($ie_m === 1) {
+      $classes[] = 'ie';
+
+      if (isset($ie_matches[2])) {
+        $classes[] = 'ie' . $ie_matches[2];
+      }
+    }
+
+    if (stristr($agent, 'opera') !== FALSE) {
+      $classes[] = 'opera';
+      $aresult = explode('/', stristr($agent, 'version'));
+      if (isset($aresult[1])) {
+        $aversion = explode(' ', $aresult[1]);
+        $classes[] = 'opera' . self::cleanVersion($aversion[0]);
+      }
+    }
+
+    // Check for chrome desktop first, then chrome mobile, lastly check for
+    // safari, as these are mutually exclusive.
+    if (stristr($agent, 'chrome') !== FALSE) {
+      $classes[] = 'chrome';
+      $aresult = explode('/', stristr($agent, 'chrome'));
+      $aversion = explode(' ', $aresult[1]);
+      $classes[] = 'chrome' . self::cleanVersion($aversion[0]);
+    }
+    elseif (stristr($agent, 'crios') !== FALSE) {
+      $classes[] = 'chrome';
+
+      $aresult = explode('/', stristr($agent, 'crios'));
+      if (isset($aresult[1])) {
+        $aversion = explode(' ', $aresult[1]);
+        $classes[] = 'chrome' . self::cleanVersion($aversion[0]);
+      }
+    }
+    elseif (stristr($agent, 'safari') !== FALSE) {
+      $classes[] = 'safari';
+
+      $aresult = explode('/', stristr($agent, 'version'));
+      if (isset($aresult[1])) {
+        $aversion = explode(' ', $aresult[1]);
+        $classes[] = 'safari' . self::cleanVersion($aversion[0]);
+      }
+    }
+
+    if (stristr($agent, 'netscape') !== FALSE) {
+      $classes[] = 'netscape';
+      if (preg_match('/navigator\/([^ ]*)/', $agent, $matches)) {
+        $classes[] = 'netscape' . self::cleanVersion($matches[1]);
+      }
+      elseif (preg_match('/netscape6?\/([^ ]*)/', $agent, $matches)) {
+        $classes[] = 'netscape' . self::cleanVersion($matches[1]);
+      }
+    }
+
+    if (stristr($agent, 'firefox') !== FALSE) {
+      $classes[] = 'ff';
+      if (preg_match("/firefox[\/ \(]([^ ;\)]+)/", $agent, $matches)) {
+         $classes[] = 'ff' . self::cleanVersion($matches[1]);
+      }                                                                                 
+    }
+
+    if (stristr($agent, 'konqueror') !== FALSE) {
+      $classes[] = 'konqueror';
+      $aresult = explode(' ', stristr($agent, 'konqueror'));
+      $aversion = explode('/', $aresult[0]);
+      $classes[] = 'konqueror' . self::cleanVersion($aversion[1]);
+    }
+
+    if (stristr($agent, 'dillo') !== FALSE) {
+      $classes[] = 'dillo';
+    }
+
+    if (stristr($agent, 'chimera') !== FALSE) {
+      $classes[] = 'chimera';
+    }
+
+    if (stristr($agent, 'beonex') !== FALSE) {
+      $classes[] = 'beonex';
+    }
+
+    if (stristr($agent, 'aweb') !== FALSE) {
+      $classes[] = 'aweb';
+    }
+
+    if (stristr($agent, 'amaya') !== FALSE) {
+      $classes[] = 'amaya';
+    }
+
+    if (stristr($agent, 'icab') !== FALSE) {
+      $classes[] = 'icab';
+    }
+
+    if (stristr($agent, 'lynx') !== FALSE) {
+      $classes[] = 'lynx';
+    }
+
+    if (stristr($agent, 'galeon') !== FALSE) {
+      $classes[] = 'galeon';
+    }
+
+    if (stristr($agent, 'opera mini') !== FALSE) {
+      $classes[] = 'operamini';
+
+      $resultant = stristr($agent, 'opera mini');
+      if (preg_match('/\//', $resultant)) {
+        $aresult = explode('/', $resultant);
+        $aversion = explode(' ', $aresult[1]);
+        $classes[] = 'operamini' . self::cleanVersion($aversion[0]);
+      }
+      else {
+        $aversion = explode(' ', stristr($resultant, 'opera mini'));
+        $classes[] = 'operamini' . self::cleanVersion($aversion[1]);
+      }
+    }
+    $result = array_merge($classes, self::getPlatform($agent));
+
+    return $result;
+  }
+
+  // This is for getting the device whether it is desktop or mobile
+
+  static function getTypeOfDevice() {
+
+    $tablet_browser = 0;
+    $mobile_browser = 0;
+
+    if (preg_match('/(tablet|ipad|playbook)|(android(?!.*(mobi|opera mini)))/i', strtolower($_SERVER['HTTP_USER_AGENT']))) {
+      $tablet_browser++;
+    }
+
+    if (preg_match('/(up.browser|up.link|mmp|symbian|smartphone|midp|wap|phone|android|iemobile)/i', strtolower($_SERVER['HTTP_USER_AGENT']))) {
+      $mobile_browser++;
+    }
+
+    if ((strpos(strtolower($_SERVER['HTTP_ACCEPT']), 'application/vnd.wap.xhtml+xml') > 0) or ((isset($_SERVER['HTTP_X_WAP_PROFILE']) or isset($_SERVER['HTTP_PROFILE'])))) {
+      $mobile_browser++;
+    }
+
+    $mobile_ua = strtolower(substr($_SERVER['HTTP_USER_AGENT'], 0, 4));
+    $mobile_agents = array(
+      'w3c ', 'acs-', 'alav', 'alca', 'amoi', 'audi', 'avan', 'benq', 'bird', 'blac',
+      'blaz', 'brew', 'cell', 'cldc', 'cmd-', 'dang', 'doco', 'eric', 'hipt', 'inno',
+      'ipaq', 'java', 'jigs', 'kddi', 'keji', 'leno', 'lg-c', 'lg-d', 'lg-g', 'lge-',
+      'maui', 'maxo', 'midp', 'mits', 'mmef', 'mobi', 'mot-', 'moto', 'mwbp', 'nec-',
+      'newt', 'noki', 'palm', 'pana', 'pant', 'phil', 'play', 'port', 'prox',
+      'qwap', 'sage', 'sams', 'sany', 'sch-', 'sec-', 'send', 'seri', 'sgh-', 'shar',
+      'sie-', 'siem', 'smal', 'smar', 'sony', 'sph-', 'symb', 't-mo', 'teli', 'tim-',
+      'tosh', 'tsm-', 'upg1', 'upsi', 'vk-v', 'voda', 'wap-', 'wapa', 'wapi', 'wapp',
+      'wapr', 'webc', 'winw', 'winw', 'xda ', 'xda-');
+
+    if (in_array($mobile_ua, $mobile_agents)) {
+      $mobile_browser++;
+    }
+
+    if (strpos(strtolower($_SERVER['HTTP_USER_AGENT']), 'opera mini') > 0) {
+      $mobile_browser++;
+      //Check for tablets on opera mini alternative headers
+      $stock_ua = strtolower(isset($_SERVER['HTTP_X_OPERAMINI_PHONE_UA']) ? $_SERVER['HTTP_X_OPERAMINI_PHONE_UA'] : (isset($_SERVER['HTTP_DEVICE_STOCK_UA']) ? $_SERVER['HTTP_DEVICE_STOCK_UA'] : ''));
+      if (preg_match('/(tablet|ipad|playbook)|(android(?!.*mobile))/i', $stock_ua)) {
+        $tablet_browser++;
+      }
+    }
+
+    if ($tablet_browser > 0) {
+      return 'mobile';
+    }
+    else if ($mobile_browser > 0) {
+      return 'mobile';
+    }
+    else {
+      return 'desktop';
+    }
+  }
+
+  static function getPlatform($agent) {
+    $classes = array();
+
+    if (stristr($agent, 'windows') !== FALSE) {
+      $classes[] = 'win';
+    }
+    elseif (stristr($agent, 'ipad') !== FALSE) {
+      $classes[] = 'ipad';
+    }
+    elseif (stristr($agent, 'ipod') !== FALSE) {
+      $classes[] = 'ipod';
+    }
+    elseif (stristr($agent, 'iphone') !== FALSE) {
+      $classes[] = 'iphone';
+    }
+    elseif (stristr($agent, 'mac') !== FALSE) {
+      $classes[] = 'mac';
+    }
+    elseif (stristr($agent, 'android') !== FALSE) {
+      $classes[] = 'android';
+    }
+    elseif (stristr($agent, 'linux') !== FALSE) {
+      $classes[] = 'linux';
+    }
+    elseif (stristr($agent, 'nokia') !== FALSE) {
+      $classes[] = 'nokia';
+    }
+    elseif (stristr($agent, 'blackberry') !== FALSE) {
+      $classes[] = 'blackberry';
+    }
+    elseif (stristr($agent, 'freebsd') !== FALSE) {
+      $classes[] = 'freebsd';
+    }
+    elseif (stristr($agent, 'openbsd') !== FALSE) {
+      $classes[] = 'openbsd';
+    }
+    elseif (stristr($agent, 'netbsd') !== FALSE) {
+      $classes[] = 'netbsd';
+    }
+    return $classes;
+  }
+
+  static function cleanVersion($version) {
+    $version = preg_replace('/[^0-9,.,a-z,A-Z-]/', '', $version);
+    return substr($version, 0, strpos($version, '.'));
+  }
+
+}

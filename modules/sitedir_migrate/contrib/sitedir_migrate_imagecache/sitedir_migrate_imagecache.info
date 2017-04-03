@@ -1,0 +1,13 @@
+; $Id: sitedir_migrate_imagecache.info,v 1.0 2010/05/13 John Carbone Exp $ 
+name = "Migrate Imagecache"
+description = "Flushes all Imagecache presets"
+package = "Migrate"
+core = "6.x"
+dependencies[] = sitedir_migrate
+dependencies[] = imagecache
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "sitedir_migrate"
+datestamp = "1380628400"
+

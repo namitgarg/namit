@@ -1,0 +1,5 @@
+; $Id: pg1help.info,v 1.4 2013/08/12 05:50:53 dries Exp $
+name = Page 1 Solutions
+description = Page 1 Solutions help pages, dashboard, and other Page 1 Supports
+core = 7.x
+ version = "7.x-1"

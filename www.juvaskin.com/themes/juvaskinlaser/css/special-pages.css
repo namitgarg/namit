@@ -1,0 +1,2486 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 26, 2016, 6:14:11 PM
+    Author     : Manishkumar.Singh
+*/
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*========Product Store landing page scss here start================*/
+/* line 14, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row {
+  float: left;
+  width: 100%;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+/* line 21, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row.views-row-last .views-field-nothing {
+  padding: 40px 0 10px;
+}
+/* line 25, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .views-field-name {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #303030;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 23px 0;
+  line-height: 1;
+}
+/* line 34, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .views-field-name:before {
+  content: '';
+  margin: auto;
+  height: 1px;
+  background: #bcbbbb;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+/* line 41, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .views-field-name .field-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  margin: auto;
+  background: #eceaeb;
+  padding: 0 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 49, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2,
+.view-juva-store-product-type .views-row .view-display-id-page_1,
+.view-juva-store-product-type .views-row .view-display-id-page_2 {
+  float: left;
+  width: 100%;
+}
+/* line 53, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row {
+  float: none;
+  padding: 0 5px;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 284px;
+}
+/* line 57, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row.views-row-2,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row.views-row-2,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row.views-row-2 {
+  margin: 0 auto 10px;
+}
+/* line 61, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row:hover .views-field-uc-product-image,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row:hover .views-field-uc-product-image,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row:hover .views-field-uc-product-image {
+  border: 1px solid #d37c7c;
+}
+/* line 65, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row .views-field-uc-product-image,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row .views-field-uc-product-image,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row .views-field-uc-product-image {
+  background: #fefefe;
+  min-height: 0;
+  border: 1px solid #bcbbbb;
+  float: left;
+  width: 100%;
+  padding: 20px;
+  display: table;
+}
+/* line 72, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row .views-field-uc-product-image .field-content,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row .views-field-uc-product-image .field-content,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row .views-field-uc-product-image .field-content {
+  display: table-cell;
+  vertical-align: bottom;
+}
+/* line 77, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row .products-title-price,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row .products-title-price,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row .products-title-price {
+  float: left;
+  width: 100%;
+  padding: 25px 15px;
+}
+/* line 81, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row .views-field-title,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row .views-field-title,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row .views-field-title {
+  color: #303030;
+  float: left;
+  width: 100%;
+  padding: 0 0 10px;
+}
+/* line 86, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row .views-field-title a,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row .views-field-title a,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row .views-field-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+/* line 91, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .view-display-id-block_2 .views-row .views-field-sell-price,
+.view-juva-store-product-type .views-row .view-display-id-page_1 .views-row .views-field-sell-price,
+.view-juva-store-product-type .views-row .view-display-id-page_2 .views-row .views-field-sell-price {
+  color: #d37c7c;
+  font-weight: 700;
+  float: left;
+  width: 100%;
+}
+/* line 98, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .views-field-nothing {
+  float: left;
+  width: 100%;
+  padding: 40px 0 58px;
+  text-align: center;
+}
+/* line 102, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .views-field-nothing a {
+  background: #d47d7d;
+  font-size: 22px;
+  color: #fefefe !important;
+  padding: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 274px;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none !important;
+}
+/* line 111, ../sass/special-pages.scss */
+.view-juva-store-product-type .views-row .views-field-nothing a:hover {
+  background: #4b4645;
+}
+
+/* line 118, ../sass/special-pages.scss */
+.model {
+  font-weight: 400;
+}
+
+/* line 122, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1, .view-juva-store-product-type.view-display-id-page_2 {
+  font-size: 15px;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+/* line 127, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1 .views-row, .view-juva-store-product-type.view-display-id-page_2 .views-row {
+  padding: 0 5px;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 49%;
+  float: none;
+}
+/* line 132, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1 .views-row:hover .views-field-uc-product-image, .view-juva-store-product-type.view-display-id-page_2 .views-row:hover .views-field-uc-product-image {
+  border: 1px solid #d37c7c;
+}
+/* line 136, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1 .views-row .views-field-uc-product-image, .view-juva-store-product-type.view-display-id-page_2 .views-row .views-field-uc-product-image {
+  background: #fefefe;
+  min-height: 0;
+  border: 1px solid #bcbbbb;
+  float: left;
+  width: 100%;
+  padding: 20px;
+  display: table;
+}
+/* line 143, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1 .views-row .views-field-uc-product-image .field-content, .view-juva-store-product-type.view-display-id-page_2 .views-row .views-field-uc-product-image .field-content {
+  display: table-cell;
+  vertical-align: bottom;
+}
+/* line 148, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1 .views-row .products-title-price, .view-juva-store-product-type.view-display-id-page_2 .views-row .products-title-price {
+  float: left;
+  width: 100%;
+  padding: 25px 15px;
+}
+/* line 152, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1 .views-row .views-field-title, .view-juva-store-product-type.view-display-id-page_2 .views-row .views-field-title {
+  color: #303030;
+  float: left;
+  width: 100%;
+  padding: 0 0 15px;
+}
+/* line 157, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1 .views-row .views-field-title a, .view-juva-store-product-type.view-display-id-page_2 .views-row .views-field-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+/* line 162, ../sass/special-pages.scss */
+.view-juva-store-product-type.view-display-id-page_1 .views-row .views-field-sell-price, .view-juva-store-product-type.view-display-id-page_2 .views-row .views-field-sell-price {
+  color: #d37c7c;
+  font-weight: 700;
+  float: left;
+  width: 100%;
+}
+
+/* line 171, ../sass/special-pages.scss */
+.romanian .view-juva-store-product-type .views-row .views-field-nothing a {
+  padding: 0 20px;
+  width: auto;
+  font-size: 16px;
+}
+
+/* line 178, ../sass/special-pages.scss */
+.spanish .view-juva-store-product-type .views-row .views-field-nothing a {
+  padding: 0 20px;
+  width: auto;
+  font-size: 16px;
+}
+
+/* line 184, ../sass/special-pages.scss */
+.node-product {
+  overflow: hidden;
+}
+/* line 187, ../sass/special-pages.scss */
+.node-product .product-wrapper .field-name-uc-product-image {
+  float: left;
+  max-width: 274px;
+  width: 100%;
+  background: #fefefe;
+  text-align: center;
+  min-height: 336px;
+  border: 1px solid #bcbbbb;
+  padding: 20px;
+  display: table;
+}
+/* line 195, ../sass/special-pages.scss */
+.node-product .product-wrapper .field-name-uc-product-image .field-items {
+  display: table-cell;
+  vertical-align: bottom;
+}
+/* line 200, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper {
+  margin-top: 30px;
+  float: right;
+  max-width: 100%;
+  width: 100%;
+}
+/* line 203, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .field-product-title {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+/* line 208, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .sell-price {
+  color: #d17575;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+/* line 213, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .sell-price .uc-price-label {
+  display: none;
+}
+/* line 217, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .cart-wrapper {
+  line-height: 48px;
+  width: 100%;
+  float: left;
+  margin: 26px 0;
+}
+/* line 222, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .cart-wrapper .form-type-uc-quantity {
+  float: left;
+  width: 160px;
+  height: 46px;
+  margin: 1px 10px 0 0;
+}
+/* line 227, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .cart-wrapper .form-type-uc-quantity label[for="edit-qty"] {
+  display: none;
+}
+/* line 230, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .cart-wrapper .form-type-uc-quantity .button-plus {
+  background: #f1f1f1;
+  cursor: pointer;
+  border: 1px solid #d2d2d2;
+  height: 46px;
+  width: 46px;
+  line-height: 46px;
+  color: #303030;
+  font-size: 18px;
+  text-align: center;
+  float: left;
+}
+/* line 242, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .cart-wrapper .form-type-uc-quantity .button-minus {
+  background: #f1f1f1;
+  cursor: pointer;
+  border: 1px solid #d2d2d2;
+  height: 46px;
+  width: 46px;
+  line-height: 46px;
+  color: #303030;
+  font-size: 18px;
+  text-align: center;
+  float: left;
+}
+/* line 254, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .cart-wrapper .form-type-uc-quantity #edit-qty {
+  background: #fff;
+  border: none;
+  float: left;
+  vertical-align: top;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  height: 46px;
+  width: 68px;
+  line-height: 46px;
+  color: #303030;
+  font-size: 18px;
+  text-align: center;
+}
+/* line 269, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .cart-wrapper .form-actions {
+  float: left;
+  width: 112px;
+  margin: 0;
+  padding: 0;
+}
+/* line 274, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .cart-wrapper .form-actions .node-add-to-cart {
+  padding: 0 12px;
+}
+/* line 279, ../sass/special-pages.scss */
+.node-product .product-wrapper .product-inner-wrapper .product-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+/* line 285, ../sass/special-pages.scss */
+.node-product .sell-price {
+  color: #d17575;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* line 296, ../sass/special-pages.scss */
+.node-type-product .field-type-taxonomy-term-reference.field-name-field-concern .field-item:last-child:after {
+  display: none;
+}
+/* line 302, ../sass/special-pages.scss */
+.node-type-product .field-type-taxonomy-term-reference .field-item {
+  display: inline-block;
+  position: relative;
+  margin: 0 3px;
+}
+/* line 306, ../sass/special-pages.scss */
+.node-type-product .field-type-taxonomy-term-reference .field-item:after {
+  content: ',';
+}
+/* line 311, ../sass/special-pages.scss */
+.node-type-product #block-block-76, .node-type-product #block-multiblock-16 {
+  margin-top: 30px;
+}
+
+/*========Product Store landing page scss here end================*/
+/*========juvastore category block scss on right sidebar here start================*/
+/* line 319, ../sass/special-pages.scss */
+#block-multiblock-11 .block-title,
+#block-multiblock-6 .block-title,
+#block-views-juvastore-category-block .block-title,
+#block-views-juvastore-category-block-1 .block-title {
+  color: #303030;
+  font-size: 22px;
+  background: #c9c99a;
+  padding: 12px 22px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+/* line 327, ../sass/special-pages.scss */
+#block-multiblock-11 .view-juvastore-category,
+#block-multiblock-6 .view-juvastore-category,
+#block-views-juvastore-category-block .view-juvastore-category,
+#block-views-juvastore-category-block-1 .view-juvastore-category {
+  float: left;
+  width: 100%;
+  padding: 11px 0 41px;
+  line-height: 1.1;
+}
+/* line 331, ../sass/special-pages.scss */
+#block-multiblock-11 .view-juvastore-category .views-row,
+#block-multiblock-6 .view-juvastore-category .views-row,
+#block-views-juvastore-category-block .view-juvastore-category .views-row,
+#block-views-juvastore-category-block-1 .view-juvastore-category .views-row {
+  width: 100%;
+  padding: 4px 22px;
+}
+/* line 334, ../sass/special-pages.scss */
+#block-multiblock-11 .view-juvastore-category .views-row a,
+#block-multiblock-6 .view-juvastore-category .views-row a,
+#block-views-juvastore-category-block .view-juvastore-category .views-row a,
+#block-views-juvastore-category-block-1 .view-juvastore-category .views-row a {
+  color: #303030;
+  font-size: 18px;
+  text-decoration: none !important;
+}
+/* line 338, ../sass/special-pages.scss */
+#block-multiblock-11 .view-juvastore-category .views-row a.active, #block-multiblock-11 .view-juvastore-category .views-row a:hover,
+#block-multiblock-6 .view-juvastore-category .views-row a.active,
+#block-multiblock-6 .view-juvastore-category .views-row a:hover,
+#block-views-juvastore-category-block .view-juvastore-category .views-row a.active,
+#block-views-juvastore-category-block .view-juvastore-category .views-row a:hover,
+#block-views-juvastore-category-block-1 .view-juvastore-category .views-row a.active,
+#block-views-juvastore-category-block-1 .view-juvastore-category .views-row a:hover {
+  color: #d37c7c;
+  text-decoration: underline !important;
+}
+
+/*========juvastore category block scss on right sidebar here start================*/
+/*========In-the-media page scss here start================*/
+/* line 349, ../sass/special-pages.scss */
+.view-juva-in-the-media {
+  overflow: hidden;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+/* line 353, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row {
+  margin-right: 29px;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+/* line 358, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row:after {
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  content: '';
+  height: 0;
+  background: #303030;
+  display: inline-block;
+  vertical-align: top;
+  width: 0;
+}
+/* line 367, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row:nth-child(1n+1) {
+  margin-right: 0;
+  margin-bottom: 45px;
+  padding-bottom: 50px;
+  position: relative;
+}
+/* line 372, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row:nth-child(1n+1).views-row-last {
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+/* line 375, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row:nth-child(1n+1).views-row-last:after {
+  display: none;
+}
+/* line 379, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row:nth-child(1n+1):after {
+  width: 300%;
+  height: 1px;
+}
+/* line 384, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-field-print-images-with-pop-up-l {
+  min-height: 150px;
+}
+/* line 387, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-field-year {
+  font-size: 17px;
+  padding-top: 15px;
+}
+/* line 390, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-field-year .field-content {
+  min-height: 28px;
+}
+/* line 392, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-field-year .field-content a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+/* line 394, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-field-year .field-content a:hover {
+  text-decoration: underline !important;
+  color: #d17575 !important;
+}
+/* line 400, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-title {
+  font-size: 17px;
+  padding-top: 15px;
+  clear: both;
+  line-height: 1.2;
+  font-weight: 700;
+  display: inline-block;
+}
+/* line 407, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+/* line 410, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-title a:hover {
+  text-decoration: underline !important;
+  color: #d17575 !important;
+}
+/* line 417, ../sass/special-pages.scss */
+.view-juva-in-the-media .views-row .views-field-field-read-more-link a {
+  font-size: 17px;
+  color: #d17575;
+}
+
+/* line 425, ../sass/special-pages.scss */
+.node-print .field-name-field-print-images-with-pop-up-l {
+  text-align: center;
+  margin: 0 auto 20px;
+  display: block;
+  vertical-align: top;
+}
+
+/*========In-the-media page scss here end================*/
+/*========Video page scss here start================*/
+/* line 434, ../sass/special-pages.scss */
+.view-video {
+  overflow: hidden;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+/* line 438, ../sass/special-pages.scss */
+.view-video .views-row {
+  margin-right: 29px;
+  min-height: 233px;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 196px;
+  width: 100%;
+  position: relative;
+}
+/* line 444, ../sass/special-pages.scss */
+.view-video .views-row:after {
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  content: '';
+  width: 0;
+  height: 0;
+  background: #303030;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 455, ../sass/special-pages.scss */
+.view-video .views-row:nth-child(1n+1) {
+  margin-right: 0;
+  margin-bottom: 45px;
+  padding-bottom: 50px;
+  position: relative;
+}
+/* line 460, ../sass/special-pages.scss */
+.view-video .views-row:nth-child(1n+1).views-row-last {
+  margin: 0;
+  padding: 0;
+}
+/* line 463, ../sass/special-pages.scss */
+.view-video .views-row:nth-child(1n+1).views-row-last:after {
+  display: none;
+}
+/* line 467, ../sass/special-pages.scss */
+.view-video .views-row:nth-child(1n+1):after {
+  width: 300%;
+  height: 1px;
+}
+/* line 475, ../sass/special-pages.scss */
+.view-video .views-row .views-field-views-conditional .external-video a:after {
+  display: none;
+}
+/* line 480, ../sass/special-pages.scss */
+.view-video .views-row .views-field-views-conditional a {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 189, ../sass/_custom_mixin.scss */
+.view-video .views-row .views-field-views-conditional a:before {
+  content: '';
+  clear: both;
+  display: block;
+  width: 100%;
+  padding-bottom: 54.82234%;
+  height: 0px;
+}
+/* line 190, ../sass/_custom_mixin.scss */
+.view-video .views-row .views-field-views-conditional a > iframe, .view-video .views-row .views-field-views-conditional a > object, .view-video .views-row .views-field-views-conditional a > embed, .view-video .views-row .views-field-views-conditional a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+/* line 482, ../sass/special-pages.scss */
+.view-video .views-row .views-field-views-conditional a:after {
+  content: '';
+  width: 28px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: auto;
+  background:  url("../images/youtube-play-button.png") no-repeat center center;
+}
+/* line 492, ../sass/special-pages.scss */
+.view-video .views-row .views-field-title {
+  font-size: 17px;
+  padding-top: 15px;
+  clear: both;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #303030;
+}
+/* line 499, ../sass/special-pages.scss */
+.view-video .views-row .views-field-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+/* line 502, ../sass/special-pages.scss */
+.view-video .views-row .views-field-title a:hover {
+  text-decoration: underline !important;
+  color: #d17575  !important;
+}
+
+/* line 512, ../sass/special-pages.scss */
+.node-videos .field-name-field-youtube-url .video-container {
+  float: none !important;
+  margin: 0 auto 40px !important;
+}
+/* line 517, ../sass/special-pages.scss */
+.node-videos .field-name-body {
+  clear: both;
+  margin-bottom: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 525, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .view-content {
+  border-top: 1px solid #303030;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding-top: 50px;
+}
+/* line 530, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .views-row {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  min-height: 0;
+}
+/* line 534, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .views-row:nth-child(1n+1) {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  position: relative;
+}
+/* line 538, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .views-row:nth-child(1n+1):after {
+  display: none !important;
+}
+/* line 545, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .views-row .views-field-views-conditional .external-video a:after {
+  display: none;
+}
+/* line 550, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .views-row .views-field-views-conditional a {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 189, ../sass/_custom_mixin.scss */
+#block-views-video-block-2 .view-video .views-row .views-field-views-conditional a:before {
+  content: '';
+  clear: both;
+  display: block;
+  width: 100%;
+  padding-bottom: 54.82234%;
+  height: 0px;
+}
+/* line 190, ../sass/_custom_mixin.scss */
+#block-views-video-block-2 .view-video .views-row .views-field-views-conditional a > iframe, #block-views-video-block-2 .view-video .views-row .views-field-views-conditional a > object, #block-views-video-block-2 .view-video .views-row .views-field-views-conditional a > embed, #block-views-video-block-2 .view-video .views-row .views-field-views-conditional a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+/* line 552, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .views-row .views-field-views-conditional a:after {
+  content: '';
+  width: 28px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: auto;
+  background:  url("../images/youtube-play-button.png") no-repeat center center;
+}
+/* line 563, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .view-footer {
+  border-top: 1px solid #303030;
+  line-height: 24px;
+  font-size: 14px;
+  text-align: left;
+}
+/* line 568, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .view-footer a {
+  color: #303030 !important;
+  padding-left: 20px;
+  margin-top: 13px;
+  text-decoration: none !important;
+  position: relative;
+  display: block;
+}
+/* line 575, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .view-footer a:before {
+  content: '\f053';
+  font-family: 'fontawesome';
+  font-size: 18px;
+  line-height: 24px;
+  color: #303030;
+  top: 1px;
+  left: 0;
+  position: absolute;
+}
+/* line 585, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .view-footer a:hover {
+  color: #d17575 !important;
+}
+/* line 585, ../sass/special-pages.scss */
+#block-views-video-block-2 .view-video .view-footer a:hover:before {
+  color: #d17575;
+}
+
+/*========Video page scss here end================*/
+/*========Add to Cart and Checkout pages scss here start================*/
+/* line 594, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart,
+#block-multiblock-1 .login-and-cart {
+  float: left;
+  width: 100%;
+  background: #424241;
+  padding: 20px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 12px;
+}
+/* line 601, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .login,
+#block-multiblock-1 .login-and-cart .login {
+  padding-left: 20px;
+  position: relative;
+  display: inline;
+}
+/* line 605, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .login:hover,
+#block-multiblock-1 .login-and-cart .login:hover {
+  color: #d37c7c;
+}
+/* line 607, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .login:hover a,
+#block-multiblock-1 .login-and-cart .login:hover a {
+  color: #d37c7c;
+}
+/* line 610, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .login:hover:before,
+#block-multiblock-1 .login-and-cart .login:hover:before {
+  color: #d37c7c;
+}
+/* line 614, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .login:before,
+#block-multiblock-1 .login-and-cart .login:before {
+  content: '\f023';
+  font-family: 'fontawesome';
+  font-size: 16px;
+  line-height: 15px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+/* line 625, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .register-sec,
+#block-multiblock-1 .login-and-cart .register-sec {
+  padding-left: 20px;
+  position: relative;
+  display: inline;
+}
+/* line 629, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .register-sec a,
+#block-multiblock-1 .login-and-cart .register-sec a {
+  text-decoration: underline !important;
+}
+/* line 632, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .register-sec .member,
+#block-multiblock-1 .login-and-cart .register-sec .member {
+  margin-right: 5px;
+}
+/* line 634, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .register-sec .member:hover,
+#block-multiblock-1 .login-and-cart .register-sec .member:hover {
+  color: #d37c7c;
+}
+/* line 638, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .register-sec:hover,
+#block-multiblock-1 .login-and-cart .register-sec:hover {
+  color: #d37c7c;
+}
+/* line 640, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .register-sec:hover a,
+#block-multiblock-1 .login-and-cart .register-sec:hover a {
+  color: #d37c7c;
+}
+/* line 643, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .register-sec:hover:before,
+#block-multiblock-1 .login-and-cart .register-sec:hover:before {
+  color: #d37c7c;
+}
+/* line 647, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .register-sec:before,
+#block-multiblock-1 .login-and-cart .register-sec:before {
+  content: '\f044';
+  font-family: 'fontawesome';
+  font-size: 16px;
+  line-height: 15px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+/* line 658, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .cart,
+#block-multiblock-1 .login-and-cart .cart {
+  padding-left: 20px;
+  display: inline;
+  position: relative;
+}
+/* line 662, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .cart:hover,
+#block-multiblock-1 .login-and-cart .cart:hover {
+  color: #d37c7c;
+}
+/* line 664, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .cart:hover a,
+#block-multiblock-1 .login-and-cart .cart:hover a {
+  color: #d37c7c;
+}
+/* line 667, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .cart:hover:before,
+#block-multiblock-1 .login-and-cart .cart:hover:before {
+  color: #d37c7c;
+}
+/* line 671, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart .cart:before,
+#block-multiblock-1 .login-and-cart .cart:before {
+  content: '\f07a';
+  font-family: 'fontawesome';
+  font-size: 16px;
+  line-height: 15px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+/* line 682, ../sass/special-pages.scss */
+#block-block-71 .login-and-cart a,
+#block-multiblock-1 .login-and-cart a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 688, ../sass/special-pages.scss */
+.form-actions {
+  padding: 0 0 20px;
+  width: 100%;
+}
+
+/* line 692, ../sass/special-pages.scss */
+.form-submit, #edit-cancel, .empty-store-link a {
+  background: #d47d7d;
+  font-size: 18px;
+  padding: 0 20px;
+  color: #fff !important;
+  margin: 0 15px !important;
+  border: none;
+  height: 48px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 48px;
+  text-decoration: none !important;
+}
+/* line 704, ../sass/special-pages.scss */
+.form-submit:hover, #edit-cancel:hover, .empty-store-link a:hover {
+  background: #303030;
+}
+/* line 707, ../sass/special-pages.scss */
+.form-submit:first-of-type, #edit-cancel:first-of-type, .empty-store-link a:first-of-type {
+  margin-left: 0 !important;
+}
+/* line 710, ../sass/special-pages.scss */
+.form-submit:last-of-type, #edit-cancel:last-of-type, .empty-store-link a:last-of-type {
+  margin-right: 0 !important;
+}
+
+/* line 715, ../sass/special-pages.scss */
+.cart-review {
+  background: #fff;
+  float: left;
+  width: 100%;
+}
+/* line 719, ../sass/special-pages.scss */
+.cart-review thead th {
+  border: none;
+  padding: 10px;
+}
+/* line 724, ../sass/special-pages.scss */
+.cart-review tbody {
+  border-top: none;
+}
+/* line 725, ../sass/special-pages.scss */
+.cart-review tbody tr {
+  border-bottom: none;
+  padding: 0;
+}
+/* line 728, ../sass/special-pages.scss */
+.cart-review tbody tr.even {
+  background: #303030;
+}
+/* line 732, ../sass/special-pages.scss */
+.cart-review tbody tr.even .desc a,
+.cart-review tbody tr.even .products a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+/* line 738, ../sass/special-pages.scss */
+.cart-review tbody tr.even .price .uc-price {
+  color: #fff;
+}
+/* line 742, ../sass/special-pages.scss */
+.cart-review tbody tr.even .qty {
+  color: #fff;
+}
+/* line 746, ../sass/special-pages.scss */
+.cart-review tbody tr.odd {
+  background: #c7c795;
+}
+/* line 750, ../sass/special-pages.scss */
+.cart-review tbody tr.odd .desc a,
+.cart-review tbody tr.odd .products a {
+  color: #303030 !important;
+  text-decoration: none !important;
+}
+/* line 756, ../sass/special-pages.scss */
+.cart-review tbody tr.odd .price .uc-price {
+  color: #303030;
+}
+/* line 761, ../sass/special-pages.scss */
+.cart-review tbody tr .subtotal {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #fff;
+}
+/* line 767, ../sass/special-pages.scss */
+.cart-review tbody tr .image {
+  text-align: center;
+}
+/* line 769, ../sass/special-pages.scss */
+.cart-review tbody tr .image a {
+  background: #fff;
+  display: block;
+  text-decoration: none;
+}
+/* line 770, ../sass/special-pages.scss */
+.cart-review tbody tr .image img {
+  padding: 3px;
+  float: none;
+  width: auto;
+  height: 50px !important;
+}
+/* line 777, ../sass/special-pages.scss */
+.cart-review tbody tr td {
+  padding: 10px;
+  vertical-align: middle;
+}
+/* line 783, ../sass/special-pages.scss */
+.cart-review tbody .remove .form-submit {
+  background: #d47d7d;
+  font-size: 18px;
+  padding: 0 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  height: 40px;
+  line-height: 38px;
+  text-decoration: none;
+}
+/* line 792, ../sass/special-pages.scss */
+.cart-review tbody .remove .form-submit:hover {
+  background: #303030;
+}
+
+/* line 800, ../sass/special-pages.scss */
+.uc-cart-checkout-form input.form-text {
+  width: 100%;
+  line-height: 38px;
+  height: 38px;
+  padding: 0 10px;
+}
+/* line 806, ../sass/special-pages.scss */
+.uc-cart-checkout-form .form-select {
+  line-height: 38px;
+  height: 38px;
+  padding: 0 5px 0 15px;
+  -webkit-appearance: menulist;
+  appearance: menulist;
+}
+/* line 813, ../sass/special-pages.scss */
+.uc-cart-checkout-form .form-item label {
+  padding: 0 !important;
+  text-align: left;
+  width: 100%;
+}
+
+/* line 819, ../sass/special-pages.scss */
+.form-submit[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 827, ../sass/special-pages.scss */
+#uc-cart-checkout-form .sticky-header thead th {
+  padding: 10px;
+}
+/* line 833, ../sass/special-pages.scss */
+#uc-cart-checkout-form #quotes-pane .form-submit {
+  margin: 10px 0;
+}
+
+/* line 838, ../sass/special-pages.scss */
+.order-review-table {
+  width: 100%;
+  margin-top: 30px;
+}
+/* line 842, ../sass/special-pages.scss */
+.order-review-table .pane-title-row td {
+  padding: 5px 10px;
+}
+/* line 846, ../sass/special-pages.scss */
+.order-review-table .title-col {
+  padding: 10px;
+}
+/* line 849, ../sass/special-pages.scss */
+.order-review-table .data-col {
+  padding: 10px;
+}
+/* line 853, ../sass/special-pages.scss */
+.order-review-table .review-button-row td {
+  padding: 10px;
+}
+
+/*========Add to Cart and Checkout pages scss here end================*/
+/*========Pay bill page scss here start================*/
+/* line 863, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .node-product .product-wrapper .product-inner-wrapper {
+  max-width: 100%;
+}
+/* line 864, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 #block-multiblock-16,
+.sidebar-second.page-node-8806 .sidebar,
+.sidebar-second.page-node-8806 .product-info,
+.sidebar-second.page-node-8806 h2 {
+  display: none !important;
+}
+/* line 868, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 #content {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+/* line 871, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 #content .product-info {
+  display: none !important;
+}
+/* line 872, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 #content .cart-wrapper {
+  margin-bottom: 0;
+}
+/* line 874, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .add-to-cart form {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 875, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .add-to-cart form .form-type-textfield {
+  margin: 0 8px 0 0;
+  line-height: 40px;
+  float: left;
+}
+/* line 875, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .add-to-cart form .form-type-textfield label {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+}
+/* line 876, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .add-to-cart form .form-type-textfield .field-prefix {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 877, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .add-to-cart form .form-type-textfield .form-text {
+  height: 40px;
+  width: 84px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 879, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .add-to-cart form .form-type-uc-quantity {
+  display: none !important;
+}
+/* line 880, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .add-to-cart form .form-actions {
+  width: 82px !important;
+  line-height: 40px;
+}
+/* line 880, ../sass/special-pages.scss */
+.sidebar-second.page-node-8806 .add-to-cart form .form-actions .form-submit {
+  line-height: 40px;
+  height: 40px;
+}
+
+/*========Pay bill page scss here start================*/
+/*========Our Staff page scss here start================*/
+/* line 885, ../sass/special-pages.scss */
+.view-our-staff .views-row {
+  padding-bottom: 15px;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #303030;
+  margin-bottom: 20px;
+}
+/* line 890, ../sass/special-pages.scss */
+.view-our-staff .views-row .views-field-title {
+  font-weight: 400;
+  font-size: 32px;
+  text-transform: capitalize;
+  line-height: 1.2;
+  text-align: left;
+  color: #d17575;
+}
+/* line 897, ../sass/special-pages.scss */
+.view-our-staff .views-row .views-field-title a {
+  text-decoration: none !important;
+}
+/* line 897, ../sass/special-pages.scss */
+.view-our-staff .views-row .views-field-title a:hover {
+  text-decoration: underline !important;
+}
+/* line 899, ../sass/special-pages.scss */
+.view-our-staff .views-row .views-more-link {
+  float: right;
+}
+/* line 902, ../sass/special-pages.scss */
+.view-our-staff .views-row.views-row-last {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/*========Our Staff page scss here end================*/
+/*========Events page scss here start================*/
+/* line 912, ../sass/special-pages.scss */
+.view-juva-events .views-row {
+  padding-bottom: 15px;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #303030;
+  margin-bottom: 20px;
+}
+/* line 917, ../sass/special-pages.scss */
+.view-juva-events .views-row .views-field-title {
+  font-weight: 400;
+  font-size: 32px;
+  text-transform: capitalize;
+  line-height: 1.2;
+  text-align: left;
+  color: #d17575;
+}
+/* line 924, ../sass/special-pages.scss */
+.view-juva-events .views-row .views-field-title a {
+  text-decoration: none !important;
+}
+/* line 924, ../sass/special-pages.scss */
+.view-juva-events .views-row .views-field-title a:hover {
+  text-decoration: underline !important;
+}
+/* line 926, ../sass/special-pages.scss */
+.view-juva-events .views-row .views-field-field-event-date-time {
+  margin-bottom: 20px;
+}
+/* line 929, ../sass/special-pages.scss */
+.view-juva-events .views-row.views-row-last {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/*========Events page scss here end================*/
+/*========Press page scss here start================*/
+/* line 939, ../sass/special-pages.scss */
+.view-press .views-row {
+  padding-bottom: 15px;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #303030;
+  margin-bottom: 20px;
+}
+/* line 944, ../sass/special-pages.scss */
+.view-press .views-row .views-field-title {
+  font-weight: 400;
+  font-size: 32px;
+  text-transform: capitalize;
+  line-height: 1.2;
+  text-align: left;
+  color: #d17575;
+}
+/* line 951, ../sass/special-pages.scss */
+.view-press .views-row .views-field-title a {
+  text-decoration: none !important;
+}
+/* line 953, ../sass/special-pages.scss */
+.view-press .views-row .views-field-title a:hover {
+  text-decoration: underline !important;
+}
+/* line 956, ../sass/special-pages.scss */
+.view-press .views-row .views-field-field-posted-date {
+  margin-bottom: 20px;
+  color: #d17575;
+}
+/* line 960, ../sass/special-pages.scss */
+.view-press .views-row.views-row-last {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/*========Press page scss here end================*/
+/* line 968, ../sass/special-pages.scss */
+#rsqaw {
+  max-width: 100% !important;
+}
+
+/*========Back to top block on proucts page scss here start================*/
+/* line 974, ../sass/special-pages.scss */
+#block-block-76 .back-to-top a,
+#block-multiblock-16 .back-to-top a {
+  color: #303030 !important;
+  padding-top: 20px;
+  font-size: 14px;
+  text-decoration: none !important;
+  display: block;
+  margin: 0 auto;
+  max-width: 75px;
+  width: 100%;
+  position: relative;
+}
+/* line 981, ../sass/special-pages.scss */
+#block-block-76 .back-to-top a:before,
+#block-multiblock-16 .back-to-top a:before {
+  content: '\f077';
+  font-family: 'fontawesome';
+  font-size: 18px;
+  width: 18px;
+  line-height: 24px;
+  color: #303030;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+/* line 994, ../sass/special-pages.scss */
+#block-block-76 .back-to-top a:hover,
+#block-multiblock-16 .back-to-top a:hover {
+  color: #d17575 !important;
+}
+/* line 994, ../sass/special-pages.scss */
+#block-block-76 .back-to-top a:hover:before,
+#block-multiblock-16 .back-to-top a:hover:before {
+  color: #d17575;
+}
+
+/*========Back to top block on proucts page scss here end================*/
+/*========Location block on Office page scss here start================*/
+/* line 1000, ../sass/special-pages.scss */
+#block-views-location-block {
+  float: left;
+  width: 100%;
+  padding: 60px 19px;
+  margin-bottom: 4px;
+  background: #000 url("../images/footer-bg-pattern.png") repeat 0 0;
+}
+/* line 1005, ../sass/special-pages.scss */
+#block-views-location-block .view-location {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+}
+/* line 1009, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-header {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 0 55px;
+  clear: both;
+  text-align: center;
+}
+/* line 1015, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content {
+  font-size: 20px;
+}
+/* line 1017, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row {
+  width: 100%;
+  text-align: center;
+}
+/* line 1020, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row.views-row-first {
+  margin-bottom: 30px;
+}
+/* line 1023, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row .address-sec {
+  margin-bottom: 30px;
+}
+/* line 1026, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row .map-sec {
+  margin-top: 30px;
+}
+/* line 1028, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row .map-sec a {
+  color: #c6c695;
+}
+/* line 1032, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row .views-field {
+  float: none;
+}
+/* line 1034, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row .views-field.views-field-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 30px auto 55px;
+  text-transform: capitalize;
+  line-height: 1.2;
+  position: relative;
+}
+/* line 264, ../sass/_custom_mixin.scss */
+#block-views-location-block .view-location .view-content .views-row .views-field.views-field-title:after {
+  content: '';
+  background: #c7c795;
+  width: 60px;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  left: 0;
+  z-index: 8;
+  margin: auto;
+}
+/* line 1041, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row .views-field.views-field-title a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+/* line 1041, ../sass/special-pages.scss */
+#block-views-location-block .view-location .view-content .views-row .views-field.views-field-title a:hover {
+  text-decoration: underline !important;
+}
+
+/* line 1048, ../sass/special-pages.scss */
+#block-views-location-block-1 {
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+/* line 1051, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  font-size: 20px;
+}
+/* line 1054, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-header {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 0 70px;
+  clear: both;
+  text-align: center;
+}
+/* line 1060, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content {
+  font-size: 20px;
+}
+/* line 1062, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content .views-row {
+  width: 100%;
+  text-align: center;
+}
+/* line 1065, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content .views-row .address-sec {
+  margin-bottom: 15px;
+}
+/* line 1068, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content .views-row .map-sec {
+  margin-top: 15px;
+}
+/* line 1071, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content .views-row .views-field {
+  float: none;
+}
+/* line 1073, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content .views-row .views-field.views-field-title {
+  text-align: center;
+  font-size: 30px;
+  margin: 45px auto 75px;
+  text-transform: capitalize;
+  line-height: 1.2;
+  position: relative;
+}
+/* line 264, ../sass/_custom_mixin.scss */
+#block-views-location-block-1 .view-location .view-content .views-row .views-field.views-field-title:after {
+  content: '';
+  background: #d17575;
+  width: 60px;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  left: 0;
+  z-index: 8;
+  margin: auto;
+}
+/* line 1080, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content .views-row .views-field.views-field-title span {
+  font-weight: 400;
+}
+/* line 1083, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content .views-row .views-field.views-field-title a {
+  text-decoration: none !important;
+}
+/* line 1083, ../sass/special-pages.scss */
+#block-views-location-block-1 .view-location .view-content .views-row .views-field.views-field-title a:hover {
+  text-decoration: underline !important;
+}
+
+/*========Location block on Office page scss here end================*/
+/*==========IPad and desktop [Also flud responsive] css start=======*/
+@media all and (min-width: 435px) and (max-width: 693px) {
+  /* line 1098, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1102, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1107, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(2n+2) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1111, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(2n+2):after {
+    width: 400%;
+    right: -100%;
+    height: 1px;
+  }
+  /* line 1117, ../sass/special-pages.scss */
+  .view-video .views-row .views-field-title {
+    font-size: 17px;
+    padding-top: 15px;
+  }
+}
+@media all and (min-width: 694px) and (max-width: 767px) {
+  /* line 1127, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1131, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1136, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(3n+3) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1140, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(3n+3):after {
+    width: 500%;
+    right: -100%;
+    height: 1px;
+  }
+  /* line 1146, ../sass/special-pages.scss */
+  .view-video .views-row .views-field-title {
+    font-size: 17px;
+    padding-top: 15px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 910px) {
+  /* line 1156, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1160, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1165, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(3n+3) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1169, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(3n+3):after {
+    width: 700%;
+    right: -100%;
+    height: 1px;
+  }
+  /* line 1175, ../sass/special-pages.scss */
+  .view-video .views-row .views-field-title {
+    font-size: 17px;
+    padding-top: 15px;
+  }
+}
+@media all and (min-width: 911px) and (max-width: 1024px) {
+  /* line 1185, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1189, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1194, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(4n+4) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1198, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(4n+4):after {
+    width: 700%;
+    right: -100%;
+    height: 1px;
+  }
+  /* line 1204, ../sass/special-pages.scss */
+  .view-video .views-row .views-field-title {
+    font-size: 17px;
+    padding-top: 15px;
+  }
+}
+@media all and (min-width: 371px) {
+  /* line 1214, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row {
+    max-width: 150px;
+  }
+}
+@media all and (min-width: 371px) and (max-width: 553px) {
+  /* line 1222, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1226, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1231, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(2n+2) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1235, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(2n+2).views-row-last {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  /* line 1239, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(2n+2):after {
+    width: 600%;
+    right: -100%;
+    height: 1px;
+  }
+}
+@media all and (min-width: 554px) and (max-width: 734px) {
+  /* line 1251, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1255, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1260, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(3n+3) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1264, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(3n+3).views-row-last {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  /* line 1268, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(3n+3):after {
+    width: 600%;
+    right: -100%;
+    height: 1px;
+  }
+}
+@media all and (min-width: 735px) and (max-width: 920px) {
+  /* line 1280, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1284, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1289, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(4n+4) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1293, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(4n+4).views-row-last {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  /* line 1297, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(4n+4):after {
+    width: 700%;
+    right: -100%;
+    height: 1px;
+  }
+}
+@media all and (min-width: 920px) {
+  /* line 1309, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1313, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1318, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(5n+5) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1322, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(5n+5).views-row-last {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  /* line 1326, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(5n+5):after {
+    width: 700%;
+    right: -100%;
+    height: 1px;
+  }
+}
+@media all and (min-width: 1025px) and (max-width: 1029px) {
+  /* line 1338, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1) {
+    margin-right: 2.41667vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1342, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1347, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(3n+3) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1351, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(3n+3).views-row-last {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  /* line 1355, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(3n+3):after {
+    width: 700%;
+    right: -100%;
+    height: 1px;
+  }
+}
+@media all and (min-width: 1028px) and (max-width: 1220px) {
+  /* line 1367, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1) {
+    margin-right: 2.41667vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1371, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1376, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(4n+4) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1380, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(4n+4).views-row-last {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  /* line 1384, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(4n+4):after {
+    width: 700%;
+    right: -100%;
+    height: 1px;
+  }
+}
+@media all and (min-width: 1221px) and (max-width: 1249px) {
+  /* line 1396, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1) {
+    margin-right: 2.41667vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1400, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1405, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(5n+5) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1409, ../sass/special-pages.scss */
+  .view-juva-in-the-media .views-row:nth-child(5n+5):after {
+    width: 700%;
+    right: -100%;
+    height: 1px;
+  }
+}
+@media all and (min-width: 1025px) and (max-width: 1199px) {
+  /* line 1421, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1425, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1430, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(3n+3) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1434, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(3n+3):after {
+    width: 500%;
+    right: -100%;
+    height: 1px;
+  }
+  /* line 1440, ../sass/special-pages.scss */
+  .view-video .views-row .views-field-title {
+    font-size: 17px;
+    padding-top: 15px;
+  }
+}
+@media all and (min-width: 1200px) {
+  /* line 1450, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1) {
+    margin-right: 29px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* line 1454, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(1n+1):after {
+    width: 0;
+    height: 0;
+  }
+  /* line 1459, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(4n+4) {
+    margin-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 50px;
+  }
+  /* line 1463, ../sass/special-pages.scss */
+  .view-video .views-row:nth-child(4n+4):after {
+    width: 500%;
+    right: 0;
+    height: 1px;
+  }
+
+  /* line 1472, ../sass/special-pages.scss */
+  #block-block-7 .ask {
+    position: relative;
+  }
+  /* line 264, ../sass/_custom_mixin.scss */
+  #block-block-7 .ask:after {
+    content: '';
+    background: #c7c795;
+    width: 88%;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    bottom: 26px;
+    left: 0;
+    z-index: 8;
+    margin: auto;
+  }
+  /* line 1475, ../sass/special-pages.scss */
+  #block-block-7 .call {
+    display: inline-block;
+  }
+
+  /* line 1482, ../sass/special-pages.scss */
+  .node-videos .field-name-field-youtube-url .video-container {
+    float: none !important;
+    margin: 0 auto 40px !important;
+  }
+  /* line 1487, ../sass/special-pages.scss */
+  .node-videos .field-name-body {
+    clear: both;
+    margin-bottom: 50px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* line 1496, ../sass/special-pages.scss */
+  #block-views-video-block-2 .view-video .view-content {
+    border-top: 1px solid #303030;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding-top: 50px;
+  }
+  /* line 1501, ../sass/special-pages.scss */
+  #block-views-video-block-2 .view-video .views-row {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    min-height: 0;
+  }
+  /* line 1505, ../sass/special-pages.scss */
+  #block-views-video-block-2 .view-video .views-row:nth-child(1n+1) {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    position: relative;
+  }
+  /* line 1509, ../sass/special-pages.scss */
+  #block-views-video-block-2 .view-video .views-row:nth-child(1n+1):after {
+    display: none !important;
+  }
+  /* line 1514, ../sass/special-pages.scss */
+  #block-views-video-block-2 .view-video .view-footer {
+    border-top: 1px solid #303030;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: left;
+  }
+  /* line 1519, ../sass/special-pages.scss */
+  #block-views-video-block-2 .view-video .view-footer a {
+    color: #303030 !important;
+    padding-left: 20px;
+    margin-top: 13px;
+    text-decoration: none !important;
+    position: relative;
+    display: block;
+  }
+  /* line 1526, ../sass/special-pages.scss */
+  #block-views-video-block-2 .view-video .view-footer a:before {
+    content: '\f053';
+    font-family: 'fontawesome';
+    font-size: 18px;
+    line-height: 24px;
+    color: #303030;
+    top: 1px;
+    left: 0;
+    position: absolute;
+  }
+}
+@media all and (max-width: 767px) {
+  /* line 1542, ../sass/special-pages.scss */
+  #uc-cart-view-form .form-actions input {
+    width: 100%;
+    margin: 2px auto;
+  }
+}
+@media all and (max-width: 549px) {
+  /* line 1548, ../sass/special-pages.scss */
+  .review-table-wrapper {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  /* line 1555, ../sass/special-pages.scss */
+  .order-review-table {
+    width: 500px;
+  }
+
+  /* line 1558, ../sass/special-pages.scss */
+  .captcha-wrapper {
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  /* line 1565, ../sass/special-pages.scss */
+  .captcha-wrapper .captcha {
+    width: 430px;
+    border: 1px solid #303030;
+  }
+
+  /* line 1570, ../sass/special-pages.scss */
+  .sticky-header {
+    display: none;
+  }
+
+  /* line 1574, ../sass/special-pages.scss */
+  #cart-form-pane #uc-cart-view-form table {
+    width: 100%;
+    max-width: 885px;
+  }
+  /* line 1578, ../sass/special-pages.scss */
+  #cart-form-pane table {
+    background: #fff;
+    float: left;
+    width: 100%;
+  }
+  /* line 1582, ../sass/special-pages.scss */
+  #cart-form-pane table thead th {
+    border: none;
+    padding: 7px;
+    float: left;
+  }
+  /* line 1586, ../sass/special-pages.scss */
+  #cart-form-pane table thead th:nth-child(5) {
+    float: right;
+  }
+  /* line 1592, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr {
+    border-bottom: none;
+    padding: 0;
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  /* line 1598, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.even {
+    background: #303030;
+  }
+  /* line 1601, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.even .desc a {
+    color: #fff;
+    text-decoration: none;
+  }
+  /* line 1607, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.even .price .uc-price {
+    color: #fff;
+  }
+  /* line 1612, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.odd {
+    background: #c7c795;
+  }
+  /* line 1615, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.odd .desc a {
+    color: #303030;
+    text-decoration: none;
+  }
+  /* line 1621, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.odd .price .uc-price {
+    color: #303030;
+  }
+  /* line 1626, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .qty {
+    left: 98px;
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+  }
+  /* line 1632, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .price {
+    width: 105px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    line-height: 40px;
+  }
+  /* line 1640, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .subtotal {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    background: #fff;
+    width: 100%;
+    float: left;
+  }
+  /* line 1647, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .subtotal #subtotal-title {
+    float: left;
+  }
+  /* line 1650, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .subtotal .uc-price {
+    width: 150px;
+  }
+  /* line 1654, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .image {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  /* line 1657, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .image a {
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    margin-bottom: 10px;
+    width: 50px;
+  }
+  /* line 1658, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .image img {
+    padding: 3px;
+    float: none;
+    width: auto;
+    height: 50px !important;
+  }
+  /* line 1665, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr td {
+    padding: 5px;
+    vertical-align: middle;
+    float: left;
+  }
+  /* line 1669, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr td.remove {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+  }
+  /* line 1675, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr td.desc {
+    width: calc(100% - 60px);
+    padding-bottom: 50px;
+  }
+  /* line 1679, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr td .form-text {
+    text-align: center;
+    line-height: 38px;
+    height: 38px;
+  }
+  /* line 1687, ../sass/special-pages.scss */
+  #cart-form-pane table tbody .remove .form-submit {
+    background: #d47d7d;
+    font-size: 18px;
+    padding: 0 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 40px;
+    line-height: 38px;
+    text-decoration: none;
+  }
+  /* line 1696, ../sass/special-pages.scss */
+  #cart-form-pane table tbody .remove .form-submit:hover {
+    background: #303030;
+  }
+}
+@media all and (min-width: 550px) {
+  /* line 1707, ../sass/special-pages.scss */
+  #cart-form-pane #uc-cart-view-form table {
+    width: 100%;
+  }
+  /* line 1710, ../sass/special-pages.scss */
+  #cart-form-pane table {
+    background: #fff;
+    float: left;
+    width: 100%;
+  }
+  /* line 1714, ../sass/special-pages.scss */
+  #cart-form-pane table thead th {
+    border: none;
+    padding: 10px;
+  }
+  /* line 1719, ../sass/special-pages.scss */
+  #cart-form-pane table tbody {
+    border-top: none;
+  }
+  /* line 1720, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr {
+    border-bottom: none;
+    padding: 0;
+  }
+  /* line 1723, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.even {
+    background: #303030;
+  }
+  /* line 1726, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.even .desc a {
+    color: #fff;
+    text-decoration: none;
+  }
+  /* line 1732, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.even .price .uc-price {
+    color: #fff;
+  }
+  /* line 1737, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.odd {
+    background: #c7c795;
+  }
+  /* line 1740, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.odd .desc a {
+    color: #303030;
+    text-decoration: none;
+  }
+  /* line 1746, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr.odd .price .uc-price {
+    color: #303030;
+  }
+  /* line 1751, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .subtotal {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    background: #fff;
+  }
+  /* line 1757, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .image {
+    text-align: center;
+  }
+  /* line 1759, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .image a {
+    display: block;
+    text-decoration: none;
+    background: #fff;
+  }
+  /* line 1760, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr .image img {
+    padding: 3px;
+    float: none;
+    width: auto;
+    height: 50px !important;
+  }
+  /* line 1767, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr td {
+    padding: 10px;
+    vertical-align: middle;
+  }
+  /* line 1770, ../sass/special-pages.scss */
+  #cart-form-pane table tbody tr td .form-text {
+    text-align: center;
+    line-height: 38px;
+    height: 38px;
+  }
+  /* line 1778, ../sass/special-pages.scss */
+  #cart-form-pane table tbody .remove .form-submit {
+    background: #d47d7d;
+    font-size: 18px;
+    padding: 0 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 40px;
+    line-height: 38px;
+    text-decoration: none;
+  }
+  /* line 1787, ../sass/special-pages.scss */
+  #cart-form-pane table tbody .remove .form-submit:hover {
+    background: #303030;
+  }
+
+  /* line 1796, ../sass/special-pages.scss */
+  .node-print .field-name-field-print-images-with-pop-up-l {
+    float: left !important;
+    margin: 10px 20px 15px 0 !important;
+  }
+}
+@media all and (min-width: 768px) {
+  /* line 1803, ../sass/special-pages.scss */
+  .node-product .product-wrapper .product-inner-wrapper {
+    max-width: calc(100% - 320px);
+    margin-top: 0;
+  }
+
+  /* line 1807, ../sass/special-pages.scss */
+  #block-views-location-block {
+    float: left;
+    width: 100%;
+    padding: 87px 0 95px;
+    margin-bottom: 4px;
+    background: #000 url("../images/footer-bg-pattern.png") repeat 0 0;
+  }
+  /* line 1812, ../sass/special-pages.scss */
+  #block-views-location-block .view-location {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+  }
+  /* line 1816, ../sass/special-pages.scss */
+  #block-views-location-block .view-location .view-header {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 0 70px;
+    clear: both;
+    text-align: center;
+  }
+  /* line 1822, ../sass/special-pages.scss */
+  #block-views-location-block .view-location .view-content {
+    font-size: 20px;
+  }
+  /* line 1824, ../sass/special-pages.scss */
+  #block-views-location-block .view-location .view-content .views-row {
+    width: 50%;
+    text-align: center;
+    font-size: 26px;
+    padding: 0 20px;
+  }
+  /* line 1829, ../sass/special-pages.scss */
+  #block-views-location-block .view-location .view-content .views-row.views-row-first {
+    margin-bottom: 0;
+  }
+  /* line 1832, ../sass/special-pages.scss */
+  #block-views-location-block .view-location .view-content .views-row .address-sec {
+    margin-bottom: 45px;
+  }
+  /* line 1835, ../sass/special-pages.scss */
+  #block-views-location-block .view-location .view-content .views-row .map-sec {
+    margin-top: 45px;
+  }
+  /* line 1838, ../sass/special-pages.scss */
+  #block-views-location-block .view-location .view-content .views-row .views-field {
+    float: none;
+  }
+  /* line 1840, ../sass/special-pages.scss */
+  #block-views-location-block .view-location .view-content .views-row .views-field.views-field-title {
+    text-align: center;
+    font-size: 37px;
+    margin: 45px auto 70px;
+    text-transform: capitalize;
+    line-height: 1.2;
+    position: relative;
+  }
+  /* line 264, ../sass/_custom_mixin.scss */
+  #block-views-location-block .view-location .view-content .views-row .views-field.views-field-title:after {
+    content: '';
+    background: #c7c795;
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    z-index: 8;
+    margin: auto;
+  }
+
+  /* line 1856, ../sass/special-pages.scss */
+  #block-views-location-block-1 .view-location .view-content .views-row {
+    width: 50%;
+    font-size: 26px;
+    padding: 0 20px;
+  }
+
+  /* line 1864, ../sass/special-pages.scss */
+  #block-block-76 .back-to-top a,
+  #block-multiblock-16 .back-to-top a {
+    float: right;
+  }
+
+  /* line 1870, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row.views-row-last .views-field-nothing {
+    padding: 40px 0 58px;
+  }
+
+  /* line 1876, ../sass/special-pages.scss */
+  .view-juva-store-product-type.view-display-id-page_1, .view-juva-store-product-type.view-display-id-page_2 {
+    text-align: center;
+    font-size: 18px;
+  }
+  /* line 1880, ../sass/special-pages.scss */
+  .view-juva-store-product-type.view-display-id-page_1 .views-row, .view-juva-store-product-type.view-display-id-page_2 .views-row {
+    float: none;
+    margin: 0 10px;
+    padding: 0;
+    max-width: 274px;
+  }
+  /* line 1885, ../sass/special-pages.scss */
+  .view-juva-store-product-type.view-display-id-page_1 .views-row .products-title-price, .view-juva-store-product-type.view-display-id-page_2 .views-row .products-title-price {
+    padding: 25px 15px 40px;
+  }
+  /* line 1887, ../sass/special-pages.scss */
+  .view-juva-store-product-type.view-display-id-page_1 .views-row .products-title-price .views-field-title, .view-juva-store-product-type.view-display-id-page_2 .views-row .products-title-price .views-field-title {
+    padding: 0 0 15px;
+  }
+  /* line 1894, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row {
+    margin-bottom: 10px;
+  }
+  /* line 1897, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row .view-display-id-block_2 .views-row {
+    margin: 0 10px 10px;
+  }
+  /* line 1899, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row .view-display-id-block_2 .views-row .products-title-price {
+    padding: 20px 15px 0;
+  }
+  /* line 1902, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row .view-display-id-block_2 .views-row .views-field-title {
+    min-height: 57px;
+    padding: 0 0 10px;
+  }
+  /* line 1908, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row .views-field-nothing {
+    padding: 40px 0 50px;
+  }
+
+  /* line 1913, ../sass/special-pages.scss */
+  .node-type-product #block-block-76, .node-type-product #block-multiblock-16 {
+    margin-top: 0px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1220px) {
+  /* line 1916, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row .view-display-id-block_2 .views-row,
+  .view-juva-store-product-type .views-row .view-display-id-page_1 .views-row,
+  .view-juva-store-product-type .views-row .view-display-id-page_2 .views-row {
+    max-width: 32%;
+    margin: 0 0 10px;
+    padding: 0 0.81967vw;
+  }
+
+  /* line 1919, ../sass/special-pages.scss */
+  .view-juva-store-product-type.view-display-id-page_1 .views-row, .view-juva-store-product-type.view-display-id-page_2 .views-row {
+    max-width: 32%;
+    margin: 0 0 10px;
+    padding: 0 0.81967vw;
+  }
+}
+@media all and (min-width: 1221px) {
+  /* line 1922, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row .view-display-id-block_2 .views-row {
+    margin: 0 0 10px;
+    max-width: 274px;
+    padding: 0;
+  }
+  /* line 1924, ../sass/special-pages.scss */
+  .view-juva-store-product-type .views-row .view-display-id-block_2 .views-row.views-row-2 {
+    margin: 0 28px 10px;
+  }
+
+  /* line 1928, ../sass/special-pages.scss */
+  .view-juva-store-product-type.view-display-id-page_1,
+  .view-juva-store-product-type.view-display-id-page_2 {
+    text-align: left;
+  }
+  /* line 1931, ../sass/special-pages.scss */
+  .view-juva-store-product-type.view-display-id-page_1 .views-row,
+  .view-juva-store-product-type.view-display-id-page_2 .views-row {
+    max-width: 274px;
+    margin: 0 28px 0 0;
+    padding: 0;
+  }
+  /* line 1935, ../sass/special-pages.scss */
+  .view-juva-store-product-type.view-display-id-page_1 .views-row:nth-child(3n+3),
+  .view-juva-store-product-type.view-display-id-page_2 .views-row:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}

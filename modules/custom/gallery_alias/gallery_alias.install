@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Install file For the Module to store Variables.
+ */
+
+/**
+ * Stores 2 variables In Variable Table.
+ * 
+ * alias_gallery_name => stores the Vocab Machine name.
+ * alias_gallery_prefix=> prefix to use before Term name.
+ */
+function gallery_alias_install() {
+  $vocab_default_name = serialize('gallery');
+  $alias_default_prefix = serialize('before-after');
+  db_merge('variable')
+      ->key(array('name' => 'alias_gallery_name'))
+      ->updateFields(array(
+        'value' => $vocab_default_name,
+      ))
+      ->insertFields(array(
+        'name' => 'alias_gallery_name',
+        'value' => $vocab_default_name,
+      ))
+      ->execute();
+
+  db_merge('variable')
+      ->key(array('name' => 'alias_gallery_prefix'))
+      ->updateFields(array(
+        'value' => $alias_default_prefix,
+      ))
+      ->insertFields(array(
+        'name' => 'alias_gallery_prefix',
+        'value' => $alias_default_prefix,
+      ))
+      ->execute();
+}

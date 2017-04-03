@@ -1,0 +1,355 @@
+/**
+ * @file
+ * Block Styling
+ */
+/* line 7, ../sass/Ie8.scss */
+.lt-ie9 {
+  /*=====================  INTERNAL CSS GOES HERE   ==================*/
+  /*=====================  CTAs CSS GOES HERE   ==================*/
+  /*======================  MEET HENRY CSS GOES HERE  ============================*/
+  /*==================== 4 THINGS CSS GOES HERE  ======================*/
+  /*==================== REVIEW CSS GOES HERE  ======================*/
+  /*==================== ASSOCIATION LOGOs CSS GOES HERE  ======================*/
+  /*=====================  FOOTER ADDRESS PART CSS GOES HERE   ==================*/
+  /*======================  FOOTER DISCLAIMER PART CSS GOES HERE  ============================*/
+  /*==============================  FOOTER MENU CSS GOES HERE  ==============================================*/
+}
+/* line 8, ../sass/Ie8.scss */
+.lt-ie9 body {
+  font-size: 18px;
+  line-height: 28px;
+}
+/* line 12, ../sass/Ie8.scss */
+.lt-ie9 .top-header-outer {
+  background: #090d12;
+  color: #ffffff;
+  float: right;
+  padding: 13px 20px;
+}
+/* line 18, ../sass/Ie8.scss */
+.lt-ie9 #block-block-5 {
+  color: #ffffff;
+  float: right;
+  font-size: 16px;
+}
+/* line 22, ../sass/Ie8.scss */
+.lt-ie9 #block-block-5 .address {
+  display: block;
+  text-align: right;
+  text-transform: uppercase;
+}
+/* line 27, ../sass/Ie8.scss */
+.lt-ie9 #block-block-5 .phone-top {
+  display: none;
+}
+/* line 31, ../sass/Ie8.scss */
+.lt-ie9 #navigation {
+  background: #ffffff none repeat scroll 0 0;
+  display: inline-block;
+  padding: 22px 10px;
+  vertical-align: top;
+  width: 100%;
+}
+/* line 38, ../sass/Ie8.scss */
+.lt-ie9 #block-block-31 {
+  display: block;
+  right: 0;
+}
+/* line 43, ../sass/Ie8.scss */
+.lt-ie9 #block-views-mast-cycle-block-3, .lt-ie9 #block-views-mast-cycle-block-2 {
+  display: block;
+}
+/* line 47, ../sass/Ie8.scss */
+.lt-ie9 #main #content {
+  width: 71.65%;
+  float: left;
+  padding: 0 10px 85px;
+}
+/* line 51, ../sass/Ie8.scss */
+.lt-ie9 #main #content p {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 0 30px;
+}
+/* line 57, ../sass/Ie8.scss */
+.lt-ie9 #main .sidebars {
+  width: 308px;
+  float: right;
+  padding-bottom: 85px;
+}
+/* line 63, ../sass/Ie8.scss */
+.lt-ie9 .sidebars {
+  width: 308px;
+  float: right;
+  padding-bottom: 85px;
+}
+/* line 69, ../sass/Ie8.scss */
+.lt-ie9 .not-front #main {
+  padding: 110px  10px 0px;
+}
+/* line 71, ../sass/Ie8.scss */
+.lt-ie9 .not-front #main #content {
+  padding: 0px  0px 98px;
+}
+/* line 76, ../sass/Ie8.scss */
+.lt-ie9 h1 {
+  font-size: 52px;
+  line-height: 52px;
+  padding: 0 0 5px;
+}
+/* line 81, ../sass/Ie8.scss */
+.lt-ie9 h3 {
+  font-size: 22px;
+  padding: 0 0 32px;
+}
+/* line 85, ../sass/Ie8.scss */
+.lt-ie9 .top-title-outer {
+  padding: 110px 10px 98px;
+}
+/* line 88, ../sass/Ie8.scss */
+.lt-ie9 .logo-inner {
+  display: block;
+  top: 70px;
+  left: 110px;
+  z-index: 5;
+  position: absolute;
+}
+/* line 94, ../sass/Ie8.scss */
+.lt-ie9 .logo-inner .call-us {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 0;
+  display: block;
+}
+/* line 99, ../sass/Ie8.scss */
+.lt-ie9 .logo-inner .call-us a {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 104, ../sass/Ie8.scss */
+.lt-ie9 #block-views-mast-cycle-block-1 {
+  display: none;
+}
+/* line 107, ../sass/Ie8.scss */
+.lt-ie9 #block-views-mast-cycle-block {
+  display: block;
+}
+/* line 115, ../sass/Ie8.scss */
+.lt-ie9 #block-views-mast-cycle-block .view-mast-cycle.view-display-id-block .flexslider .slides li .views-field-field-cycle-image img {
+  padding-right: 15%;
+}
+/* line 121, ../sass/Ie8.scss */
+.lt-ie9 #block-views-mast-cycle-block .view-mast-cycle.view-display-id-block .flexslider .slides li .views-field-nothing .banner-text .banner-tagline {
+  font-size: 60px;
+  line-height: 60px;
+  padding: 60px 10px 80px;
+}
+/* line 128, ../sass/Ie8.scss */
+.lt-ie9 #block-views-mast-cycle-block .view-mast-cycle.view-display-id-block .flexslider .slides li .views-field-field-banner-number {
+  top: 275px;
+  left: 275px;
+}
+/* line 140, ../sass/Ie8.scss */
+.lt-ie9 #block-views-cta-homepage-block .view-cta-homepage {
+  max-width: 100%;
+}
+/* line 141, ../sass/Ie8.scss */
+.lt-ie9 #block-views-cta-homepage-block .view-cta-homepage .views-row {
+  max-width: 300px;
+  margin: 17px 5px 0;
+}
+/* line 144, ../sass/Ie8.scss */
+.lt-ie9 #block-views-cta-homepage-block .view-cta-homepage .views-row:first-child, .lt-ie9 #block-views-cta-homepage-block .view-cta-homepage .views-row.views-row-2, .lt-ie9 #block-views-cta-homepage-block .view-cta-homepage .views-row.views-row-3, .lt-ie9 #block-views-cta-homepage-block .view-cta-homepage .views-row.views-row-4 {
+  margin: 0 5px 0;
+}
+/* line 146, ../sass/Ie8.scss */
+.lt-ie9 #block-views-cta-homepage-block .view-cta-homepage .views-row .views-field-nothing a {
+  font-size: 21px;
+}
+/* line 154, ../sass/Ie8.scss */
+.lt-ie9 .meet-henry {
+  padding: 25px 10px 0;
+}
+/* line 159, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .mobile-img {
+  float: left;
+  display: none;
+}
+/* line 163, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .desktop-img {
+  display: block;
+  float: left;
+  width: 38%;
+  line-height: 0;
+}
+/* line 168, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .desktop-img img {
+  line-height: 0;
+}
+/* line 172, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .meet-dr-text {
+  float: left;
+  width: 62%;
+  padding: 100px 0 0;
+  margin-left: -30px;
+}
+/* line 177, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .meet-dr-text .meet-hentry-heading {
+  padding: 0 0 42px;
+}
+/* line 179, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .meet-dr-text .meet-hentry-heading:after {
+  border-bottom: 1px solid #ffffff;
+  top: 25px;
+}
+/* line 181, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .meet-dr-text .text-box {
+  width: 100%;
+  max-width: 385px;
+  float: left;
+  padding: 0 20px 0 0;
+}
+/* line 186, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .meet-dr-text .text-box p {
+  text-align: left;
+}
+/* line 190, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .meet-dr-text .text-box .btn-container a {
+  font-size: 16px;
+  line-height: 51px;
+  padding: 0 15px;
+  min-width: 148px;
+  margin: 20px 3px 0px;
+}
+/* line 199, ../sass/Ie8.scss */
+.lt-ie9 #block-block-11 .meet-dr .meet-dr-text .video-box {
+  width: 42%;
+  float: right;
+}
+/* line 207, ../sass/Ie8.scss */
+.lt-ie9 .things {
+  padding: 88px 10px 90px;
+}
+/* line 210, ../sass/Ie8.scss */
+.lt-ie9 #block-views-4-things-block-1 {
+  display: none;
+}
+/* line 211, ../sass/Ie8.scss */
+.lt-ie9 #block-views-4-things-block {
+  display: block;
+}
+/* line 213, ../sass/Ie8.scss */
+.lt-ie9 #block-views-4-things-block .block-title {
+  font-size: 52px;
+  padding: 0 0 60px;
+  max-width: 100%;
+}
+/* line 222, ../sass/Ie8.scss */
+.lt-ie9 #block-views-4-things-block .slick-wrapper #slick-views-4-things-1 .slick-list .slick-track .slick__slide {
+  width: 23%;
+  padding: 0;
+  margin-left: 13px;
+}
+/* line 226, ../sass/Ie8.scss */
+.lt-ie9 #block-views-4-things-block .slick-wrapper #slick-views-4-things-1 .slick-list .slick-track .slick__slide.slide--0, .lt-ie9 #block-views-4-things-block .slick-wrapper #slick-views-4-things-1 .slick-list .slick-track .slick__slide.slide--1 {
+  margin-bottom: 0px;
+}
+/* line 227, ../sass/Ie8.scss */
+.lt-ie9 #block-views-4-things-block .slick-wrapper #slick-views-4-things-1 .slick-list .slick-track .slick__slide .slide__content {
+  padding: 0 5px 20px;
+}
+/* line 229, ../sass/Ie8.scss */
+.lt-ie9 #block-views-4-things-block .slick-wrapper #slick-views-4-things-1 .slick-list .slick-track .slick__slide .slide__content .views-field-title {
+  max-width: 150px;
+}
+/* line 240, ../sass/Ie8.scss */
+.lt-ie9 .reviews-home {
+  background: url(../images/review-bg-desktop.jpg) no-repeat;
+  background-size: 100% 100%;
+  padding: 70px 12px 54px;
+}
+/* line 249, ../sass/Ie8.scss */
+.lt-ie9 #block-views-testimonials-block-1 .view-testimonials .views-row .views-field-nothing .review-main {
+  border: 2px solid #ffffff;
+  font-size: 34px;
+  line-height: 48px;
+  padding: 55px 70px 55px;
+}
+/* line 257, ../sass/Ie8.scss */
+.lt-ie9 #block-views-testimonials-block-1 .view-testimonials .view-footer {
+  margin-top: -25px;
+}
+/* line 259, ../sass/Ie8.scss */
+.lt-ie9 #block-views-testimonials-block-1 .view-testimonials .view-footer a {
+  font-size: 24px;
+  line-height: 51px;
+  max-width: 264px;
+}
+/* line 269, ../sass/Ie8.scss */
+.lt-ie9 #block-views-association-logos-block .view-display-id-block {
+  max-width: 100%;
+}
+/* line 271, ../sass/Ie8.scss */
+.lt-ie9 #block-views-association-logos-block .view-display-id-block .views-row {
+  width: auto;
+  margin-left: 10px;
+  padding: 0;
+}
+/* line 275, ../sass/Ie8.scss */
+.lt-ie9 #block-views-association-logos-block .view-display-id-block .views-row.views-row-1 {
+  margin-left: 0;
+}
+/* line 276, ../sass/Ie8.scss */
+.lt-ie9 #block-views-association-logos-block .view-display-id-block .views-row.views-row-5, .lt-ie9 #block-views-association-logos-block .view-display-id-block .views-row.views-row-6 {
+  width: auto;
+}
+/* line 281, ../sass/Ie8.scss */
+.lt-ie9 .region-bottom-menu {
+  padding: 25px 10px;
+}
+/* line 285, ../sass/Ie8.scss */
+.lt-ie9 .region-bottom {
+  padding: 30px 10px 50px;
+  font-size: 14px;
+  line-height: 24px;
+}
+/* line 289, ../sass/Ie8.scss */
+.lt-ie9 .region-bottom p {
+  font-size: 14px;
+  line-height: 24px;
+}
+/* line 294, ../sass/Ie8.scss */
+.lt-ie9 #footer {
+  background: url(../images/footer-bg-desktop.jpg) no-repeat;
+  background-size: 100% 100%;
+  padding: 90px 10px 75px;
+}
+/* line 300, ../sass/Ie8.scss */
+.lt-ie9 #block-block-16 .text-box {
+  width: 57%;
+  float: left;
+  max-width: 495px;
+  padding: 0 30px 0 0;
+}
+/* line 305, ../sass/Ie8.scss */
+.lt-ie9 #block-block-16 .text-box .telephone {
+  padding: 0;
+}
+/* line 309, ../sass/Ie8.scss */
+.lt-ie9 #block-block-16 .map-box {
+  float: right;
+  width: 43%;
+}
+/* line 315, ../sass/Ie8.scss */
+.lt-ie9 .region-bottom-menu {
+  padding: 25px 10px;
+}
+/* line 320, ../sass/Ie8.scss */
+.lt-ie9 #block-menu-block-3 ul.menu li {
+  padding: 5px 23px;
+}
+/* line 322, ../sass/Ie8.scss */
+.lt-ie9 #block-menu-block-3 ul.menu li a {
+  font-size: 14px;
+}

@@ -1,0 +1,4 @@
+name=gallery_alias
+description= Go to admin/before-after-setting/alias . Fill in the form to create alias for Gallery View Pages to remove Special character from Url
+core=7.x
+dependencies[] = pathauto

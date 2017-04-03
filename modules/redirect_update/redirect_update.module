@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Module file for Redirect Update module.
+ */
+
+/**
+ * Implements hook_init(). 
+ */
+function redirect_update_init() {
+  drupal_set_message(t('Redirect Update module is currently enabled. Unless you are updating redirections, there\'s no reason to leave it enabled.'), 'warning', FALSE);
+}
+
+/**
+ * Implements hook_menu().
+ * @return array 
+ */
+function redirect_update_menu() {
+  $items = array();
+  $items['admin/config/bulk-seo/redirect-update'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('_redirect_update_form'),
+    'access arguments' => array('access redirect_update settings'),
+    'type' => MENU_NORMAL_ITEM,
+    'title' => 'Redirect Update',
+    'file' => 'includes/redirect_update.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ * @return array
+ */
+function redirect_update_permission() {
+  return array(
+    'access redirect_update settings' => array(
+      'title' => t('Access Redirect Update Form'),
+      'description' => t('Update all the links which are redirected to different path.'),
+    ),
+  );
+}

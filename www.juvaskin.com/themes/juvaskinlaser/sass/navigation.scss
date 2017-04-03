@@ -1,0 +1,818 @@
+
+@import "base";
+
+/*========================= navigation css ===============================*/
+
+.relative-wrapper {
+    @include pos(re);
+    @include dis(null,100%,left);
+}
+#navigation {
+    @include dis(null,100%,left);
+    @include pos(re,0,null,null,0,90);
+    background: set($bg, nav,bg);
+    height: 61px;
+    padding: 0;
+}
+#navigation.stickey {
+    @include pos(fi,0,null,null,0,999);
+}
+/*======================== block-tb-megamenu-main-menu related scss start ============================*/
+#block-nice-menus-1,
+#block-tb-megamenu-main-menu {
+    display: none !important;
+}
+#block-tb-megamenu-main-menu {
+    @include dis(1200px,100%,block);
+    @include pos(re);
+    text-align: center;
+    .tb-megamenu {
+        background: none;
+        .tb-megamenu-nav {
+            width: auto;
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+            background: none;
+            border: none;
+            background: none;
+            max-height: 61px;
+            height: auto;
+            float: none;
+            > li {
+                color: #000;
+                float: left;
+                background: none;
+                border: none;
+                width: auto;
+                &.active {
+                    > a {
+                        color: #fff;
+                    }
+                }
+                > a,
+                span.no-link {
+                    border: none;
+                    background: none;
+                    margin: 0;
+                    color: #000;
+                    line-height: 17px;
+                    text-decoration: none;
+                    padding: 22px 15px;
+                    font-size: 15px;
+                    position: relative;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    display: block;
+                    &.active,
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                &[data-id="1332"] {
+                    display: none;
+                }
+                .caret {
+                    display: none;
+                }
+                > .mega-dropdown-menu {
+                    max-width: 900px !important;
+                    background: #fff;
+                    border: 1px solid #000;
+                    padding: 15px 0;
+                    box-shadow: none;
+                    .mega-group-title {
+                        font-weight: 400;
+                        color: #d17575;
+                        text-decoration: none;
+                        margin: 5px 0;
+                        padding: 0;
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        padding: 0 15px;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .tb-megamenu-column-inner {
+                        padding: 0;
+                    }
+                }
+									
+            }
+            li[data-id="3816"] .tb-megamenu-subnav {
+                li.level-2 {
+																	&.hidden-lable-2-maga-group-title {> a.mega-group-title{display: none;}}
+                    padding-bottom: 13px;
+                    .mega-group-title, > a {
+                        font-weight: 400;
+                        color: #d17575;
+                        text-decoration: none;
+                        margin: 5px 0;
+                        padding: 0;
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        padding: 0 15px;
+																								&:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .mega-dropdown-inner {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .tb-megamenu .dropdown-menu li > a {
+        clear: both;
+        color: #000;
+        display: block;
+        font-size: 15px;
+        line-height: 1.4;
+        text-decoration: none;
+        text-shadow: none;
+        padding: 0 15px;
+        text-transform: capitalize;
+        border: none;
+        font-weight: 400;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .tb-megamenu .dropdown-menu li.active > a {
+        text-decoration: underline;
+        background: none;
+    }
+    .tb-megamenu .dropdown-menu li.active .mega-group-title {
+        color: #d17575;
+        text-decoration: underline;
+    }
+    .tb-megamenu .row-fluid [class*="span"] {
+        margin: 0;
+        min-height: 0 !important;
+    }
+    .tb-megamenu .row-fluid .span4 {
+        width: 33%;
+    }
+    .mega-dropdown-inner {
+        background: #fff;
+        padding-bottom: 13px;
+    }
+}
+/*======================== block-tb-megamenu-main-menu related scss end ============================*/
+/*======================== block-nice-menus-1 related css ============================*/
+#block-nice-menus-1 {
+    @include dis(1200px,100%,block);
+    @include pos(re);
+    padding-right: 50px;
+    text-align: center;
+    #nice-menu-1 {
+        @include dis(null,100%,inline-block);
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 0;
+        height: auto;
+        float: none;
+        .menu-path-nolink,
+        > li {
+            color: set($bg,nav,link);
+            float: left;
+            background: none;
+            border: none;
+            padding: 0 7px;
+            width: auto;
+            position: relative;
+            .nolink,
+            a {
+                border: none;
+                background: none;
+                border-bottom: 5px solid transparent;
+                color: set($bg,nav,link);
+                display: block;
+                text-decoration: none;
+                padding: 21.5px 9px;
+                font-size: set($bg,nav,text-size);
+                line-height: 18px;
+                position: relative;
+                font-weight: 400;
+                text-transform: uppercase;
+                &.active,
+                &:hover {
+                    border-bottom: 5px solid set($bg,nav,active);
+                    color: set($bg,nav,hover);
+                }
+            }
+            &.menuparent {
+                > a {
+                    position: relative;
+                }
+                &:hover {
+                    > a {
+                        border-bottom: 5px solid set($bg,nav,active);
+                    }
+                }
+            }
+            &.active-trail {
+                > a {
+                    border-bottom: 5px solid set($bg,nav,active);
+                }
+                a.active {
+                    border-bottom: 5px solid set($bg,nav,active);
+                }
+            }
+            //&.first{padding-left: 0px;}
+            &.last,
+            &.menu-path-node-79 {
+                ul {
+                    left: -110px;
+                }
+            }
+            &.menu-path-sitemap,
+            &.menu-path-user-login {
+                display: none;
+            }
+            > ul {
+                width: 240px;
+                top: 66px;
+                left: 15px;
+                z-index: 99;
+                background: set($bg,nav,first-tier-bg);
+                padding: 15px 0;
+                border: none;
+                .menu-path-nolink,
+                > li {
+                    width: 100%;
+                    background: none;
+                    border: none;
+                    position: relative;
+                    &.menuparent {
+                        > a {
+                            position: relative;
+                            &:after {
+                                content: '\f105';
+                                font-size: 20px;
+                                line-height: 20px;
+                                @include fa;
+                                position: absolute;
+                                top: 0;
+                                right: 10px;
+                                bottom: 0;
+                                margin: auto;
+                                width: 10px;
+                                height: 20px;
+                                color: set($bg,nav,right-angle-color);
+                            }
+                        }
+                        &:hover {
+                            > a {
+                                color: set($bg,nav,first-tier-hover);
+                                background: set($bg,nav, first-tier-hover-bg);
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                    &.active-trail {
+                        > a {
+                            color: set($bg,nav,first-tier-active);
+                            background: set($bg,nav,first-tier-hover-bg);
+                            border-bottom: none;
+                        }
+                        a.active {
+                            color: set($bg,nav,first-tier-active);
+                            background: set($bg,nav, first-tier-hover-bg);
+                            border-bottom: none;
+                        }
+                    }
+                    .nolink,
+                    a {
+                        background: none;
+                        margin: 0;
+                        padding: 7px 20px;
+                        border: none;
+                        line-height: 18px;
+                        color: set($bg,nav,first-tier-link);
+                        display: block;
+                        &.active,
+                        &:hover {
+                            color: set($bg,nav,first-tier-active);
+                            background: set($bg,nav,first-tier-hover-bg);
+                            border-bottom: none;
+                        }
+                    }
+                    > ul {
+                        background: set($bg,nav, second-tier-bg);
+                        width: 240px;
+                        left: 240px;
+                        padding: 15px 0;
+                        z-index: 100;
+                        border: none;
+                        top: -15px;
+                        > li {
+                            width: 100%;
+                            position: relative;
+                            background: none;
+                            border: none;
+                            &.menuparent {
+                                > a {
+                                    position: relative;
+                                    &:after {
+                                        content: '\f105';
+                                        font-size: 20px;
+                                        line-height: 20px;
+                                        @include fa;
+                                        position: absolute;
+                                        top: 0;
+                                        right: 10px;
+                                        bottom: 0;
+                                        margin: auto;
+                                        width: 10px;
+                                        height: 20px;
+                                    }
+                                }
+                                &:hover {
+                                    > a {
+                                        color: set($bg,nav,second-tier-hover);
+                                        background: set($bg,nav,second-tier-hover-bg);
+                                    }
+                                }
+                            }
+                            &.active-trail {
+                                > a {
+                                    color: set($bg,nav,second-tier-active);
+                                    background: set($bg,nav,second-tier-hover-bg);
+                                }
+                                a.active {
+                                    color: set($bg,nav,second-tier-active);
+                                    background: set($bg,nav, second-tier-hover-bg);
+                                }
+                            }
+                            .nolink,
+                            a {
+                                background: none;
+                                margin: 0;
+                                padding: 7px 20px;
+                                border: none;
+                                color: set($bg,nav,second-tier-active);
+                                display: block;
+                                &.active,
+                                &:hover {
+                                    color: set($bg,nav,second-tier-hover);
+                                    background: set($bg,nav,second-tier-hover-bg);
+                                }
+                            }
+                            > ul {
+                                width: 240px;
+                                top: -15px;
+                                left: 240px;
+                                z-index: 101;
+                                background: set($bg,nav, third-tier-bg);
+                                padding: 15px 0;
+                                border: none;
+                                .menu-path-nolink,
+                                > li {
+                                    width: 100%;
+                                    position: relative;
+                                    background: none;
+                                    border: none;
+                                    &.menuparent {
+                                        > a {
+                                            position: relative;
+                                            &:after {
+                                                content: '\f105';
+                                                @include fa;
+                                                font-size: 20px;
+                                                line-height: 20px;
+                                                position: absolute;
+                                                top: 0;
+                                                right: 10px;
+                                                bottom: 0;
+                                                margin: auto;
+                                                width: 10px;
+                                                height: 20px;
+                                            }
+                                        }
+                                        &:hover {
+                                            > a {
+                                                color: set($bg,nav,third-tier-hover);
+                                                background: set($bg,nav, third-tier-hover-bg);
+                                            }
+                                        }
+                                    }
+                                    &.active-trail {
+                                        > a {
+                                            color: set($bg,nav,third-tier-active);
+                                            background: set($bg,nav, third-tier-hover-bg);
+                                        }
+                                        a.active {
+                                            color: set($bg,nav,third-tier-active);
+                                            background: set($bg,nav, third-tier-hover-bg);
+                                        }
+                                    }
+                                    .nolink,
+                                    a {
+                                        background: none;
+                                        margin: 0;
+                                        padding: 7px 20px;
+                                        border: none;
+                                        color: set($bg,nav,third-tier-active);
+                                        display: block;
+                                        &.active,
+                                        &:hover {
+                                            color: set($bg,nav,third-tier-hover);
+                                            background: set($bg,nav, third-tier-hover-bg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #tinynav1 {
+        display: none;
+    }
+}
+
+/*======================== block-menu-block-3 related css ============================*/
+
+#block-menu-block-3 {
+    @include dis(1200px,100%,block);
+    padding: 25px 20px 20px;
+    clear: both;
+    text-align: center;
+    .menu {
+        @include dis(null,auto,inline-block);
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0 auto;
+        .menu-path-nolink,
+        > li {
+            color: set($colors,footer-nav,link);
+            float: left;
+            list-style: none;
+            background: none;
+            border: none;
+            padding: 0 9px;
+            width: auto;
+            position: relative;
+            .nolink,
+            a {
+                border: none;
+                background: none;
+                color: set($colors,footer-nav,link);
+                display: block;
+                text-decoration: none;
+                padding: 0;
+                font-size: 16px;
+                line-height: 24px;
+                position: relative;
+                font-weight: 400;
+                text-transform: uppercase;
+                &.active,
+                &:hover {
+                    color: set($colors,footer-nav,hover);
+                }
+            }
+        }
+    }
+}
+
+/*========================search form related scss here start============================*/
+
+#block-search-form {
+    @include pos(ab,0,0);
+    height: 47px;
+    margin: 0;
+    .block-title {
+        @include pos(ab,0,0,null,null,101);
+        font-size: 0;
+        line-height: 0;
+        font-weight: normal;
+        height: 47px;
+        margin: auto;
+        cursor: pointer;
+        display: block;
+        &:before {
+            content: "\f002";
+            font-family: 'FontAwesome';
+            font-size: set($bg,search,font-size);
+            @include pos(ab,50%,0px,null,null);
+            width: 60px;
+            cursor: pointer;
+            text-align: center;
+            color: set($bg,search,color);
+        }
+    }
+    #search-block-form {
+        float: right;
+        @include pos(ab,25px,5px,null,null,102);
+        height: 70px;
+        line-height: 0;
+        padding: 0;
+        display: none;
+        .container-inline {
+            border: 4px solid #fff;
+            @include dis(null,238px,inline-block);
+            background: set($bg,search,bg);
+            margin-top: 20px;
+            position: relative;
+            .form-item {
+                margin: 0;
+                @include css3(border-radius, 0);
+                display: inline-block;
+                height: 40px;
+                background: set($bg,search,bg);
+                width: 100%;
+            }
+            .form-text {
+                &::-webkit-input-placeholder {
+                    color: set($bg,search,placeholder-color) !important;
+                    opacity: 1;
+                    font-size: 15.75px;
+                }
+                &:-webkit-input-placeholder {
+                    color: set($bg,search,placeholder-color) !important;
+                    opacity: 1;
+                    font-size: 15.75px;
+                }
+                &::-webkit-placeholder {
+                    color: set($bg,search,placeholder-color) !important;
+                    opacity: 1;
+                    font-size: 15.75px;
+                }
+                &::-moz-placeholder {
+                    color: set($bg,search,placeholder-color) !important;
+                    opacity: 1;
+                    font-size: 15.75px;
+                }
+                &:-ms-placeholder {
+                    color: set($bg,search,placeholder-color) !important;
+                    opacity: 1;
+                    font-size: 15.75px;
+                }
+                width: 100%;
+                border: 1px solid #d17575;
+                background: #fff;
+                outline: none;
+                font-size: 15.75px;
+                line-height: 40px;
+                height: 40px;
+                color: set($bg,search,input-color);
+                text-align: left;
+                padding: 0 42px 0 10px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px #fff inset;
+                -webkit-text-fill-color: #000 !important;
+            }
+            .form-submit {
+                outline: none !important;
+                @include pos(ab,0,0);
+                border: none !important;
+                font-size: 0;
+                width: 42px;
+                height: 40px;
+                background: #d17575 url("../images/search-button.png") no-repeat center center !important;
+                cursor: pointer;
+            }
+            &:before {
+                border-bottom: 15px solid set($bg,search,bg);
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                content: "";
+                height: 0;
+                left: 195px;
+                position: absolute;
+                top: -18px;
+                width: 0;
+            }
+            &:after {
+                border-bottom: 15px solid set($bg,search,bg);
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                content: "";
+                height: 0;
+                left: 195px;
+                position: absolute;
+                top: -18px;
+                width: 0;
+                z-index: 9;
+            }
+        }
+    }
+}
+
+/*========================search form related scss here end============================*/
+/*=============Search and Search_node pages scss here start==================================*/
+.search-results-label {
+    clear: both;
+    font-weight: 700;
+    margin: 10px 0;
+    text-transform: capitalize;
+    color: #303030 !important;
+    font-size: 22px!important;
+    display: inline-block;
+    width: 100%;
+}
+#content div.messages.error,
+div.messages,
+div.warning {
+    ul.messages__list {
+        margin: 0;
+        padding: 0 0 0 25px;
+        overflow: hidden;
+        li {
+            color: #fff !important;
+            background-image: none;
+        }
+    }
+    background-color: set($bg,search,blog-error-bg);
+    background-position: 14px 10px;
+    color: #fff;
+    line-height: 24px;
+    font-size: 16px;
+    a {
+        color: #fff;
+    }
+}
+.section-search #content h2.search-404results,
+.section-search404 #content h2.search-404results {
+    color: #303030 !important;
+    font-weight: 400;
+    margin: 5px 0;
+    text-transform: capitalize !important;
+    width: 100%;
+    display: block;
+}
+.section-search404 #edit-basic > div > label[for="edit-keys"],
+.section-search #edit-basic > div > label[for="edit-keys"] {
+    clear: both;
+    font-weight: 700;
+    margin: 10px 0;
+    text-transform: capitalize;
+    color: #303030 !important;
+    font-size: 22px!important;
+    display: inline-block;
+    width: 100%;
+}
+.section-search #edit-basic input#edit-submit,
+.section-search404 #edit-basic input#edit-submit {
+    color: #fff;
+    background: #d47d7d;
+    text-transform: capitalize;
+    width: 100px;
+    font-size: 22px;
+    margin: 0;
+    vertical-align: middle;
+    padding: 0 3px;
+    &:hover {
+        background: #303030;
+    }
+}
+.section-search #edit-basic > div > input#edit-keys,
+.section-search404 #edit-basic > div > input#edit-keys {
+    border: 1px solid #303030 !important;
+    width: 77%;
+    width: calc(100% - 105px);
+    padding: 12px;
+    vertical-align: middle;
+}
+.section-search .search-results.node-results,
+.section-search404 .search-results.node-results {
+    padding: 0;
+}
+
+/*==============================node search page style css==========================================*/
+
+.section-search {
+    .search-form + h2 {
+        color: #303030;
+    }
+    #content ol.search-results,
+    #content ul.search-results {
+        margin: 0 0 20px;
+        padding: 0;
+        li.search-result {
+            font-size: 16px;
+            line-height: 24px;
+            color: #303030;
+            font-weight: 400;
+            padding-bottom: 10px;
+            background-image: none;
+            border-bottom: 1px solid #303030;
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+/*==============================node search page style css==========================================*/
+/*==========IPad and desktop [Also flud responsive] css start==========*/
+
+@media all and (min-width: 1025px) and (max-width:1250px) {
+    #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+    #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+        padding: 22px vw(11.2,1250);
+        font-size: vw(17.2,1250);
+    }
+    #block-nice-menus-1 #nice-menu-1 > li {
+        > a {
+            padding: 22px vw(15,1250);
+        }
+    }
+    #block-menu-block-3 .menu li {
+        padding: 0 vw(10,1250);
+        .nolink,
+        a {
+            font-size: vw(16,1250);
+            float: none;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+@media all and (max-width: 1024px) {
+    #navigation {
+        height: 47px;
+    }
+    #block-nice-menus-1 {
+        display: none !important;
+    }
+    #block-menu-block-3 {
+        .menu {
+            > li {
+                float: none;
+                display: inline-block;
+                padding: 0 vw(10,1200);
+                vertical-align: top;
+                .nolink,
+                a {
+                    font-size: 15px;
+                    float: none;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 1025px) {
+    #block-search-form {
+        height: 61px;
+        .block-title {
+            &:hover {
+                &:before {
+                    color: set($bg,search,hover-color);
+                }
+            }
+            right: 0;
+            top: -170px;
+            height: 61px;
+            &:before {
+                width: 50px;
+                right: 0;
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+    }
+    #block-search-form #search-block-form {
+        top: -130px;
+        right: 0;
+    }
+    #block-menu-block-3 {
+        padding: 20px 0 18px;
+    }
+    #block-tb-megamenu-main-menu {
+        display: block !important;
+    }
+}
+@media all and (max-width:767px) {
+    #block-menu-block-3 {
+        padding-top: 25px;
+        background: url("../images/footer-bg-pattern-on-menu.jpg") no-repeat top center;
+        background-size: 100% 11px;
+								.menu > li a{line-height: 30px;font-size: 14px;padding: 0 3px;}
+    }
+}
+@media all and (min-width:1200px) {
+    #block-tb-megamenu-main-menu {
+        display: block !important;
+        .tb-megamenu .row-fluid .span4 {
+            width: 33.3333% !important;
+        }
+    }
+}
+
+/*==========IPad and desktop [Also flud responsive] css start==========*/

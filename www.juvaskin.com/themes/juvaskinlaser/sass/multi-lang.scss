@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 19, 2016, 4:50:51 PM
+    Author     : Manishkumar.Singh
+*/
+
+/**
+ * @file
+ * Block Styling
+ */
+@import "base";
+@media all and (max-width:360px) {
+    body {
+        &.french,
+        &.russian {
+            &.page-cart-checkout {
+                font-size: 15px;
+                #main {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+                .form-submit:last-of-type {
+                    margin-right: 15px;
+                }
+                .form-submit:first-of-type {
+                    margin-left: 15px !important;
+                }
+            }
+            .uc-cart-checkout-form {
+                .fieldset {
+                    padding: 10px 5px;
+                }
+            }
+            .form-submit:last-of-type {
+                margin-right: 15px;
+            }
+            .form-submit:first-of-type {
+                margin-left: 15px !important;
+            }
+        }
+    }
+}
+@media all and (min-width:768px) {
+
+    body {
+        #edit-actions {
+            > font {
+                margin: 0 15px;
+                &:first-of-type {
+                    margin-left: 0 !important;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+        &.russian {
+            #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+            #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+                padding: 22px 12px;
+            }
+            #block-menu-block-3 .menu .menu-path-nolink,
+            #block-menu-block-3 .menu > li {
+                padding: 0 4px;
+            }
+        }
+        &.french {
+            #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+            #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+                padding: 22px 7px;
+            }
+            #block-menu-block-3 .menu .menu-path-nolink,
+            #block-menu-block-3 .menu > li {
+                padding: 0 8px;
+            }
+        }
+        &.spanish {
+            #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li > a,
+            #block-tb-megamenu-main-menu .tb-megamenu .tb-megamenu-nav > li span.no-link {
+                padding: 22px 7px;
+            }
+            &.page-cart-checkout {
+                font-size: 15px;
+                #main {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+            #block-views-location-block .view-location .view-content .views-row .views-field.views-field-title {
+                font-size: 35px;
+            }
+        }
+    }
+}

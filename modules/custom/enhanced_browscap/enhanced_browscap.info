@@ -1,0 +1,4 @@
+name = Enhanced Browscap
+description = Enhanced Browscap module
+core = 7.x 
+package = custom

@@ -1,0 +1,329 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+@import "base";
+.lt-ie9{ 
+    body{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .top-header-outer{
+        background: #090d12;
+        color: #ffffff;
+        float: right;
+        padding: 13px 20px;
+    }
+    #block-block-5{
+        color: #ffffff;
+        float:right;
+        font-size:16px;
+        .address{
+            display: block;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        .phone-top{
+            display: none;
+        }
+    }
+    #navigation {
+    background: #ffffff none repeat scroll 0 0;
+    display: inline-block;
+    padding: 22px 10px;
+    vertical-align: top;
+    width: 100%;
+}
+#block-block-31 {
+    display: block;
+    right: 0;
+}
+/*=====================  INTERNAL CSS GOES HERE   ==================*/
+#block-views-mast-cycle-block-3, #block-views-mast-cycle-block-2{
+    display: block;
+}
+    #main{   
+        #content{
+            width: 71.65%;
+            float: left;
+            padding: 0 10px 85px;
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                margin: 0 0 30px;
+            }
+        }
+        .sidebars{
+            width: 308px;
+            float: right;
+            padding-bottom: 85px;
+        }
+    }
+    .sidebars{
+            width: 308px;
+            float: right;
+            padding-bottom: 85px;
+        }
+    .not-front{
+        #main{
+            padding:110px  10px 0px; 
+            #content{
+                padding:0px  0px 98px; 
+            }  
+        }
+    }
+    h1{
+        font-size: 52px;
+        line-height: 52px;
+        padding: 0 0 5px;
+    }
+    h3{
+        font-size: 22px;
+        padding: 0 0 32px;
+    }
+    .top-title-outer{
+        padding: 110px 10px 98px;
+    }
+    .logo-inner{
+        display: block;
+        top:70px;
+        left: 110px;
+        z-index: 5;
+        position: absolute;
+        .call-us{
+            color:#fff;font-size:20px;
+            text-align:center;
+            margin:20px 0 0;
+            display:block;
+            a{
+               text-decoration: none;color: #fff;
+            }
+        }
+    }
+    #block-views-mast-cycle-block-1{
+        display: none;
+    }
+    #block-views-mast-cycle-block{
+        display: block;
+        .view-mast-cycle{
+            &.view-display-id-block{
+                .flexslider{
+                    .slides{
+                        li{
+                            .views-field-field-cycle-image{
+                                img{
+                                    padding-right: 15%;
+                                }
+                            }
+                            .views-field-nothing{
+                                .banner-text{
+                                    .banner-tagline{
+                                        font-size: 60px;
+                                        line-height: 60px;
+                                        padding: 60px 10px 80px;
+                                    }
+                                }
+                            }
+                            .views-field-field-banner-number{
+                                top: 275px;
+                                left: 275px;
+                            }
+                        }
+                    }
+                }
+            }        
+        }
+    }
+    /*=====================  CTAs CSS GOES HERE   ==================*/
+#block-views-cta-homepage-block{
+    .view-cta-homepage{max-width:100%;
+        .views-row{
+            max-width:300px;
+            margin: 17px 5px 0;
+            &:first-child, &.views-row-2, &.views-row-3, &.views-row-4{margin: 0 5px 0;}
+            .views-field-nothing{
+                a{
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
+/*======================  MEET HENRY CSS GOES HERE  ============================*/
+.meet-henry{
+        padding: 25px 10px 0;
+    }
+#block-block-11{
+        .meet-dr{
+            .mobile-img{
+                float: left;
+                display: none;
+            }
+            .desktop-img{
+                display: block;
+                float: left;
+                width: 38%;
+                line-height: 0;
+                img{
+                    line-height: 0;
+                }
+            }
+            .meet-dr-text{
+                float: left;
+                width:62%;
+                padding:100px 0 0;
+                margin-left: -30px;
+                .meet-hentry-heading{
+                    padding: 0 0 42px;
+                    &:after{border-bottom: 1px solid #ffffff;top: 25px;}
+                }
+                .text-box{
+                    width: 100%;
+                    max-width: 385px;
+                    float: left;
+                    padding:0 20px 0 0;
+                    p{
+                        text-align: left;
+                    }
+                    .btn-container{
+                        a{
+                            font-size: 16px;
+                            line-height: 51px;
+                            padding: 0 15px;
+                            min-width: 148px;
+                            margin: 20px 3px 0px;
+                        }
+                    }
+                }
+                .video-box{
+                    width: 42%;
+                    float: right;
+                }
+            }
+        }        
+    }
+/*==================== 4 THINGS CSS GOES HERE  ======================*/
+.things{
+    padding: 88px 10px 90px;
+}
+#block-views-4-things-block-1{display: none;}
+#block-views-4-things-block{
+    display:block;
+    .block-title{
+        font-size: 52px;
+        padding: 0 0 60px;
+        max-width: 100%;
+    }
+    .slick-wrapper{
+        #slick-views-4-things-1{
+            .slick-list{
+                .slick-track{
+                    .slick__slide{
+                        width:23%;
+                        padding:0; 
+                        margin-left: 13px;
+                        &.slide--0, &.slide--1{margin-bottom: 0px;}
+                        .slide__content{
+                            padding: 0 5px 20px;
+                            .views-field-title{
+                               max-width: 150px;
+                            }
+                        }
+                    }         
+                }                               
+            }
+        }
+    }
+}
+/*==================== REVIEW CSS GOES HERE  ======================*/
+.reviews-home{
+ background: url(../images/review-bg-desktop.jpg) no-repeat;
+ background-size: 100% 100%;
+ padding: 70px 12px 54px;
+}
+#block-views-testimonials-block-1{    
+    .view-testimonials{
+        .views-row{
+            .views-field-nothing{
+                .review-main{
+                    border: 2px solid #ffffff;
+                    font-size: 34px;
+                    line-height: 48px;
+                    padding: 55px 70px 55px;
+                }
+            }            
+        }
+        .view-footer{
+            margin-top: -25px;
+            a{
+                font-size: 24px;
+                line-height: 51px;
+                max-width: 264px;
+            }
+        }
+    }
+}
+/*==================== ASSOCIATION LOGOs CSS GOES HERE  ======================*/
+#block-views-association-logos-block{
+    .view-display-id-block{
+        max-width:100%;
+        .views-row{
+            width: auto;
+            margin-left:10px;
+            padding:0;
+            &.views-row-1{margin-left: 0;}
+            &.views-row-5, &.views-row-6{width: auto;}
+        }
+    }
+}
+/*=====================  FOOTER ADDRESS PART CSS GOES HERE   ==================*/
+.region-bottom-menu{
+    padding: 25px 10px;
+}
+ /*======================  FOOTER DISCLAIMER PART CSS GOES HERE  ============================*/
+.region-bottom{
+    padding: 30px 10px 50px;
+    font-size: 14px;
+    line-height: 24px;
+    p{
+        font-size: 14px;
+        line-height: 24px; 
+    }
+}
+#footer{
+    background: url(../images/footer-bg-desktop.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding: 90px 10px 75px;
+}
+#block-block-16{
+    .text-box{
+        width: 57%;
+        float: left;
+        max-width: 495px;
+        padding: 0 30px 0 0;
+        .telephone{
+            padding: 0;
+        }
+    }
+    .map-box{
+        float: right;
+        width: 43%;
+    }
+}
+/*==============================  FOOTER MENU CSS GOES HERE  ==============================================*/
+.region-bottom-menu{
+    padding: 25px 10px;
+}
+    #block-menu-block-3{
+        ul.menu{
+            li{
+                padding:5px 23px;
+                a{                    
+                    font-size: 14px; 
+                }
+            }
+        }
+    }
+
+}

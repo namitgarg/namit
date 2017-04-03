@@ -1,0 +1,12 @@
+name = "Migrate Blocks"
+description = "Migrates paths stored in blocks"
+package = "Migrate"
+core = "7.x"
+dependencies[] = sitedir_migrate
+
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "sitedir_migrate"
+datestamp = "1380628400"
+

@@ -1,0 +1,16 @@
+/* 
+    Document   : redirect_update
+    Created on : Nov 8, 2013, 3:25:37 PM
+    Author     : rohit.joshi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.redirect-update-all-ccontent-types .form-type-checkbox {
+  display: inline-block;
+  margin-right: 25px;
+  margin-bottom: 5px;
+  vertical-align: top;
+  width: 200px;
+}
+

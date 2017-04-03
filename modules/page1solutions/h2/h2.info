@@ -1,0 +1,6 @@
+; $Id: h2.info,v 1.5 2010/12/08 05:50:53 dries Exp $
+name = h2
+description = Sets a site-wide &#60h2&#62; tag.
+package = SEO
+version = VERSION
+core = 7.x

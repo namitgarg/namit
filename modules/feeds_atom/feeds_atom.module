@@ -1,0 +1,210 @@
+<?php
+
+/**
+ * @file
+ * Contains the main functionality for feeds_atom.
+ */
+
+define('FEEDS_ATOM_TOMBSTONE_NAMESPACE', 'http://purl.org/atompub/tombstones/1.0');
+
+
+/**
+ * Implements hook_entity_property_info_alter().
+ */
+function feeds_atom_entity_property_info_alter(&$info) {
+
+  if (!empty($info['node']['properties'])) {
+    $info['node']['properties']['feeds_atom_import'] = array(
+      'label' => t('Feeds Atom Import'),
+      'type' => 'boolean',
+      'description' => t('A Boolean for whether this node is importing through Feeds Atom.'),
+    );
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function feeds_atom_ctools_plugin_api($owner, $api) {
+  if ($owner == 'feeds' && $api == 'plugins') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implements hook_feeds_plugins().
+ */
+function feeds_atom_feeds_plugins() {
+  $path = drupal_get_path('module', 'feeds_atom') . '/plugins';
+
+  $info['FeedsAtomRDFParser'] = array(
+    'name' => 'FeedsAtomRDF parser',
+    'description' => 'Parse data in Atom RDF format.',
+    'handler' => array(
+      'parent' => 'FeedsParser',
+      'class' => 'FeedsAtomRDFParser',
+      'file' => 'FeedsAtomRDFParser.inc',
+      'path' => $path,
+    ),
+  );
+
+  $info['FeedsAtomRDFProcessor'] = array(
+    'name' => 'FeedsAtomRDF Processing Stage',
+    'description' => 'Process my stuff.',
+    'help' => 'Processing stage of parsed data.',
+    'handler' => array(
+      'parent' => 'FeedsNodeProcessor',
+      'class' => 'FeedsAtomRDFProcessor',
+      'file' => 'FeedsAtomRDFProcessor.inc',
+      'path' => $path,
+    ),
+  );
+
+  return $info;
+}
+
+/**
+ * @todo, update this for D7
+ *
+ * Implementation of hook_feeds_atom_rdf_map_alter().
+ *
+ * We implement this hook on behalf of the taxonomy module so that we can
+ * lazy-create terms as needed.  We only do so if the vocabulary the term is in
+ * already exists.  If the vocabulary doesn't exist, the incoming term is ignored.
+ *
+ * @param $target_item
+ *   The node that we are creating/editing.
+ * @param $source_item
+ *   The parsed data array from the feed.
+ * @return unknown_type
+ * /
+function taxonomy_feeds_atom_rdf_map_alter(&$target_item, $source_item) {
+
+  // @todo Check for consistency in taxonomy and taxonomy_vocabulary.
+  // The coder module made automatic changes in the D6 to D7 update.
+
+  if (empty($source_item['rdf']['taxonomy']) || !is_array($source_item['rdf']['taxonomy'])) {
+    // Nothing to process
+    return;
+  }
+
+  // Zero out the taxonomy data that is already there, as it will break if we
+  // try to save the node with it there.
+  $target_item->taxonomy = array();
+
+  // Process the term data.
+  foreach ($source_item['rdf']['taxonomy'] as $source_term) {
+    // Add new terms if they don't exist
+    $vid = NULL;
+    $tid = NULL;
+
+    // Find the vocabulary.
+    if (!empty($source_term['taxonomy_vocabulary'])) {
+      // Features intergration: Features stores vocabulary machine name's in
+      // module key prepended with features_
+      if (module_exists('features')) {
+        $machine_name = !empty($source_term['machine']) ? $source_term['machine'] : $source_term['taxonomy_vocabulary'];
+        // Add in features_ if doesn't exist
+        if (strpos($machine_name, 'features_') !== 0) {
+          $machine_name = 'features_' . $machine_name;
+        }
+        $vid = db_query("SELECT vid FROM {taxonomy_vocabulary} WHERE module = :module", array(':module' => strtolower($machine_name)))->fetchField();
+      }
+      // Fallback to name matching if vid not found above.
+      if (empty($vid)) {
+        $vid = db_query("SELECT vid FROM {taxonomy_vocabulary} WHERE lower(name) = :lower(name)", array(':lower(name)' => strtolower($source_term['taxonomy_vocabulary'])))->fetchField();
+      }
+    }
+
+    // See if the term already exists
+    foreach (taxonomy_get_term_by_name($source_term['title']) as $term) {
+      // if VID was not found but name matches or vid is term's vocabulary.
+      if (empty($vid) || $vid == $term->vid) {
+        $tid = $term->tid;
+      }
+    }
+    // Create the new term if doesn't exist and know vocabulary
+    if (empty($tid) && !empty($vid)) {
+      $new_term = array(
+        'vid' => $vid,
+        'name' => $source_term['title'],
+        'description' => $source_term['description'],
+      );
+      taxonomy_term_save($term /* @todo Term object replaces array $new_term * /);
+      $tid = $new_term['tid'];
+    }
+
+    // Apply the term to the target node.
+    if (!empty($tid)) {
+      $term = taxonomy_term_load($tid, TRUE);
+      $target_item->taxonomy[$term->tid] = $term;
+    }
+  }
+}
+
+/**
+ * Implementation of hook_feeds_atom_set_target_element_value_alter().
+ */
+function file_feeds_atom_set_target_element_value_alter(&$value, $field_name) {
+  _file_feeds_atom_set_target_element_value_alter($value, $field_name, $field_type = 'file');
+}
+
+/**
+ * Implementation of hook_feeds_atom_set_target_element_value_alter().
+ */
+function image_feeds_atom_set_target_element_value_alter(&$value, $field_name) {
+  _file_feeds_atom_set_target_element_value_alter($value, $field_name, $field_type = 'image');
+}
+
+/**
+ * Helper function for hook_feeds_atom_set_target_element_value_alter().
+ *
+ * Drupal 7 splits image and file fields. However, the needed hook logic is the same
+ * for both.
+ */
+function _file_feeds_atom_set_target_element_value_alter(&$value, $field_name, $field_type = 'file') {
+
+  // Use static variables in combination with the FeedsEnclosureUnique class
+  // to ensure that imported files are not downloaded more than once.
+  static $enclosures = array();
+  static $files = array();
+
+    $field_info = field_info_field($field_name);
+
+    if (!empty($value) && !empty($field_info['type']) && $field_info['type'] == $field_type) {
+      foreach ($value as $language_key => $field_language_instances) {
+        if ($language_key[0] === '#') {
+          continue;
+        }
+
+        foreach ($field_language_instances as $i => $instance) {
+
+          // This is only the case if the field in question is a filefield and
+          // not the #attributes element.
+          if (!empty($instance['full_url'])) {
+
+            if (empty($enclosures[$instance['full_url']])) {
+              // @todo D7 isn't actually doing anything yet to ensure uniqueness.
+              $enclosures[$instance['full_url']] = new FeedsEnclosureUnique($instance['full_url'], $instance['filemime']);
+              // @todo can't hardcode public
+              $files[$instance['full_url']] = $enclosures[$instance['full_url']]->getFile('public://');
+            }
+            $value[$language_key][$i] = (array) $files[$instance['full_url']] + $value[$language_key][$i];
+          }
+        }
+      }
+    }
+}
+
+/**
+ * Implements hook_file_delete().
+ */
+function feeds_atom_file_delete($file) {
+
+  // Clean up our extra tracking information.
+  // @todo Please review the conversion of this statement to the D7 database API syntax.
+  /* db_query("DELETE FROM {feeds_atom_file_import} WHERE fid = %d", $file->fid) */
+  db_delete('feeds_atom_file_import')
+  ->condition('fid', $file->fid)
+  ->execute();
+}

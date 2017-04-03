@@ -1,0 +1,18 @@
+<?php
+
+function sitedir_migrate_panels_sitedir_query() {
+  return 'Panels';
+}
+
+function sitedir_migrate_panels_sitedir_update() {
+  watchdog('Sitedir Migrate', 'Running the Panels migration');
+  $args = func_get_args();
+  $from = $args[0];
+  $to = $args[1];
+  $results = db_query("SELECT pid, configuration from {panels_pane} where type='custom' and subtype='custom'");
+  while ($row = db_fetch_array($results)) {
+    $configuration = unserialize($row['configuration']);
+    $configuration['body'] = str_replace($from, $to, $configuration['body']);
+    db_query("UPDATE {panels_pane} SET configuration = '%s' where pid = %d", array(serialize($configuration), $row['pid'])); 
+  }
+}

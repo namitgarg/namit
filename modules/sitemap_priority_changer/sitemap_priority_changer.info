@@ -1,0 +1,6 @@
+name = Sitemap Priority Changer
+description = Change Sitemap XML Priority Upto Second Level Main Menu Pages.
+core = 7.x
+package = SEO 
+configure=admin/config/system/sitemap-priority
+dependencies[] = xmlsitemap

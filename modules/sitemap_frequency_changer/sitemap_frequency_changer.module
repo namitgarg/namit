@@ -1,0 +1,21 @@
+<?php
+
+function sitemap_frequency_changer_xmlsitemap_link_alter(&$link) {
+//function sitemap_frequency_changer_xmlsitemap_element_alter(&$link){
+//$a = serialize($link);   
+//watchdog('security', '@fallback', array('@fallback' => $a), WATCHDOG_WARNING);       
+    if ($link['loc'] == 'blog' || $link['loc'] == 'blog.html' || $link['loc'] == 'blog.htm') {
+     $link['lastmod'] = 0;
+     //$link['changefreq'] = XMLSITEMAP_FREQUENCY_MONTHLY; 
+    // $link['changefreq'] = XMLSITEMAP_FREQUENCY_DAILY;
+     $link['changefreq'] = XMLSITEMAP_FREQUENCY_WEEKLY;
+
+    
+    } 
+
+
+}
+
+
+
+

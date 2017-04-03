@@ -1,0 +1,3 @@
+name = cache check
+description = Check cache setting for multisite via drush
+core = 7.x

@@ -1,0 +1,86 @@
+<?php
+
+/*
+ * @file
+ * Module file for node_generator module.
+ */
+
+/**
+ * Implements hook_init(). 
+ */
+function node_generator_init() {
+    global $user;
+    if ($user->uid > 0 && in_array('administrator', $user->roles)) {  //If logged in user and administrator.
+        drupal_set_message(t('Node Generator module is currently enabled, unless you are doing node creation right now, there\'s no reason to leave it enabled.'), 'warning', FALSE);
+        if(!function_exists('curl_version')){
+         drupal_set_message(t('Curl Is Not Enable On This Server, Please Make Sure Curl Is Enabled On Your Server Before Genrate Nodes.'), 'error', FALSE);
+        }
+    }
+    drupal_add_js(drupal_get_path('module', 'node_generator') . '/node_generator.js');
+}
+
+/**
+ * Implements hook_menu().
+ */
+function node_generator_menu() {
+    $items['admin/config/system/node-generator-form'] = array(
+        'title' => 'Node Generator',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('_node_generator_input_form'),
+        'access arguments' => array('access node_generator settings'),
+        'type' => MENU_LOCAL_TASK,
+        'file' => 'include/node_generator.admin.inc'
+    );
+
+    $items['getfield/%'] = array(
+        'page callback' => 'node_generator_get_field',
+        'type' => MENU_CALLBACK,
+        'page arguments' => array(1),
+        'access arguments' => array('access content'),
+    );
+    return $items;
+}
+
+/**
+ * Implements hook_permission(). 
+ */
+function node_generator_permission() {
+    return array(
+        'access node_generator settings' => array(
+            'title' => t('Access Node Generator Form'),
+            'description' => t('Generate the nodes from external url by xml.'),
+        ),
+    );
+}
+
+/**
+ * Callback to return JSON encoded for given content type.
+ */
+function node_generator_get_field($type) {
+    $fields = node_generator_get_fields($type);
+    drupal_json_output($fields);
+}
+
+
+
+
+/**
+ * Callback to return Term Refrence fields for given content type.
+ */
+function node_generator_get_fields($data) {
+    $fields = array();
+    $query = db_select('field_config', 'fc');
+    $query->join('field_config_instance', 'fci', 'fc.id = fci.field_id');
+    $query->fields('fc', array('field_name'));
+    $query->condition('fc.type', 'taxonomy_term_reference');
+    $query->condition('fci.bundle', $data);
+    $result = $query->execute();
+    $record = $result->fetchAll();
+    foreach ($record as $key => $value) {
+        $tmp = field_info_instance('node', $value->field_name, $data);
+        $tmp1 = $tmp['label'];
+        $tmp2 = $value->field_name;
+        $fields[$tmp2] = $tmp1;
+    }
+    return $fields;
+}

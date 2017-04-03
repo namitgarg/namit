@@ -1,0 +1,5 @@
+name = juvastore_h2
+description = Sets a h2 tag for juva store
+package = SEO
+version = VERSION
+core = 7.x

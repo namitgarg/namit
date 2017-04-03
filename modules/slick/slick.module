@@ -1,0 +1,550 @@
+<?php
+/**
+ * @file
+ * Slick carousel integration, the last carousel you'll ever need.
+ */
+
+define('SLICK_VERSION', '1.x');
+
+/**
+ * Implements hook_help().
+ */
+function slick_help($path, $arg) {
+  $module_path   = drupal_get_path('module', 'slick');
+  $slick_fields  = drupal_get_path('module', 'slick_fields');
+  $slick_views   = drupal_get_path('module', 'slick_views');
+  $slick_example = drupal_get_path('module', 'slick_example');
+  switch ($path) {
+    case 'admin/help#slick':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t("The Slick carousel module is a field formatter to create the last carousel you'll ever need. Also available as Views style plugin. <br />To get up running quickly, <a href='@slick_example' target='_blank'>enable Slick example</a> module.", array('@slick_example' => url('admin/modules', array('fragment' => 'edit-modules-slick')))) . '</p>';
+      $output .= '<p>' . t('Read <a href="@readme_example" target="_blank">more info about Slick example</a> before you proceed.', array('@readme_example' => url($slick_example . '/README.txt'))) . '</p>';
+      $output .= '<p>' . t('Read <a href="@slick_readme" target="_blank">more info about Slick</a> in general, including some troubleshootings.', array('@slick_readme' => url($module_path . '/README.txt'))) . '</p>';
+      $output .= '<h3>' . t('Uses') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt><strong>' . t('Creating optionsets') . '</strong></dt>';
+      $output .= '<dd>' . t('Optionsets are a collection of re-usable options to ease up building various slick carousels. These will be available for selection at sub-modules -- field formatters and Views style plugin. <br />Create optionsets at <a href="@slick_collection" target="_blank">Slick collection</a> page.', array('@slick_collection' => url('admin/config/media/slick'))) . '</dd>';
+      $output .= '<dt><strong>' . t('Usage as a field formatter') . '</strong></dt>';
+      $output .= '<dd>' . t('At any fieldable entity, e.g. <a href="@content_type" target="_blank">Content types</a> -- click "Manage display". <br />Under "Format" of the active view mode, choose <strong>Slick carousel</strong> for any of the following supported fields: Image, Media, Field collection.', array('@content_type' => url('admin/structure/types'))) . '</dd>';
+      $output .= '<dd>' . t('Click the "Configure" icon to have some extra options. Each option has its contextual info by clicking a question mark on hover.') . '</dd>';
+      $output .= '<dd>' . t('<strong>Examples</strong>: about pages with individual team video/photo carousels, or blog posts with multimedia carousels for either multiple items, or single. Slick plays nice with both cases.') . '</dd>';
+      $output .= '<dd>' . t('See relevant <a href="@readme_field" target="_blank">README.txt</a> for Fields integration.', array('@readme_field' => url($slick_fields . '/README.txt'))) . '</dd>';
+      $output .= '<dt><strong>' . t('Usage as a Views style plugin') . '</strong></dt>';
+      $output .= '<dd>' . t('Create a new View at <a href="@views_collection" target="_blank">Views collection page</a>.', array('@views_collection' => url('admin/structure/views'))) . '</dd>';
+      $output .= '<dd><ol><li>' . t('Add a <strong>Slick carousel</strong> style if you are aggregating multiple entity instances.') . '</li>';
+      $output .= '<li>' . t('Or add an <strong>Unformatted list</strong> if you are targetting a single entity with supported multi-value fields -- Image/Media/Field colection, and make it formatted as <strong>Slick carousel</strong>. <br />Be sure to check "Use field formatter" under "Style settings". Use contextual filer by NID/UID to display a slick by their entity ID, such as homepage or inner, or user carousels/slideshows.') . '</li>';
+      $output .= '<li>' . t('Or use <strong>Slick carousel</strong> for both Views style of the main display and a particular multi-value field, to build a nested slick, a slick containing multiple slick instances.') . '</li></ol></dd>';
+      $output .= '<dd>' . t('See relevant <a href="@readme_field" target="_blank">README.txt</a> for Views integration.', array('@readme_field' => url($slick_views . '/README.txt'))) . '</dd>';
+      $output .= '</dl>';
+      $output .= '<p>' . t('See the <a href="@field">Field module help</a> and the <a href="@field_ui">Field UI help</a> pages for general information on fields and how to create and manage them. For more information, see the <a href="@slick_readme" target="_blank">Slick readme module</a>.', array(
+        '@field' => url('admin/help/field'),
+        '@field_ui' => url('admin/help/field_ui'),
+        '@slick_readme' => url($module_path . '/README.txt'),
+      )) . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function slick_theme($existing, $type, $theme, $path) {
+  $base = array(
+    'file' => 'slick.theme.inc',
+    'path' => $path . '/templates',
+  );
+
+  return array(
+    // Slick displays: main, thumbnail, overlay.
+    'slick' => $base + array(
+      'render element' => 'element',
+      'template' => 'slick',
+    ),
+    // The Slick wrapper to hold displays: main and thumbnail navigation.
+    'slick_wrapper' => $base + array(
+      'render element' => 'element',
+    ),
+    // Individual slick item: grid, main, thumbnail, overlay.
+    'slick_item' => $base + array(
+      'render element' => 'element',
+      'template' => 'slick-item',
+    ),
+    // Handles grid items within a single slide.
+    'slick_grid' => $base + array(
+      'render element' => 'element',
+      'template' => 'slick-grid',
+    ),
+    // Slick media file field.
+    'slick_media' => $base + array(
+      'render element' => 'element',
+      'template' => 'slick-media',
+    ),
+    // Slick lazy load image formatter.
+    'slick_image_formatter_lazy' => $base + array(
+      'variables' => array(
+        'item' => NULL,
+        'path' => NULL,
+        'image_style' => NULL,
+        'delta' => 0,
+        'count' => NULL,
+        'options' => array(),
+      ),
+    ),
+    // Slick lazy load image.
+    // This is required at D7 due to hardcoded SRC attributes, but dropped at D8
+    // that supports inline image, or kept replacing slick_image_formatter_lazy.
+    'slick_image_lazy' => $base + array(
+      'variables' => array(
+        'style_name' => NULL,
+        'path' => NULL,
+        'height' => NULL,
+        'width' => NULL,
+        'alt' => '',
+        'title' => NULL,
+        'lazy' => FALSE,
+        'attributes' => array(),
+        'options' => array(),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_permission().
+ */
+function slick_permission() {
+  return array(
+    'administer slick' => array(
+      'title' => t('Administer the Slick carousel module'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function slick_ctools_plugin_api($owner, $api) {
+  if ($owner == 'slick' && $api == 'slick_default_preset') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slick_ctools_plugin_directory($module, $plugin) {
+  if ($plugin == 'export_ui') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_hook_info().
+ */
+function slick_hook_info() {
+  $hooks['slick_arrows_info'] = array('group' => 'slick');
+  $hooks['slick_dots_info']   = array('group' => 'slick');
+  $hooks['slick_skins_info']  = array('group' => 'slick');
+
+  return $hooks;
+}
+
+/**
+ * Implements hook_library().
+ */
+function slick_library() {
+  $library_path = libraries_get_path('slick');
+  $path = drupal_get_path('module', 'slick');
+  $info = system_get_info('module', 'slick');
+
+  $common = array(
+    'website' => 'http://drupal.org/project/slick',
+    'version' => !empty($info['version']) ? $info['version'] : '7.x-2.x',
+  );
+
+  $libraries = array();
+
+  // Alternative to jqeasing since hardly updated and uses a non-minified one.
+  $libraries['slick.easing'] = array(
+    'title' => 'jQuery Easing',
+    'vendor url' => 'https://github.com/gdsmith/jquery.easing',
+    'version' => '1.3',
+    'js' => array(
+      libraries_get_path('easing') . '/jquery.easing.min.js' => array('group' => JS_LIBRARY, 'weight' => -6),
+    ),
+    'dependencies' => array(
+      array('system', 'jquery'),
+    ),
+  );
+
+  $libraries['mousewheel'] = array(
+    'title' => 'jQuery Mousewheel',
+    'vendor url' => 'https://github.com/brandonaaron/jquery-mousewheel',
+    'version' => '3.1.11',
+    'js' => array(
+      libraries_get_path('mousewheel') . '/jquery.mousewheel.min.js' => array('group' => JS_LIBRARY, 'weight' => -5),
+    ),
+    'dependencies' => array(
+      array('system', 'jquery'),
+    ),
+  );
+
+  // Slick plugin libraries.
+  $libraries['slick'] = array(
+    'title' => 'Slick',
+    'website' => 'http://kenwheeler.github.io/slick/',
+    'version' => SLICK_VERSION,
+    'js' => array(
+      $library_path . '/slick/slick.min.js' => array('group' => JS_LIBRARY, 'weight' => -4),
+    ),
+    'css' => array(
+      $library_path . '/slick/slick.css',
+    ),
+    'dependencies' => array(
+      array('system', 'jquery'),
+    ),
+  );
+
+  // Slick module libraries.
+  $libraries['drupal.slick'] = $common + array(
+    'title' => 'Slick module',
+    'js' => array(
+      $path . '/js/slick.load.min.js' => array('group' => JS_DEFAULT, 'weight' => 0),
+    ),
+    'dependencies' => array(
+      array('system', 'jquery.once'),
+      array('slick', 'slick'),
+    ),
+  );
+
+  // Slick colorbox libraries.
+  $libraries['drupal.slick.colorbox'] = $common + array(
+    'title' => 'Slick colorbox',
+    'js' => array(
+      $path . '/js/slick.colorbox.min.js' => array('group' => JS_DEFAULT, 'weight' => 1),
+    ),
+    'css' => array(
+      $path . '/css/components/slick.colorbox.css',
+      $path . '/css/components/slick.lightbox.css',
+    ),
+    'dependencies' => array(
+      array('system', 'jquery.once'),
+      array('slick', 'slick'),
+      array('slick', 'drupal.slick'),
+    ),
+  );
+
+  // Slick colorbox libraries.
+  $libraries['drupal.slick.photobox'] = $common + array(
+    'title' => 'Slick photobox',
+    'js' => array(
+      $path . '/js/slick.photobox.min.js' => array('group' => JS_DEFAULT, 'weight' => 1),
+    ),
+    'css' => array(
+      $path . '/css/components/slick.lightbox.css',
+    ),
+    'dependencies' => array(
+      array('system', 'jquery.once'),
+      array('slick', 'slick'),
+      array('slick', 'drupal.slick'),
+      array('photobox', 'photobox'),
+    ),
+  );
+
+  // Slick media libraries.
+  $libraries['drupal.slick.media'] = $common + array(
+    'title' => 'Slick media',
+    'js' => array(
+      $path . '/js/slick.media.min.js' => array('group' => JS_DEFAULT, 'weight' => 2),
+    ),
+    'css' => array(
+      $path . '/css/components/slick.media.css',
+    ),
+    'dependencies' => array(
+      array('system', 'jquery.once'),
+      array('slick', 'slick'),
+      array('slick', 'drupal.slick'),
+    ),
+  );
+
+  // Slick admin libraries.
+  $libraries['slick.admin'] = $common + array(
+    'title' => 'Slick admin',
+    'js' => array(
+      $path . '/js/slick.admin.ui.min.js' => array('group' => JS_DEFAULT, 'weight' => 3),
+    ),
+    'css' => array(
+      $path . '/css/admin/slick.admin--ui.css' => array(),
+      $path . '/css/admin/slick.admin--ui--field.css' => array(),
+    ),
+    'dependencies' => array(
+      array('system', 'jquery.once'),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_libraries_info().
+ */
+function slick_libraries_info() {
+  $libraries['slick'] = array(
+    'name' => 'Slick',
+    'vendor url' => 'http://kenwheeler.github.io',
+    'download url' => 'https://github.com/kenwheeler/slick/',
+    'version' => SLICK_VERSION,
+    'version arguments' => array(
+      'file' => 'slick/slick.js',
+      'pattern' => '/Version: (\d+\.\d+\.\d+)/',
+    ),
+    'files' => array(
+      'js' => array(
+        'slick/slick.min.js',
+      ),
+      'css' => array(
+        'slick/slick.css',
+      ),
+    ),
+  );
+
+  // Alternative to jqeasing.
+  $libraries['slick.easing'] = array(
+    'name' => 'jQuery Easing',
+    'vendor url' => 'https://github.com/gdsmith/jquery.easing',
+    'download url' => 'https://github.com/gdsmith/jquery.easing/archive/master.zip',
+    'version arguments' => array(
+      'file' => 'jquery.easing.js',
+      'pattern' => '/jQuery\s+Easing\s+v?([0-9\.]+)/',
+    ),
+    'files' => array(
+      'js' => array(
+        'jquery.easing.min.js',
+      ),
+    ),
+  );
+
+  // No module for drupal 7 by now.
+  $libraries['mousewheel'] = array(
+    'name' => 'jQuery Mousewheel',
+    'vendor url' => 'https://github.com/brandonaaron/jquery-mousewheel',
+    'download url' => 'https://github.com/brandonaaron/jquery-mousewheel/archive/master.zip',
+    'version arguments' => array(
+      'file' => 'jquery.mousewheel.js',
+      'pattern' => '/Version: (\d+\.\d+\.\d+)/',
+    ),
+    'files' => array(
+      'js' => array(
+        'jquery.mousewheel.min.js',
+      ),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Returns #attached array for needed JS and CSS for the given slick.
+ *
+ * @param array $attach
+ *   An array of conditions to load the relevant assets, or libraries.
+ *
+ * @return array
+ *   Array formatted for the '#attached' property.
+ */
+function slick_attach(array $attach) {
+  $path   = drupal_get_path('module', 'slick');
+  $skins  = slick_skins();
+  $load   = array();
+  $defaults = array(
+    'attach_default'        => TRUE,
+    'attach_easing'         => TRUE,
+    'attach_mousewheel'     => FALSE,
+    'attach_slick'          => TRUE,
+    'attach_slick_element'  => TRUE,
+    'attach_module'         => TRUE,
+    'attach_module_css'     => TRUE,
+    'attach_media'          => FALSE,
+    'attach_colorbox'       => FALSE,
+    'attach_photobox'       => FALSE,
+    'attach_skin'           => NULL,
+    'attach_skin_thumbnail' => NULL,
+    'attach_skin_arrows'    => NULL,
+    'attach_skin_dots'      => NULL,
+    'attach_dots_thumbnail' => NULL,
+    'attach_inline_css'     => NULL,
+  );
+
+  $attach = array_merge($defaults, $attach);
+
+  // Allows attach information to be altered.
+  drupal_alter('slick_attach_info', $attach);
+
+  if ($attach['attach_easing']) {
+    $easing = module_exists('jqeasing') ? array('jqeasing', 'easing') : array('slick', 'slick.easing');
+    $load['library'][] = $easing;
+  }
+
+  if ($attach['attach_mousewheel']) {
+    $load['library'][] = array('slick', 'mousewheel');
+  }
+
+  if ($attach['attach_slick']) {
+    $load['library'][] = array('slick', 'slick');
+  }
+
+  if ($attach['attach_colorbox']) {
+    $load['library'][] = array('slick', 'drupal.slick.colorbox');
+  }
+
+  if ($attach['attach_photobox']) {
+    $load['library'][] = array('photobox', 'photobox');
+    $load['library'][] = array('slick', 'drupal.slick.photobox');
+  }
+
+  if ($attach['attach_module']) {
+    $load['library'][] = array('slick', 'drupal.slick');
+  }
+
+  if ($attach['attach_media']) {
+    $load['library'][] = array('slick', 'drupal.slick.media');
+  }
+
+  $load['css'] = array();
+  $load['js'] = array();
+
+  // Skin assets.
+  if ($skin = $attach['attach_skin']) {
+    if (isset($skins[$skin]['css'])) {
+      // If we do have a defined skin, load the Slick element and module theme.
+      if ($attach['attach_slick_element']) {
+        $load['css'] += array(libraries_get_path('slick') . '/slick/slick-theme.css' => array('weight' => -100));
+      }
+
+      if ($attach['attach_module_css']) {
+        $load['css'] += array($path . '/css/theme/slick.theme.css' => array('weight' => -99));
+      }
+
+      if ($attach['attach_dots_thumbnail']) {
+        $load['css'] += array($path . '/css/components/slick.dots--thumbnail.css' => array('weight' => -98));
+      }
+
+      if (is_array($skins[$skin]['css'])) {
+        $load['css'] += $skins[$skin]['css'];
+      }
+    }
+    if (isset($skins[$skin]['js']) && is_array($skins[$skin]['js'])) {
+      $load['js'] += $skins[$skin]['js'];
+    }
+  }
+
+  if ($skin_thumbnail = $attach['attach_skin_thumbnail']) {
+    if (isset($skins[$skin_thumbnail]['css']) && is_array($skins[$skin_thumbnail]['css'])) {
+      $load['css'] += $skins[$skin_thumbnail]['css'];
+    }
+    if (isset($skins[$skin_thumbnail]['js']) && is_array($skins[$skin_thumbnail]['js'])) {
+      $load['js'] += $skins[$skin_thumbnail]['js'];
+    }
+  }
+
+  if ($skin_arrows = $attach['attach_skin_arrows']) {
+    $arrows = slick_arrows();
+    if (isset($arrows[$skin_arrows]['css']) && is_array($arrows[$skin_arrows]['css'])) {
+      $load['css'] += $arrows[$skin_arrows]['css'];
+    }
+  }
+
+  if ($skin_dots = $attach['attach_skin_dots']) {
+    $dots = slick_dots();
+    if (isset($dots[$skin_dots]['css']) && is_array($dots[$skin_dots]['css'])) {
+      $load['css'] += $dots[$skin_dots]['css'];
+    }
+  }
+
+  // Inline CSS for individual slide color, or fullscreen skin.
+  if ($attach['attach_inline_css']) {
+    $load['css'][] = array(
+      'data' => $attach['attach_inline_css'],
+      'type' => 'inline',
+      'group' => CSS_THEME + 1,
+    );
+  }
+
+  // Attach default JS settings to allow responsive options have a lookup and
+  // avoid dup options in the markups. This is the only JS head injection we
+  // have since responsives got no inheritance, and no context without, pity.
+  // Only responsive instance settings need this, not the main one.
+  if ($attach['attach_default']) {
+    $defaults = _slick_optionset_defaults('settings');
+
+    // Prevents JS error with Slick > 1.3.11 within responsive display clone.
+    // Prevents main settings from screwing up responsive settings.
+    // Error: Syntax error, unrecognized expression: $(element).
+    unset(
+      $defaults['mobileFirst'],
+      $defaults['appendDots'],
+      $defaults['appendArrows'],
+      $defaults['asNavFor'],
+      $defaults['prevArrow'],
+      $defaults['nextArrow'],
+      $defaults['cssEaseBezier'],
+      $defaults['cssEaseOverride']
+    );
+
+    $load['js'][] = array(
+      'data' => array(
+        'slick' => $defaults,
+      ),
+      'type' => 'setting',
+    );
+  }
+
+  // Allows load information to be altered with $attach and $skins context.
+  drupal_alter('slick_attach_load_info', $load, $attach, $skins);
+
+  return $load;
+}
+
+/**
+ * Loads the required JS and CSS for a slick instance, excluding JS settings.
+ *
+ * The slick_add() will be ignored if element #attached is provided to
+ * theme_slick, useful for more fine-grained control over libraries to load.
+ *
+ * Notes: This is not used since the sub-modules implements #attached property
+ * instead. It is here to load library for custom works as needed, or fallback.
+ * This is dropped at D8 using the #attached at template_preprocess_slick().
+ *
+ * @see slick_attach()
+ */
+function slick_add() {
+  static $already_added = FALSE;
+
+  if ($already_added) {
+    // Don't add the JavaScript and CSS multiple times.
+    return;
+  }
+
+  // Add libraries.
+  // https://github.com/gdsmith/jquery.easing
+  // libraries_load fails silently, if none found.
+  if (module_exists('jqeasing')) {
+    libraries_load('easing');
+  }
+  else {
+    libraries_load('slick.easing');
+  }
+
+  libraries_load('slick');
+
+  // @see https://drupal.org/node/1855918
+  drupal_add_library('slick', 'drupal.slick');
+
+  $already_added = TRUE;
+}
+
+/**
+ * Off-load the following slick elements to another file.
+ */
+require_once dirname(__FILE__) . '/includes/slick.elements.inc';

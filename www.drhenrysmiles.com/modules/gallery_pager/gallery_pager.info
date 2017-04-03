@@ -1,0 +1,4 @@
+name = gallery_pager
+description = This is the module to Add Previous Next Button To Gallery Nodes
+core = 7.x
+package = custom

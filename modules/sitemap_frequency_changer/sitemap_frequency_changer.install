@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for Views.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function sitemap_frequency_changer_install() {
+  db_query("UPDATE {system} SET weight = 2 WHERE name = 'sitemap_frequency_changer'");
+
+try{
+       db_query("UPDATE {xmlsitemap} SET changefreq = 604800 WHERE loc = 'blog' OR loc = 'blog.html' OR loc = 'blog.htm'");
+        }
+        catch(Exception $e)
+        {
+          die($e->getMessage());  
+        }
+
+
+
+
+}
+

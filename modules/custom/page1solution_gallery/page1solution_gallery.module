@@ -1,0 +1,103 @@
+<?php
+ /**
+  *Implements hook_init(). 
+  */
+function page1solution_gallery_init(){
+    drupal_add_library('system', 'ui.draggable');
+    drupal_add_js(drupal_get_path('module', 'page1solution_gallery').'/js/jquery.beforeafter-1.4.min.js');  
+    drupal_add_css(drupal_get_path('module', 'page1solution_gallery').'/css/gallerydetails.css');
+}
+
+/**
+ * Implements hook_menu().
+ */
+function page1solution_gallery_menu() {
+$items['before-after/%'] = array(
+    'title callback' => 'page1solution_gallery_titlecallback',
+     'title arguments' => array(1),
+    'page callback' => 'before_after_pagecall',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+$items['admin/before-after-setting'] = array(
+    'title' => t('Gallery Setting'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' =>array('page1solution_gallery_form'),
+    'access callback' => 'page1solution_gallery_permission',
+    'type' => MENU_SUGGESTED_ITEM,
+  );
+
+
+  return $items;
+}
+/**
+ *Implement access callback  
+ */
+function page1solution_gallery_user_has_role() {  
+  global $user;
+  if (in_array('administrator', $user->roles)) {
+      return TRUE;
+    }
+  return FALSE; 
+}
+
+function page1solution_gallery_permission() {
+return array(
+  'your permission name' => array(
+    'title' => t('Manage page1solution_gallery'),
+    'description' => t('Manage page1solution_gallery.'),
+  ),
+);
+}
+/**
+ *Implement callback title 
+ */
+function page1solution_gallery_titlecallback($arg){
+return "Gallery of " . ucwords(strtolower(str_replace('-',' ',$arg)));    
+}
+/**
+* Implements callback before_after_pagecall().
+*/
+function before_after_pagecall() {
+$name = 'gallery_block';
+
+$output = views_embed_view($name, $display_id = variable_get('before_after_setting','default'),arg(1));
+return $output;
+}
+
+/**
+* Implement form.
+*/
+function page1solution_gallery_form($form, &$form_state) {
+       //$form = array();
+$form = array();
+$opt = array(
+            0=>'Select',
+            'block'=>'Single Image with Box',
+            'block_2'=>'Before After Pair in Box',
+            'block_3'=>'Group Image with Box',
+            'block_1'=>'Two large and other thumb',
+            'block_4'=>'Before After Pair with underneath description',            
+            'block_5'=>'Before After Pair open in box with description',
+            'block_6'=>'Before After Pair with Slider',
+            'block_7'=>'single Image open in box as 2nd image',
+            );  
+$form['before_after_setting'] = array(
+       '#type' => 'select',
+       '#title' => t('Select Gallery View Type'),
+       '#options' => $opt,
+       '#default_value' => variable_get('before_after_setting',0),
+       '#description' => t('Set this to Gallery view style.'),
+   );
+$form['before_after_title'] = array(
+       '#type' => 'textfield',
+       '#title' => t('Gallery Title'),
+       '#default_value' => variable_get('before_after_title','Gallery'),
+       '#description' => t('Set Title of Gallery view style [gallery-type].'),
+   );
+
+return system_settings_form($form);
+}
+
+
+

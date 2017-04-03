@@ -1,0 +1,303 @@
+
+@import "base";
+/*================Client profile gallery landing and listing scss start here===================*/
+#content .view-before-and-after-terms-page.view-display-id-page_1 {
+    @include dis(null, 100%, block);
+    padding: 0 0 40px;
+    .views-row {
+        @include dis(null, 100%, left);
+        margin: 0;
+        padding: 0 0 40px;
+        border-bottom: none;
+        &:last-child {
+            padding-bottom: 0;
+        }
+        .views-field-field_taxanomy_before_image {
+            @include dis(null,50%,left);
+            pointer-events: none;
+            img {
+                width: 100%;
+                border-right: 1px solid transparent;
+            }
+        }
+        .views-field-field_taxanomy_after_image {
+            @include dis(null,50%,left);
+            pointer-events: none;
+            img {
+                width: 100%;
+                border-left: 1px solid transparent;
+            }
+        }
+        .views-field-name {
+            font-size: 26px;
+            line-height: 71px;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+            background: #313130 url("../images/gallery-procedures-bg.jpg") no-repeat center center;
+            text-transform: uppercase;
+            @include dis(null, 100%, left);
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+            &:hover {}
+        }
+        .list-section {
+            clear: both;
+            text-align: center;
+            padding: 20px;
+            display: inline-block;
+            vertical-align: top;
+            background: #c7c795;
+            color: #303030;
+            font-size: 22px;
+            .parent-list {
+                padding: 0;
+                margin: 0;
+                .views-row {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 20px;
+                }
+            }
+            li {
+                list-style: none;
+                background-image: none;
+            }
+            a {
+                margin: 0 auto 30px;
+                color: inherit !important;
+                &:hover {
+                    text-decoration: none !important;
+                }
+            }
+        }
+    }
+}
+
+.view-gallery-block {
+    width: 100%;
+    .view-header {
+        margin-bottom: 10px;
+    }
+    .pager {
+        padding-bottom: 20px !important;
+    }
+    .view-content {
+        .views-row {
+            @include dis(null,100%,left);
+            padding-bottom: 15px;
+            border-bottom: 1px solid set($colors,base);
+            margin-bottom: 20px;
+            &.views-row-last {
+                padding-bottom: 0;
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+            .views-field-title {
+                font-size: set($size,h-group,h3);
+                margin: 0 auto 20px;
+                width: 100%;
+                line-height: 1.2;
+            }
+            .views-field-body {
+                width: 100%;
+                color: set($colors,base);
+            }
+            .views-field-field-courtesy-procedure {
+                @include dis(null,100%,left);
+                padding-left: 6px;
+                font-size: 10px;
+            }
+            .views-field-nothing {
+                width: 100%;
+                float: left;
+                .gallery-title {
+                    font-size: set($size,h-group,h3);
+                    padding: 10px 10px 7px;
+                    width: 100%;
+                    background: set($bg, gallery-bg);
+                    color: #303030;
+                }
+                #gallery_pairs {
+                    @include dis(null,auto,null);
+                    margin: 0 0 20px;
+                    .gallery_pair {
+                        border: 0 solid transparent;
+                        margin: 0;
+                        padding: 0;
+                        @include dis(null,100%,left);
+                        a {
+                            @include dis(null,50%,left);
+                            pointer-events: none;
+                            img.adaptive-image {
+                                width: 100%;
+                                border: 2px solid transparent;
+                                &:first-child {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.node-type-gallery {
+    .node-gallery {
+        @include dis(null,100%,left);
+        clear: both;
+        margin-top: 15px;
+        .field-name-field-gallery-type {
+            .field-label {
+                @include dis(null,null,inline-block)
+            }
+            .field-items {
+                @include dis(null,null,inline-block)
+            }
+        }
+        .field-name-field-is-this-featured {
+            .field-items,
+            .field-label {
+                @include dis(null,null,inline-block);
+            }
+        }
+        .field-name-field-courtesy-procedure {
+            font-size: 10px;
+            @include dis(null,100%,left);
+            padding-left: 6px;
+        }
+        .img-wrapper {
+            @include dis(420px,100%,table);
+        }
+        .field-type-image {
+            @include dis(50%,100%,inline-block);
+            text-align: center;
+            margin: 20px 0;
+            &[class*="before"] {
+                float: left;
+                .field-item {
+                    border-right-width: 3.5px;
+                }
+            }
+            &[class*="after"] {
+                float: left;
+                .field-item {
+                    border-left-width: 3.5px;
+                }
+            }
+            .field-label {
+                width: 100%;
+            }
+            .field-item {
+                border: 3px solid #c7c795;
+                display: block;
+                a {
+                    pointer-events: none;
+                }
+                img {
+                    vertical-align: top;
+                }
+            }
+        }
+        .field-name-body {
+            width: 100%;
+            float: left;
+            margin: 0 !important;
+            line-height: 0 !important;
+        }
+    }
+}
+
+/*================Client profile gallery landing and listing scss start end===================*/
+/*================ColorBox scss start here===================*/
+
+#cboxLoadedContent {
+    padding-bottom: 28px !important;
+    margin-bottom: 0 !important;
+    img {
+        width: 50%;
+        border: 1px solid transparent;
+    }
+}
+#cboxCurrent {
+    bottom: 0;
+}
+
+/*================ColorBox scss end here===================*/
+/*==========IPad and desktop [Also flud responsive] css start==========*/
+@media screen and (min-width:320px) and (max-width:360px) {
+    .view-gallery-block .view-content .views-row .views-field-title {
+        font-size: vw(32,360);
+    }
+}
+@media screen and (min-width:320px) and (max-width:480px) {
+    #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-name {
+        font-size: vw(26,480);
+        line-height: (71,480);
+        padding: 0 vw(20,480);
+    }
+}
+@media screen and (min-width:768px) {
+    .view-gallery-block {
+        .view-content {
+            .views-row {
+                .views-field-title {
+                    font-size: set($size,h-group,h3);
+                    margin: 0 auto 20px;
+                }
+                .views-field-body {
+                    width: 50%;
+                }
+                .views-field-nothing {
+                    width: 50%;
+                    padding-right: 20px;
+                    #gallery_pairs .gallery_pair a {
+                        pointer-events: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    #content .view-before-and-after-terms-page.view-display-id-page_1 {
+        .views-row {
+            @include dis(null, 50%, inline-block);
+            &:nth-child(1n+1) {
+                padding-right: 33px;
+                padding-left: 0;
+            }
+            &:nth-child(2n+2) {
+                padding-left: 33px;
+                padding-right: 0;
+                float: right;
+            }
+            &:last-child {
+                padding-bottom: 0;
+                .list-section {
+                    min-height: 0;
+                }
+            }
+            .list-section {
+                min-height: 670px;
+                a {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    #content .view-before-and-after-terms-page.view-display-id-page_1 .views-row .views-field-name {
+        font-size: vw(26,1024);
+        line-height: (71,1024);
+        padding: 0 vw(20,1024);
+    }
+}
+@media screen and (min-width:1200px) {
+    }
+
+/*==========IPad and desktop [Also flud responsive] css end==========*/

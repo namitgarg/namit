@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Code for the PPC New Landing Page feature.
+ */
+
+include_once 'ppc_new_landing_page.features.inc';
+
+drupal_add_css(drupal_get_path('module', 'ppc_content_type') . '/ppc-landing-page-css/font-awesome.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+drupal_add_css(drupal_get_path('module', 'ppc_content_type') . '/ppc-landing-page-css/ppc-landing-page1-css.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+drupal_add_css(drupal_get_path('module', 'ppc_content_type') . '/ppc-landing-page-css/ppc-landing-page2-css.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));

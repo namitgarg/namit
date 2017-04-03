@@ -1,0 +1,38 @@
+<?php
+
+function gallery_pager_block_info() {
+  $blocks = array();
+  // Provide a pager block that will work for all node types
+  $blocks['gallery_pager'] = array(
+    'info' => t('Gallery Pager (Before and After Gallery)'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+  return $blocks;
+}
+
+function gallery_pager_block_view($delta = '') {
+
+  $block = array();
+  switch ($delta) {
+    case 'gallery_pager':
+      $block['subject'] = '';
+      $variables = array(); //do stuff here
+      global $base_url;
+      $block['content'] = theme('gallery_pager', array('list'=>$base_url));
+      break;
+  }
+  return $block;
+}
+
+function gallery_pager_theme() {
+  return array(
+    'gallery_pager' => array(
+      'variables' => array(
+        'list' => array(),
+      ),
+      'template' => 'gallery_pager',
+    ),
+  );
+}
+
+?>

@@ -1,0 +1,15 @@
+name = image_styles_presets
+core = 7.x
+package = Features
+version = 7.x-1.1
+project = image_styles_presets
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = gallery_200
+features[image][] = gallery_402
+features[image][] = gallery_large
+features[image][] = gallery_pair_150
+features[image][] = gallery_pair_500
+features[image][] = gallery_thumb
+features[image][] = gallery_underneath
+features[image][] = group_image_380

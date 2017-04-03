@@ -1,0 +1,227 @@
+/*
+Nice menus 
+*/
+/*
+  This is the default layout template for nice menus, and will provide
+  a starting point for the look of your menus. To customize, it's
+  recommended to create a custom CSS file using this file as a template,
+  then configure the module to use your custom CSS file
+  (this is done in the global settings tab of the theme administration.)
+
+  See README.txt and the handbook page (http://drupal.org/node/185543)
+  for more information on using the CSS.
+*/
+/******************************
+ Global CSS for ALL menu types
+******************************/
+/* line 21, ../sass/nice_menus_default.scss */
+ul.nice-menu, ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 0px;
+}
+
+/* line 22, ../sass/nice_menus_default.scss */
+ul.nice-menu li {
+  border: 0px;
+  border-top: 0;
+  float: left;
+  /* LTR */
+  border: 0px;
+  background-color: transparent;
+}
+
+/* line 23, ../sass/nice_menus_default.scss */
+ul.nice-menu a {
+  padding: 0.3em 5px 0.3em 5px;
+  text-decoration: none;
+}
+
+/* line 24, ../sass/nice_menus_default.scss */
+ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px;
+  /* LTR */
+  border: 0;
+  border-top: 0px;
+  margin-right: 0;
+  /* LTR */
+}
+
+/* line 25, ../sass/nice_menus_default.scss */
+ul.nice-menu ul li {
+  width: 12.5em;
+}
+
+/******************************
+ VERTICAL (left/right) menus
+******************************/
+/* This is the default width of all vertical menus. */
+/* line 31, ../sass/nice_menus_default.scss */
+ul.nice-menu-right, ul.nice-menu-left, ul.nice-menu-right li, ul.nice-menu-left li {
+  width: 12.5em;
+}
+
+/* VERTICAL menus where submenus pop RIGHT (default). */
+/* line 33, ../sass/nice_menus_default.scss */
+ul.nice-menu-right ul {
+  width: 12.5em;
+  left: 12.5em;
+  top: -1px;
+}
+
+/* line 34, ../sass/nice_menus_default.scss */
+ul.nice-menu-right ul ul {
+  width: 12.5em;
+  left: 12.5em;
+  top: -1px;
+}
+
+/* line 35, ../sass/nice_menus_default.scss */
+ul.nice-menu-right li.menuparent, ul.nice-menu-right li li.menuparent {
+  background: none;
+}
+
+/* line 36, ../sass/nice_menus_default.scss */
+ul.nice-menu-right li.menuparent:hover, ul.nice-menu-right li li.menuparent:hover {
+  background: none;
+}
+
+/* VERTICAL menus where submenus pop LEFT. */
+/* line 38, ../sass/nice_menus_default.scss */
+ul.nice-menu-left li ul {
+  width: 12.5em;
+  left: -12.65em;
+  top: -1px;
+}
+
+/* line 39, ../sass/nice_menus_default.scss */
+ul.nice-menu-left li ul li ul {
+  width: 12.5em;
+  left: -12.65em;
+  top: -1px;
+}
+
+/* line 40, ../sass/nice_menus_default.scss */
+ul.nice-menu-left li.menuparent, ul.nice-menu-left li li.menuparent {
+  background: none;
+}
+
+/* line 41, ../sass/nice_menus_default.scss */
+ul.nice-menu-left li.menuparent:hover, ul.nice-menu-left li li.menuparent:hover {
+  background: none;
+}
+
+/* line 42, ../sass/nice_menus_default.scss */
+ul.nice-menu-left a, ul.nice-menu-left ul a {
+  padding-left: 14px;
+}
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+/* line 47, ../sass/nice_menus_default.scss */
+ul.nice-menu-down {
+  float: left;
+  /* LTR */
+  border: 0;
+  background: #000;
+}
+
+/* line 48, ../sass/nice_menus_default.scss */
+ul.nice-menu-down li {
+  border-top: 0px;
+}
+
+/* line 49, ../sass/nice_menus_default.scss */
+ul.nice-menu-down li li {
+  border-top: 0;
+}
+
+/* line 50, ../sass/nice_menus_default.scss */
+ul.nice-menu-down ul {
+  left: 0;
+  /* LTR */
+  background: #000;
+  width: 200px;
+}
+
+/* line 51, ../sass/nice_menus_default.scss */
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+/* line 52, ../sass/nice_menus_default.scss */
+ul.nice-menu-down li ul li ul {
+  left: 200px;
+  /* LTR */
+  top: -1px;
+}
+
+/* line 53, ../sass/nice_menus_default.scss */
+ul.nice-menu-down .menuparent a {
+  padding-right: 15px;
+  /* LTR */
+}
+
+/* line 54, ../sass/nice_menus_default.scss */
+ul.nice-menu-down li.menuparent {
+  background: none;
+  /* LTR */
+}
+
+/* line 55, ../sass/nice_menus_default.scss */
+ul.nice-menu-down li.menuparent:hover {
+  background: none;
+  /* LTR */
+}
+
+/* line 56, ../sass/nice_menus_default.scss */
+ul.nice-menu-down li li.menuparent {
+  background: none;
+  /* LTR */
+}
+
+/* line 57, ../sass/nice_menus_default.scss */
+ul.nice-menu-down li li.menuparent:hover {
+  background: none;
+  /* LTR */
+}
+
+/* line 60, ../sass/nice_menus_default.scss */
+ul.nice-menu-down a {
+  color: #fff;
+}
+/* line 61, ../sass/nice_menus_default.scss */
+ul.nice-menu-down a:hover, ul.nice-menu-down a.active {
+  background: #ccc;
+  color: #000;
+}
+
+/******************************
+ Garland-specific CSS
+******************************/
+/**
+ * Global CSS for ALL menu types
+ */
+/* line 71, ../sass/nice_menus_default.scss */
+ul.nice-menu li {
+  margin: 0;
+  padding-left: 0;
+  /* LTR */
+  background-image: none;
+}
+
+@media all and (max-width: 759px) {
+  /* line 74, ../sass/nice_menus_default.scss */
+  #nice-menu-1 {
+    display: none;
+  }
+}
+@media all and (min-width: 760px) {
+  /* line 78, ../sass/nice_menus_default.scss */
+  #tinynav1 {
+    display: none;
+  }
+}

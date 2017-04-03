@@ -1,0 +1,4 @@
+name = logo alt text
+description = Sets a site-wide alt text for logo.
+package = SEO
+core = 7.x

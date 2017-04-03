@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){var height=jQuery(window).height();var width=jQuery(window).width();if(width>height){if(jQuery(window).width()>1024)jQuery('a[href^="tel:"]').each(function(){jQuery(this).replaceWith(jQuery(this).text())})}else if(jQuery(window).width()>768)jQuery('a[href^="tel:"]').each(function(){jQuery(this).replaceWith(jQuery(this).text())})});

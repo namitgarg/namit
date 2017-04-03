@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Module file for node_generator module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function search_replace_blocks_menus_menu() {
+  $items['admin/config/system/replace-blocks-menus'] = array(
+    'title' => 'Replace In Blocks and Menus',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('search_replace_blocks_menus_input_form'),
+    'access arguments' => array('access search_replace_blocks_menus settings'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'search_replace_blocks_menus.admin.inc',
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_permission().
+ */
+function search_replace_blocks_menus_permission() {
+  return array(
+    'access search_replace_blocks_menus settings' => array(
+      'title' => t('Access replace Blocks Menus Form'),
+      'description' => t('Replace String in Blocks Body and Menu Title.'),
+    ),
+  );
+}

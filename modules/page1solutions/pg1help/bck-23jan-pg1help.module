@@ -1,0 +1,177 @@
+<?php
+/**
+* Valid permissions for this module
+* @return array An array of valid permissions for the onthisdate module
+*/
+
+function pg1help_perm() {
+  return array('access pg1help content');
+}
+
+
+  // Main help page and returns for display
+function pg1help_helphome() {
+  module_load_include('css','seven','compact-icon');
+  $page_content = '';
+  $html = '';
+  $mod_path = drupal_get_path('module', 'pg1help');
+  /*if (user_access("create page content")) {
+    $html .= '<div class="content-in">
+                <ul class="admin-menu-compact">
+                  <li class="leaf"><a href="/admin/page1solutions/help/create-page"><img src="/'. $mod_path . '/images/add-page.png"><br>Create a Page</a></li>
+                </ul>
+              </div>';
+  }*/
+  
+  
+    $html .= '<div class="content-in">
+                <ul class="admin-menu-compact">
+                  <li class="leaf"><a href="/admin/page1solutions/help/create-page"><img src="/'. $mod_path . '/images/add-page.png"><br>Create a Page</a></li>
+                </ul>
+              </div>';
+  
+  $html .= '<div class="content-in">
+              <ul class="admin-menu-compact">
+                <li class="leaf"><a href="/admin/page1solutions/help/manage-content"><img src="/'. $mod_path . '/images/manage-content.png"><br>Manage Content</a></li>
+              </ul>
+            </div>';
+  $html .= '<div class="content-in">
+              <ul class="admin-menu-compact">
+                <li class="leaf"><a href="/admin/page1solutions/help/adding-images"><img src="/'. $mod_path . '/images/add-image.png"><br>Adding an Image</a></li>
+              </ul>
+            </div>';
+  if (user_access("create before_after content")) {
+    $html .= '<div class="content-in">
+              <ul class="admin-menu-compact">
+                <li class="leaf"><a href="/admin/page1solutions/help/create-before-after"><img src="/'. $mod_path . '/images/add-ba-gallery.png"><br>Create a Before & After</a></li>
+              </ul>
+            </div>';
+  }
+  $html .= '<div class="content-in">
+              <ul class="admin-menu-compact">
+                <li class="leaf"><a href="/admin/page1solutions/help/terminology"><img src="/'. $mod_path . '/images/drupal-terms.png"><br>Drupal Terminology</a></li>
+              </ul>
+            </div>';
+
+  $page_content = $html;
+
+  return $page_content;
+}
+
+  // Help Page for creating a page and returns for display
+function pg1help_createpage() {
+  $mod_path = drupal_get_path('module', 'pg1help');
+  $html = '';
+  $html = '<div id="help-content">
+    
+	<iframe width="1000" height="3000" src="https://docs.google.com/document/d/19bCX1QahqNLZatrci1vT-1wj8k142rqj7-Q_Xun9m1M/pub?embedded=true"></iframe>
+	
+	</div>';
+  return $html;
+}
+
+  
+  // Managing existing content help and returns for display
+function pg1help_managecontent() {
+  $mod_path = drupal_get_path('module', 'pg1help');
+  $html = '';
+  $html .='<div id="help-content">
+    
+	<iframe width="1000" height="3000" src="https://docs.google.com/document/d/1jLTXQrcVfly5HDslwgR3wnFusxZD13C7QdPRq_b0mPE/pub?embedded=true"></iframe>
+	
+	</div>';
+  return $html;
+}
+
+  // gets deleting a page help tpl file and returns for display
+function pg1help_delete() {
+  $page_content = '';
+  $mod_path = drupal_get_path('module', 'pg1help');
+  $var = file_get_contents($mod_path . '/delete-page.tpl');
+  $page_content = $var;
+  return $page_content;
+}
+
+  // adding an image help tpl file and returns for display
+function pg1help_addingimages() {
+  $mod_path = drupal_get_path('module', 'pg1help');
+  $html = '';
+  $html .= '<div id="help-content">
+	<iframe width="1000" height="3000" src="https://docs.google.com/document/d/1JzBw907iwEpzVYpvT387Qx55--WPtzHLpLkKFQMcoZU/pub?embedded=true"></iframe>
+  </div>';
+  return $html;
+}
+
+  // Adding before and after help and returns for display
+function pg1help_beforeafter() {
+  $mod_path = drupal_get_path('module', 'pg1help');
+  $html = '';
+   $html .='<div id="help-content">
+   
+   <iframe width="1000" height="5000" src="https://docs.google.com/document/d/1y__mQo4qtNGhLai59nVLbgXxt6Lx6IlESsw_ZHQQAmY/pub?embedded=true"></iframe>
+   
+	</div>';
+  return $html;
+}
+
+  // Help Page for terminology and returns for display
+function pg1help_terminology() {
+  $mod_path = drupal_get_path('module', 'pg1help');
+  $html = '';
+  $html .= '<div id="help-content">
+  
+  <iframe width="900" height="3000" src="https://docs.google.com/document/d/1_YAZpQDEym207RbWHU70USABsTB3kBaZPqANcKeEVVE/pub?embedded=true"></iframe>
+  
+  
+</div>';
+  return $html;
+}
+
+function pg1help_menu() {
+
+  $items = array();
+  //this is adds our main help menu item.
+  $items['admin/page1solutions/help'] = array(
+    'title' => 'Page 1 Help',
+    'page callback' => 'pg1help_helphome',
+    'access arguments' => array('access pg1help content'),
+    'type' => MENU_NORMAL_ITEM
+  );
+  //adds a create page menu item.
+  $items['admin/page1solutions/help/create-page'] = array(
+    'title' => 'Create a Page',
+    'page callback' => 'pg1help_createpage',
+    'access arguments' => array('access pg1help content'),
+    'type' => MENU_NORMAL_ITEM
+  );
+  //this is adds our manage content menu item.
+  $items['admin/page1solutions/help/manage-content'] = array(
+    'title' => 'Managing Content',
+    'page callback' => 'pg1help_managecontent',
+    'access arguments' => array('access pg1help content'),
+    'type' => MENU_NORMAL_ITEM
+  );
+  //adds adding image help page menu item.
+  $items['admin/page1solutions/help/adding-images'] = array(
+    'title' => 'Adding an Image',
+    'page callback' => 'pg1help_addingimages',
+    'access arguments' => array('access pg1help content'),
+    'type' => MENU_NORMAL_ITEM
+  );
+  //adds a create before and after help menu item.
+  $items['admin/page1solutions/help/create-before-after'] = array(
+    'title' => 'Create a Before & After',
+    'page callback' => 'pg1help_beforeafter',
+    'access arguments' => array('create before_after content'),
+    'type' => MENU_NORMAL_ITEM
+  );
+  //adds a terminology help menu item.
+  $items['admin/page1solutions/help/terminology'] = array(
+    'title' => 'Drupal Terminology',
+    'page callback' => 'pg1help_terminology',
+    'access arguments' => array('access pg1help content'),
+    'type' => MENU_NORMAL_ITEM
+  );
+  return $items;
+}
+?>

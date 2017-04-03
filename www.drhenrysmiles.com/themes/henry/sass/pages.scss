@@ -1,0 +1,444 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+@import "base";
+
+/*=====================  GLOBAL CSS GOES HERE   =======================*/
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+*{
+    -moz-font-smoothing: none;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; 
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-text-fill-color: #303030 !important;
+}
+.fa-map-marker:before{
+  content: "\f041;";
+}
+.fa-search:before{
+    content: "\f002;";
+    width:14px;height: 14px;
+}
+.fa-google-plus:before {
+    content: "\f0d5";
+    width:45px;height: 45px;
+}
+.fa-facebook:before {
+    content: "\f09a";
+    width:23px;height: 45px;
+}
+.fa-linkedin:before {
+    content: "\f0e1";
+    width:23px;height: 45px;
+}
+.fa-twitter:before {
+    content: "\f099";
+    width:23px;height: 45px;
+}
+.fa-youtube:before {
+    content: "\f167";
+    width:23px;height: 45px;
+}
+.fa-angle-right:before{
+    content: "\f105;";
+    width:14px;height: 14px;
+}
+.fa-angle-left:before{
+    content: "\f104;";
+    width:14px;height: 14px;
+}
+.safari{*{-webkit-text-stroke: 0.001em;}}
+p{margin:0; padding: 0;line-height: normal;}
+a:focus{ outline:none !important;}
+input{-webkit-appearance: none;border-radius: 0;}
+h1, h2, h3, h4, h5, h6, body{padding: 0;margin: 0;font-family: 'Lato', sans-serif;}
+body{color: #303030;font-size: 14px;font-family: 'Lato', sans-serif;line-height: 20px;}
+iframe{max-width: 100%;}
+table{max-width: 100%;}
+h1{
+    font-size: 30px;
+    color: #0b56a4;
+    padding: 0 0 15px;
+    text-transform: capitalize;
+}
+h2{
+    font-size: 18px;
+    color: #666666;
+}
+h3{
+    font-size: 14px;
+    color: #303030;
+    font-weight: 700;
+    padding: 0 0 7px;
+}
+.leftimage{
+    float: left;
+    margin: 0 15px 10px 0;
+}
+.rightimage{
+    float: right;
+    margin: 0 0px 10px 15px;
+}
+.top-title-outer{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 45px 0 35px;
+}
+.not-front{
+    .top-title-outer{
+        padding: 0 0 35px;
+    }
+    #main{
+        padding:45px 10px 0;
+        #content{
+           padding:0px  0px 30px; 
+        }  
+    }
+}
+#main{
+    width: 100%;
+    max-width: 1298px;
+    margin: 0 auto;
+    padding:0  10px 0px;
+    #content{
+        padding:0  0px 30px;
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0 0 20px;
+        }
+        a, a:active, a:visited, a:focus{
+            text-decoration: underline;
+            color: #0b56a4;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        ul{
+            margin: 0 0 20px;
+        }
+        input[type="text"],input[type="password"]{max-width:100%; outline: none; width: 100%; height: 32px; font-size: 18px; border: 1px solid #4891c6; padding: 5px; color: #303030;outline: none;}
+        input[type="submit"]{width: 171px; height: 32px;border:none; padding: 0 20px 0 23px; text-align: center; line-height: 32px;  color: #fff; text-decoration: none; font-size: 12px;  display: inline-block; background: #4891c6;vertical-align:top;
+                             &:hover{background: #303030;;}}
+    }
+}
+.sidebars{
+    width: 100%;
+    float: left;
+    padding-bottom: 30px;
+}
+
+/*==========================  HOME PAGE CSS GOES HERE  ================================================*/
+#callOut{
+    width:100%;
+    display:inline-block;
+    vertical-align:top;
+    padding:0 0 30px;
+    h6{
+        font-size: 18px;
+        color: #303030;
+        text-transform: capitalize;        
+    }
+}
+
+/*==========================  BLOG PAGE CSS GOES HERE  ================================================*/
+
+/* page-search404 and section-search related css */
+  div.warning,div.messages{
+    padding:10px;
+    background:#0b56a4;
+    color:#fff !important;
+    border-radius:4px;
+    border:1px solid #31001c;
+    a{
+      color:#4e4e4e !important;
+    }
+    ul{
+      margin:0 !important;
+      padding: 0 !important;
+      li{
+        list-style: none;
+        color:#fff !important; word-wrap:break-word !important;
+      }
+    }
+  }
+
+
+/* block-views-exp-page-1-blog-page-2 related css */
+#block-views-exp-page-1-blog-page-2, #block-views-exp-b-a-gallery-page-2{ width:100%; display:inline-block; margin:20px 0 0 0;
+.views-exposed-form { margin:0;
+.views-exposed-widgets{ margin-bottom:0; width:100%; height:30px; position:relative; text-align:left; line-height:0;
+.views-exposed-widget{padding:0; width:100%;
+.form-text{ border:1px solid #0b56a4; box-sizing:border-box; color:#000; font-family:arial; font-size:14px; height:30px; letter-spacing:1px; line-height:normal;
+padding:0 150px 0 5px; width:100%;max-width: 100% !important; background:none;}
+.form-submit{ position:absolute; top:0; right:0; background:#0b56a4; font-size:14px; height:30px; width:30px; border:none; cursor:pointer; font-family:arial; width:140px;
+margin:0; color:#fff; text-transform:uppercase;
+&:hover{background:#303030;}
+}
+}
+}
+}
+}
+
+
+/*============================================== common blog page css======================================= */
+.view-page-1-blog{ clear:both;
+.views-row{margin-bottom:15px; padding-top:15px; border-top: 1px dotted #0b56a4; float:left; width:100%;
+.views-field-title{font-size: 26px; color:#0b56a4;line-height:normal;
+a{ color:#0b56a4; text-decoration:none !important;text-transform:capitalize;font-size:22px;
+&:hover{ text-decoration:underline !important;}
+}
+}
+.views-field-created{font-size: 12px;}
+.views-field-body{padding: 15px 0;}
+.views-field-field-category{
+div{ display: inline;
+a{color: #0b56a4;
+&:hover{ text-decoration: none;}
+}  
+}
+.views-label-field-category{float: left; margin-right: 5px; font-weight: 600;}
+}
+.views-field-field-blog-tags{
+span{ display: inline;
+a{color: #231f20;
+&:hover{ text-decoration: none;}
+}
+}
+}
+}
+.views-row-1{border-top:none;}
+a{color: #231f20; }
+}
+
+
+
+/*  Blog Archive*/
+.ui-accordion-header{background: #0b56a4;}
+.view-grouping-header:before{
+  background: url(../images/arrow-archive.png) no-repeat left center;
+  top:10px;
+}
+.view-grouping-header{
+    &.nested-accordion:before{
+        background: url(../images/arrow-archive-hover.png) no-repeat left bottom !important;
+    }
+}
+.ui-state-active .ui-icon{
+  background: url(../images/arrow-archive-hover.png) no-repeat left bottom !important;
+ }
+.ui-state-default .ui-icon{
+  background: url(../images/arrow-archive.png) no-repeat left bottom;
+}
+.ui-icon{
+  width:14px;
+  height:14px;
+}
+
+#block-views-page-1-blog-block-1{ text-align:left;display:inline-block;margin-bottom:20px;width:100%;
+.block-title{color:#0b56a4; font-size:22px; font-weight:normal; margin:0;padding: 10px 0 20px !important;text-align: left;} 
+.view-display-id-block_1{width:100%; font-size:15px;
+.view-grouping-header{background: #0b56a4;border-radius: 0;}
+.ui-accordion-content{
+.views-row{margin-bottom:0; padding:0 0 10px 0;
+.views-field-title{
+a { color:#0b56a4; font-size:16px;
+&:hover{ text-decoration:underline;}
+}
+span{font-weight:normal; padding:0 0 0 10px; float:left; line-height:18px;}
+}
+}
+}
+.ui-state-default .ui-icon{float:left; margin:3px 0 0;}
+.ui-state-active .ui-icon{float:left; margin:3px 0 0;}
+.ui-state-default{background:#4891c6;border-radius: 0;a{padding: 0 0 0 5px;color: #fff !important;text-decoration: none !important;font-weight: normal;&:hover{text-decoration: underline !important;}}&:visited{color:#fff !important;}}
+.ui-accordion .ui-accordion-content{padding:0 !important;border-radius: 0;height: auto !important;}
+.view-grouping-content{
+    h3{background: #4891c6;}
+}
+}
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{color: #fff !important;}
+
+/*  Blog Category */
+#block-menu-block-2{ margin:0px 0 25px 0px;  clear:both; text-align:left; float:left; width:100%;
+.block-title{color:#0b56a4; font-size:22px; font-weight:normal; margin:0;padding: 0 0 20px !important;text-align: left;} 
+.menu-block-wrapper{ border:1px solid #d3d3d3; border-radius:0px; padding:10px 0;
+.menu{ margin:0; padding:0; float:none;
+li{ list-style:none; padding:0 0 0 10px; a{text-decoration:none; color:#0b56a4; font-size:15px; &:hover{text-decoration:underline;}}}
+}
+}
+}
+#block-views-exp-b-a-gallery-page-2{margin: 0 0 20px 0;vertical-align: top;}
+
+
+/*=======================  SEARCH RESULT PAGE CSS GOES HERE  ========================*/
+.search-results{
+    li{
+        &.search-result{
+            border-bottom: 1px dotted #0b56a4;
+        }
+    }
+}
+/*=======================  BLOG DETAILED PAGE CSS GOES HERE  ========================*/
+.section-blog{
+    .field-name-field-category{
+        .field-label{
+            display: inline-block;
+        }
+        .field-items{
+            display: inline-block;
+            .field-item{
+                display: inline-block;
+                padding: 0 0 0 5px;
+            }
+        }
+    }
+}
+.section-blog-category{
+    article{
+        border-bottom: 1px dotted #0b56a4;
+        h2{
+            a{
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+@media screen and (min-width:768px){
+    #main{
+        #content{
+            width: 56%;
+            float: left;
+            padding: 0 0px 60px;
+        }
+        .sidebars{
+            width: 308px;
+            float: right;
+            padding-bottom: 85px;
+        }
+    }
+    .not-front{
+        #main{
+            #content{
+                padding:0px  0px 60px; 
+            }  
+        }
+    }
+}
+@media screen and (min-width:950px){
+    #main{
+        #content{
+            width: 64%;
+        }
+    }
+}
+@media screen and (min-width:1100px){
+    #main{ 
+        padding: 0 10px 0px; 
+        #content{
+            width: 70.65%;
+        }
+    }
+    /*==========================  HOME PAGE CSS GOES HERE  ================================================*/
+#callOut{
+    h6{
+        font-size: 18px;
+        color: #303030;
+        text-transform: capitalize;        
+    }
+    ul{
+        li{
+            width: 33%;
+            float: left;
+        }
+    }
+}
+}
+
+@media screen and (min-width:1298px){
+    body{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #main{   
+        #content{
+            width: 71.65%;
+            padding: 0 10px 85px;
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                margin: 0 0 30px;
+            }
+        }
+    }
+    .not-front{
+        #main{
+            padding:110px  10px 0px; 
+            #content{
+                padding:0px  0px 98px; 
+            }  
+        }
+    }
+    h1{
+        font-size: 52px;
+        line-height: 52px;
+        padding: 0 0 5px;
+    }
+    h3{
+        font-size: 22px;
+        padding: 0 0 32px;
+    }
+    .top-title-outer{
+        padding: 110px 10px 35px;
+    } 
+    
+}
+@media screen and (min-width:1330px){
+  .top-title-outer{
+        padding: 110px 0px 35px;
+    }  
+    #main{
+        padding:0;
+        #content{
+             padding: 0 0 85px;
+        }        
+    }
+    .not-front{
+        .top-title-outer{
+            padding: 0 0 35px;
+        }
+        #main{
+            padding:110px  0px 0px;  
+            #content{
+                padding:0px  0px 85px; 
+            }  
+        }
+    }
+}
+@media screen and (min-width:0px) and (max-width:380px) {
+    .rightimage, .leftimage {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        float: none;
+    }
+}
+

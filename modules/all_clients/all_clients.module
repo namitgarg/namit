@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the All Clients feature.
+ */
+
+include_once 'all_clients.features.inc';

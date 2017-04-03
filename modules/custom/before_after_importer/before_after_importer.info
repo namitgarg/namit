@@ -1,0 +1,5 @@
+name = Before After Custom Importer 
+description = Custom module for Before After Node Importer from CSV format, and CSV format have been attached with this module
+core = 7.x 
+package = Page one Solution
+configure = before-after-importer

@@ -1,0 +1,43 @@
+<?php
+/**
+ * @file
+ *Set a text field for logo image attribute alt.
+ */
+
+/**
+ * Implementation of hook_help().
+ */
+function logo_alttext_help($path, $arg) {
+  $output = '';  //declare your output variable
+  switch ($path) {
+    case "admin/help#logo_alttext":
+      $output = '<p>' . t('Sets site-wide image alt text. Use &#60;?php print $site_imgalt ?&#62; in your page.tpl file') . '</p>';
+      break;
+  }
+  return $output;
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function logo_alttext_form_alter(&$form, $form_state, $form_id) {
+  // Check form id of site information page.
+  if ($form_id == 'system_site_information_settings') {
+    $form['site_information']['logo_alttext_imgtext'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Logo image alt text'),
+      '#maxlength' => 256,
+      '#size' => 90,
+      '#weight' => 2,
+      '#default_value' => variable_get('logo_alttext_imgtext', ''),
+      '#description' => t('Sets a site-wide alt text for logo'),
+    );
+  }
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function logo_alttext_preprocess(&$variables) {
+      $variables['site_imgalt'] = variable_get('logo_alttext_imgtext', '');
+}

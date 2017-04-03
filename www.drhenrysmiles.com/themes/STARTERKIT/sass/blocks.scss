@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+@import "base";
+
+
+.block { /* Block wrapper */
+  margin-bottom: 1.5em;
+
+  &.first { /* The first block in the region */
+  }
+
+  &.last { /* The last block in the region */
+  }
+
+  &.odd { /* Zebra striping for each block in the region */
+  }
+
+  &.even { /* Zebra striping for each block in the region */
+  }
+
+  h2.block-title { /* Block title */
+  }
+}
+@media all and (min-width:768px){
+ .defaultimage { float: left; margin: 15px 20px 15px 0;}
+.leftimage{  float: left; margin: 15px 20px 15px 0;}
+.rightimage{float: right ; margin: 15px 0px 15px 20px;}
+.centerimage{float: none ; margin: 15px auto;}
+}
+
