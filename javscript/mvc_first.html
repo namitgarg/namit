@@ -4,29 +4,36 @@
 
 <div ng-controller="language">
 Select your programming language
-<button ng-click="php()">PHP</button>
-<button ng-click="java()">java</button>
-<button ng-click="cplus()">C++</button>
-<p> Tour language is {{mylang}} </p>
-
+<div><span ng-click="php($event)" ng-class="PHP" >PHP</span></div>
+<div><span ng-click="php($event)" ng-class="JAVA">JAVA</span></div>
+<div><span ng-click="php($event)">CPLUS</span></div>
+<!--<div ng-repeat="language in lang">
+<span ng-click="myindex($index)">{{ language}}</span>
+</div>-->
+<p ng-class="activeClass('PHP')" class="PHP">PHP</p>
+<p ng-class="activeClass('JAVA')" class="JAVA" >JAVA</p>
+<p ng-class="activeClass('CPLUS')" class="CPLUS" >CPLUS</p>
+<p ng-class="Ng-show" ng-show="(mylang =='CPLUS')||(mylang =='none')">NG-show</p>
+<p>
+ Tour language is {{mylang}} 
+</p>
 </div>
 
 <script>
 var application =angular.module('myPrefferedLanguage',[]);
 application.controller('language',function($scope) {
-$scope.mylang='None';
-$scope.php = function()
-{
-$scope.mylang ='PHP';
-}
-$scope.java = function()
-{
-$scope.mylang ='java';
+$scope.mylang='none';
+$scope.activeClass= function(myElement){
+$scope.classvalue=($scope.mylang == myElement)||($scope.mylang=='none')?'active':'disabled';
+return $scope.classvalue;
 }
 
-$scope.cplus = function()
+$scope.php = function(event)
 {
-$scope.mylang ='java';
+ 
+$scope.mylang = event.target.firstChild.nodeValue;
+//alert(JSON.stringify($scope.mylang));
+
 }
 
 
